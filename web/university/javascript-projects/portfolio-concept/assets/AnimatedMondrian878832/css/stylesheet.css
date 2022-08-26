@@ -1,0 +1,606 @@
+/*A quick way to give two elements the same property is to write a style with
+multiple selectors separated by a comma.*/
+
+body, html {
+    background-color: #f6f6f6;
+}
+
+/*Animations*/
+
+@keyframes bigbox {
+  0% {
+    left: -3000vmax;
+    border-style: solid;
+    border-width: 5vmax;
+    background-color: orange;
+  }
+  20% {
+    left: 0vmax;
+    top: 400vmax;
+    border-radius: 0vmax;
+  }
+  30% {
+    border-radius: 145vmax;
+    left: 0vmax;
+    top: 400vmax;
+    transform: rotate(0deg);
+  }
+  35%{
+    top: 0vmax;
+    left: -5vmax;
+    transform: rotate(-90deg);
+  }
+  40% {
+
+  }
+  60% {
+
+  }
+  65% {
+    border-width: 5vmax;
+    border-style: solid;
+  }
+  70% {
+    border-width: 0vmax;
+    border-style: none;
+  }
+  75% {
+    top: 0vmax;
+    left: -5vmax;
+    border-style: none none solid solid;
+    border-width: 5vmax;
+    transform: rotate(-90deg);
+  }
+  80% {
+    top: 0vmax;
+    left: 105vmax;
+    transform: rotate(0deg);
+    border-radius: 145vmax;
+  }
+  85% {
+    border-radius: 0vmax 145vmax 145vmax 145vmax;
+  }
+  90% {
+    border-radius: 0vmax 0vmax 145vmax 145vmax;
+  }
+  95% {
+    border-radius: 0vmax 0vmax 0vmax 145vmax;
+  }
+  100% {
+    top: 0vmax;
+    left: 105vmax;
+    transform: rotate(0deg);
+    border-style: none none solid solid;
+    border-width: 5vmax;
+    border-radius: 0vmax 0vmax 0vmax 0vmax;
+    background-color: red;
+  }
+}
+
+@keyframes mediumboxtop {
+  0% {
+    left: -3000vmax;
+    border-style: solid;
+    border-width: 5vmax;
+  }
+  20% {
+    left: 400vmax;
+    top: 255vmax;
+    border-radius: 0vmax;
+  }
+  30% {
+    border-radius: 145vmax;
+  }
+  35% {
+    left: 400vmax;
+    top: 255vmax;
+    transform: rotate(0deg);
+  }
+  40% {
+    transform: rotate(-90deg);
+    left: 20vmax;
+    top: 275vmax;
+  }
+  60% {
+
+  }
+  65% {
+    border-width: 5vmax;
+    border-style: solid;
+  }
+  70% {
+    border-width: 0vmax;
+    border-style: none;
+  }
+  75% {
+    left: 20vmax;
+    top: 275vmax;
+    border-radius: 145vmax;
+    border-style: none solid solid none;
+    border-width: 5vmax;
+    transform: rotate(-90deg);
+  }
+  80% {
+    top: 0vmax;
+    left: 0vmax;
+    transform: rotate(0deg);
+  }
+  85% {
+    border-radius: 0vmax 145vmax 145vmax 145vmax;
+  }
+  90% {
+    border-radius: 0vmax 0vmax 145vmax 145vmax;
+  }
+  95% {
+    border-radius: 0vmax 0vmax 0vmax 145vmax;
+  }
+  100% {
+    top: 0vmax;
+    left: 0vmax;
+    transform: rotate(0deg);
+    border-style: none solid solid none;
+    border-width: 5vmax;
+    border-radius: 0vmax 0vmax 0vmax 0vmax;
+  }
+}
+
+@keyframes mediumboxbottom {
+  0% {
+    left: -3000vmax;
+    border-style: solid;
+    border-width: 5vmax;
+  }
+  20% {
+    left: 295vmax;
+    top: 255vmax;    
+    border-radius: 0vmax;
+  }
+  30% {
+    border-radius: 145vmax;
+  }
+  40% {
+    left: 295vmax;
+    top: 255vmax;
+    transform: rotate(0deg);
+  }
+  45% {
+    transform: rotate(-90deg);
+    left: 167vmax;
+    top: 127vmax;
+  }
+  60% {
+
+  }
+  65% {
+    border-width: 5vmax;
+    border-style: solid;
+  }
+  70% {
+    border-width: 0vmax;
+    border-style: none;
+  }
+  75% {
+    left: 167vmax;
+    top: 127vmax;
+    border-radius: 145vmax;
+    border-style: solid solid solid none;
+    border-width: 5vmax;
+    transform: rotate(-90deg);
+  }
+  80% {
+    top: 0vmax;
+    left: 0vmax;
+    transform: rotate(0deg);
+  }
+  85% {
+    border-radius: 0vmax 145vmax 145vmax 145vmax;
+  }
+  90% {
+    border-radius: 0vmax 0vmax 145vmax 145vmax;
+  }
+  95% {
+    border-radius: 0vmax 0vmax 0vmax 145vmax;
+  }
+  100% {
+    top: 0vmax;
+    left: 0vmax;
+    transform: rotate(0deg);
+    border-style: solid solid solid none;
+    border-width: 5vmax;
+    border-radius: 0vmax 0vmax 0vmax 0vmax;
+
+  }
+}
+
+@keyframes smallbox {
+  0% {
+    left: -3000vmax;
+    border-style: solid;
+    border-width: 5vmax;
+    background-color: green;
+  }
+  20% {
+    left: 400vmax;
+    top: -295vmax;
+    border-radius: 0vmax;
+  }
+  30% {
+    border-radius: 145vmax;
+  }
+  40% {
+
+  }
+  45% {
+    transform: rotate(0deg);
+    left: 400vmax;
+    top: -295vmax;
+  }
+  50% {
+    transform: rotate(-90deg);
+    left: 295vmax;
+    top: 0vmax;
+  }
+  60% {
+
+  }
+  65% {
+    border-width: 5vmax;
+    border-style: solid;
+  }
+  70% {
+    border-width: 0vmax;
+    border-style: none;
+  }
+  75% {
+    left: 295vmax;
+    top: 0vmax;
+    border-radius: 145vmax;
+    border-style: solid solid none none;
+    border-width: 5vmax;
+    transform: rotate(-90deg);
+  }
+  80% {
+    top: 0vmax;
+    left: 0vmax;
+    transform: rotate(0deg);
+  }
+  85% {
+    border-radius: 0vmax 145vmax 145vmax 145vmax;
+  }
+  90% {
+    border-radius: 0vmax 0vmax 145vmax 145vmax;
+  }
+  95% {
+    border-radius: 0vmax 0vmax 0vmax 145vmax;
+  }
+  100% {
+    top: 0vmax;
+    left: 0vmax;
+    transform: rotate(0deg);
+    border-style: solid solid none none;
+    border-width: 5vmax;
+    border-radius: 0vmax 0vmax 0vmax 0vmax;
+    background-color: blue;
+  }
+}
+
+@keyframes widebox {
+  0% {
+    left: -3000vmax;
+    border-style: solid;
+    border-width: 5vmax;
+  }
+  20% {
+    left: -270vmax;
+    top: 0vmax;
+    border-radius: 0vmax;
+  }
+  30% {
+    border-radius: 145vmax;
+  }
+  40% {
+
+  }
+  50% {
+    transform: rotate(0deg);
+    left: -270vmax;
+    top: 0vmax;
+  }
+  55% {
+    transform: rotate(-90deg);
+    left: 212vmax;
+    top: -186vmax;
+  }
+  60% {
+
+  }
+  65% {
+    border-width: 5vmax;
+    border-style: solid;
+  }
+  70% {
+    border-width: 0vmax;
+    border-style: none;
+  }
+  75% {
+    left: 212vmax;
+    top: -186vmax;
+    border-radius: 145vmax;
+    border-style: solid solid none solid;
+    border-width: 5vmax;
+    transform: rotate(-90deg);
+  }
+  80% {
+    top: 0vmax;
+    left: 105vmax;
+    transform: rotate(0deg);
+  }
+  85% {
+    border-radius: 0vmax 145vmax 145vmax 145vmax;
+  }
+  90% {
+    border-radius: 0vmax 0vmax 145vmax 145vmax;
+  }
+  95% {
+    border-radius: 0vmax 0vmax 0vmax 145vmax;
+  }
+  100% {
+    top: 0vmax;
+    left: 105vmax;
+    transform: rotate(0deg);
+    border-style: solid solid none solid;
+    border-width: 5vmax;
+    border-radius: 0vmax 0vmax 0vmax 0vmax;
+  }
+}
+
+@keyframes tinyboxtop {
+  0% {
+    left: -3000vmax;
+    border-style: solid;
+    border-width: 5vmax;
+  }
+  20% {
+    left: -25vmax;
+    top: -295vmax;
+    border-radius: 0vmax;
+  }
+  30% {
+    border-radius: 145vmax;
+  }
+  40% {
+
+  }
+  55% {
+    transform: rotate(0deg);
+    left: -25vmax;
+    top: -295vmax;
+  }
+  60% {
+    transform: rotate(-90deg);
+    left: 309vmax;
+    top: -310vmax;
+  }
+  65% {
+    border-width: 5vmax;
+    border-style: solid;
+  }
+  70% {
+    border-width: 0vmax;
+    border-style: none;
+  }
+  75% {
+    left: 309vmax;
+    top: -310vmax;
+    border-radius: 145vmax;
+    border-style: solid none solid solid;
+    border-width: 5vmax;
+    transform: rotate(-90deg);
+  }
+  80% {
+    top: 0vmax;
+    left: 375vmax;
+    transform: rotate(0deg);
+  }
+  85% {
+    border-radius: 0vmax 145vmax 145vmax 145vmax;
+  }
+  90% {
+    border-radius: 0vmax 0vmax 145vmax 145vmax;
+  }
+  95% {
+    border-radius: 0vmax 0vmax 0vmax 145vmax;
+  }
+  100% {
+    top: 0vmax;
+    left: 375vmax;
+    transform: rotate(0deg);
+    border-style: solid none solid solid;
+    border-width: 5vmax;
+    border-radius: 0vmax 0vmax 0vmax 0vmax;
+  }
+}
+
+@keyframes tinyboxbottom {
+  0% {
+    left: -3000vmax;
+    border-style: solid;
+    border-width: 5vmax;
+    background-color: brown;
+  }
+  20% {
+    left: -25vmax;
+    top: -150vmax;
+    border-radius: 0vmax;
+  }
+  30% {
+    border-radius: 145vmax;
+  }
+  40% {
+
+  }
+  60% {
+    transform: rotate(0deg);
+    left: -25vmax;
+    top: -150vmax;
+  }
+  65% {
+    transform: rotate(-90deg);
+    left: 364vmax;
+    top: -310vmax;
+    border-width: 5vmax;
+    border-style: solid;
+  }
+  70% {
+    border-width: 0vmax;
+    border-style: none;
+  }
+  75% {
+    left: 364vmax;
+    top: -310vmax;
+    border-radius: 145vmax;
+    border-style: solid none none solid;
+    border-width: 5vmax;
+    transform: rotate(-90deg);
+  }
+  80% {
+    top: 55vmax;
+    left: 375vmax;
+    transform: rotate(0deg);
+  }
+  85% {
+    border-radius: 0vmax 145vmax 145vmax 145vmax;
+  }
+  90% {
+    border-radius: 0vmax 0vmax 145vmax 145vmax;
+  }
+  95% {
+    border-radius: 0vmax 0vmax 0vmax 145vmax;
+  }
+  100% {
+    top: 55vmax;
+    left: 375vmax;
+    transform: rotate(0deg);
+    border-style: solid none none solid;
+    border-width: 5vmax;
+    border-radius: 0vmax 0vmax 0vmax 0vmax;
+    background-color: yellow;
+  }
+}
+
+/*This is the white-ish surface that we will fill with boxes, rows, and columns*/
+
+#painting {
+    background-color: white;
+    width: 400vmax;
+    height: 400vmax;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 10vmax 10vmax 1vmax #8d8d8d;
+}
+
+/*These are the rows that will divide the the painting into three horizontal sections*/
+
+#toprow {
+  width: 400vmax;
+  height: 145vmax;
+  position: relative;
+  top: 0vmax;
+}
+
+#middlerow {
+  width: 400vmax;
+  height: 150vmax;
+  position: relative;
+  top: 0vmax;
+}
+
+#bottomrow {
+  width: 400vmax;
+  height: 105vmax;
+  position: relative;
+  top: 0vmax;
+}
+
+/*These are the boxes that give the painting its shape, including the black dividers*/
+
+#bigbox {
+  width: 290vmax;
+  height: 290vmax;
+
+  position: absolute;
+
+  animation-name: bigbox;
+  animation-duration: 15s;
+  animation-fill-mode: forwards;
+}
+
+/* Medium box as a class */
+
+.mediumbox {
+  width:100vmax;
+  height:140vmax;
+
+  position: absolute;
+
+  animation-name: mediumboxtop;
+  animation-duration: 15s;
+  animation-fill-mode: forwards;
+}
+
+/* Medium box as a ID */
+
+#mediumbox {
+  width:100vmax;
+  height:140vmax;
+
+  position: absolute;
+
+  animation-name: mediumboxbottom;
+  animation-duration: 15s;
+  animation-fill-mode: forwards;
+}
+
+#smallbox {
+  width:100vmax;
+  height:100vmax;
+
+  position: absolute;
+
+  animation-name: smallbox;
+  animation-duration: 15s;
+  animation-fill-mode: forwards;
+}
+
+#widebox {
+  width:260vmax;
+  height:100vmax;
+
+  position: absolute;
+
+  animation-name: widebox;
+  animation-duration: 15s;
+  animation-fill-mode: forwards;
+}
+
+#tinybox {
+  width:20vmax;
+  height:45vmax;
+
+  position: absolute;
+
+  animation-name: tinyboxtop;
+  animation-duration: 15s;
+  animation-fill-mode: forwards;
+}
+
+.tinybox {
+  width:20vmax;
+  height:45vmax;
+
+  position: absolute;
+
+  animation-name: tinyboxbottom;
+  animation-duration: 15s;
+  animation-fill-mode: forwards;
+}

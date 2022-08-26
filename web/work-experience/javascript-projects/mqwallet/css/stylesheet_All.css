@@ -1,0 +1,5252 @@
+/*Fonts*/
+@font-face {
+  font-family: "Poppins100";
+  src: url("../assets/fonts/Poppins/Poppins-Thin.ttf") format("truetype");
+  font-style: normal;
+}
+@font-face {
+  font-family: "Poppins200";
+  src: url("../assets/fonts/Poppins/Poppins-ExtraLight.ttf") format("truetype");
+  font-style: normal;
+}
+@font-face {
+  font-family: "Poppins300";
+  src: url("../assets/fonts/Poppins/Poppins-Light.ttf") format("truetype");
+  font-style: normal;
+}
+@font-face {
+  font-family: "Poppins400";
+  src: url("../assets/fonts/Poppins/Poppins-Regular.ttf") format("truetype");
+  font-style: normal;
+}
+@font-face {
+  font-family: "Poppins500";
+  src: url("../assets/fonts/Poppins/Poppins-Medium.ttf") format("truetype");
+  font-style: normal;
+}
+@font-face {
+  font-family: "Poppins600";
+  src: url("../assets/fonts/Poppins/Poppins-SemiBold.ttf") format("truetype");
+  font-style: normal;
+}
+@font-face {
+  font-family: "Poppins700";
+  src: url("../assets/fonts/Poppins/Poppins-Bold.ttf") format("truetype");
+  font-style: normal;
+}
+@font-face {
+  font-family: "Rubik300";
+  src: url("../assets/fonts/Rubik/Rubik-VariableFont_wght.ttf")
+    format("truetype");
+  font-weight: 300;
+}
+@font-face {
+  font-family: "Rubik400";
+  src: url("../assets/fonts/Rubik/Rubik-VariableFont_wght.ttf")
+    format("truetype");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Rubik500";
+  src: url("../assets/fonts/Rubik/Rubik-VariableFont_wght.ttf")
+    format("truetype");
+  font-weight: 500;
+}
+@font-face {
+  font-family: "FuturaLightCondensed";
+  src: url("../assets/fonts/Futura/futuralightcondensed.ttf") format("truetype");
+}
+
+html {
+  width: 100%;
+  height: 100%;
+  /**/
+  background-image: url("../assets/images/MQBackground.png");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  /**/
+  margin: 0px;
+  padding: 0px 25px 0px 25px;
+  /**/
+  line-height: 100%;
+  font-family: "Poppins300", sans-serif;
+  font-size: 14px;
+  /**/
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  overflow: auto;
+}
+
+body {
+  margin: 0px;
+  padding: 0px;
+  /**/
+  line-height: 100%;
+  font-family: "Poppins300", sans-serif;
+  font-size: 14px;
+}
+
+@media only all and (min-width: 0px) {
+  /*____________________LOGIN PAGE____________________*/
+  #loginContainer {
+    z-index: 0;
+    width: 500px;
+    max-width: 100%;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    /**/
+    background-color: rgba(255, 255, 255, 1);
+    border-radius: 20px 20px 20px 20px;
+    box-shadow: 0 0 20px 0 black;
+    /**/
+    margin-top: 10vh;
+    /**/
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    overflow-x: auto;
+  }
+
+  #loginInternalContainer {
+    z-index: 0;
+    min-width: 200px;
+    width: 100%;
+    position: relative;
+    top: 0px;
+    left: 0px;
+    /**/
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+  #loginCompanyLogoContainer {
+    z-index: 0;
+    width: 100%;
+    height: 120px;
+    max-height: 100%;
+    position: relative;
+    /**/
+    background-color: rgba(255, 223, 0, 1);
+    box-shadow: 0px 2px 5px -1px grey;
+    /**/
+    padding: 20px 20px 20px 20px;
+    /**/
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    pointer-events: none;
+  }
+
+  #loginCompanyLogo {
+    z-index: 0;
+    height: 100%;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    /**/
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    border: none;
+    /**/
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    outline: none;
+    pointer-events: none;
+    user-select: none; /* supported by Chrome and Opera */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+  }
+
+  #loginForm {
+    z-index: 0;
+    width: 400px;
+    max-width: 100%;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    /**/
+    padding: 20px 20px 20px 20px;
+    /**/
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+  .textInputContainer {
+    z-index: 0;
+    width: 100%;
+    height: 35px;
+    position: relative;
+    /**/
+    margin: 15px 0px 15px 0px;
+    /**/
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+  .textInput:enabled {
+    z-index: 0;
+    width: 100%;
+    height: 35px;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    /**/
+    background: none;
+    border: 2px solid #505050;
+    border-radius: 17px;
+    /**/
+    color: black;
+    font-family: "Poppins300", sans-serif;
+    font-size: 14px;
+    text-overflow: ellipsis;
+    /**/
+    padding: 0px 18px 0px 18px;
+    /**/
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    outline: none;
+  }
+
+  .floatingLabel {
+    z-index: 1;
+    position: absolute;
+    top: 50%;
+    left: 17px;
+    transform: translateY(-50%);
+    /**/
+    background-color: white;
+    /**/
+    color: grey;
+    font-family: "Rubik400", sans-serif;
+    font-size: 14px;
+    /**/
+    padding: 0px 3px 0px 3px;
+    /**/
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    pointer-events: none;
+    touch-action: none;
+    user-select: none; /* supported by Chrome and Opera */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    /**/
+    transition: 0.2s ease-in-out;
+  }
+
+  .textInput:focus ~ .floatingLabel,
+  .textInput:not(:focus) ~ .floatingLabel {
+    top: 0%;
+    /**/
+    font-size: 10px;
+  }
+
+  .textInput:not(:focus):placeholder-shown ~ .floatingLabel {
+    top: 50%;
+    /**/
+    font-size: 14px;
+  }
+
+  .textInput:disabled {
+    z-index: 0;
+    width: 100%;
+    height: 35px;
+    position: relative;
+    left: 0px;
+    /**/
+    background: none;
+    border: 2px solid grey;
+    border-radius: 17px;
+    /**/
+    color: grey;
+    font-family: "Poppins300", sans-serif;
+    font-size: 14px;
+    text-overflow: ellipsis;
+    /**/
+    padding: 0px 18px 0px 18px;
+    /**/
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    outline: none;
+  }
+
+  .phpResponse {
+    z-index: 0;
+    width: 100%;
+    position: relative;
+    /**/
+    color: red;
+    font-family: "Rubik300", sans-serif;
+    font-size: 12px;
+    text-align: center;
+    /**/
+    margin: 10px 0px 0px 0px;
+  }
+
+  .buttonContainer {
+    z-index: 0;
+    width: 100%;
+    height: 35px;
+    position: relative;
+    left: 0px;
+    /**/
+    margin-top: 20px;
+    /**/
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+  button {
+    cursor: pointer;
+  }
+
+  button:disabled {
+    cursor: auto;
+  }
+
+  #loginButton {
+    z-index: 0;
+    width: 100px;
+    height: 35px;
+    position: absolute;
+    top: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+    /**/
+    background-color: rgba(255, 223, 0, 1);
+    border: 2px solid black;
+    border-radius: 20px;
+    /**/
+    color: black;
+    font-family: "Rubik400", sans-serif;
+    font-size: 14px;
+    /**/
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+  .loadingAnimationContainer {
+    z-index: 0;
+    width: 100px;
+    height: 35px;
+    position: absolute;
+    top: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+    /**/
+    display: none;
+    /**/
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    pointer-events: none;
+  }
+
+  .bulletPoint {
+    z-index: 1;
+    position: absolute;
+    transform: translateX(-50%);
+    /**/
+    color: black;
+    font-family: "Rubik300", sans-serif;
+    font-size: 20px;
+    text-align: center;
+    line-height: 175%;
+    /**/
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    user-select: none; /* supported by Chrome and Opera */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+  }
+
+  #bulletPoint1 {
+    animation: loadingAnimationForBulletPoint1 2s forwards infinite linear;
+    animation-play-state: paused;
+  }
+
+  #bulletPoint2 {
+    animation: loadingAnimationForBulletPoint2 2s forwards infinite linear;
+    animation-play-state: paused;
+  }
+
+  #bulletPoint3 {
+    animation: loadingAnimationForBulletPoint3 2s forwards infinite linear;
+    animation-play-state: paused;
+  }
+
+  @keyframes loadingAnimationForBulletPoint1 {
+    0% {
+      left: 0%;
+      opacity: 0;
+    }
+
+    25% {
+      left: 0%;
+      opacity: 0;
+    }
+
+    30% {
+      left: 60%;
+      opacity: 1;
+    }
+
+    60% {
+      left: 60%;
+      opacity: 1;
+    }
+
+    65% {
+      left: 100%;
+      opacity: 0;
+    }
+
+    100% {
+      left: 100%;
+      opacity: 0;
+    }
+  }
+
+  @keyframes loadingAnimationForBulletPoint2 {
+    0% {
+      left: 0%;
+      opacity: 0;
+    }
+
+    30% {
+      left: 0%;
+      opacity: 0;
+    }
+
+    35% {
+      left: 50%;
+      opacity: 1;
+    }
+
+    65% {
+      left: 50%;
+      opacity: 1;
+    }
+
+    70% {
+      left: 100%;
+      opacity: 0;
+    }
+
+    100% {
+      left: 100%;
+      opacity: 0;
+    }
+  }
+
+  @keyframes loadingAnimationForBulletPoint3 {
+    0% {
+      left: 0%;
+      opacity: 0;
+    }
+
+    35% {
+      left: 0%;
+      opacity: 0;
+    }
+
+    40% {
+      left: 40%;
+      opacity: 1;
+    }
+
+    70% {
+      left: 40%;
+      opacity: 1;
+    }
+
+    75% {
+      left: 100%;
+      opacity: 0;
+    }
+
+    100% {
+      left: 100%;
+      opacity: 0;
+    }
+  }
+
+  .forcePageBottomMargin {
+    z-index: 0;
+    width: 100%;
+    height: 20px;
+    position: relative;
+    /**/
+    background: none;
+    /**/
+    margin: 0px;
+    padding: 0px;
+    /**/
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    pointer-events: none;
+    overflow: hidden;
+  }
+
+  /*____________________EMAIL VERIFICATION PAGE____________________*/
+  #emailVerificationForm {
+    z-index: 0;
+    width: 400px;
+    max-width: 100%;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    /**/
+    padding: 20px 20px 20px 20px;
+    /**/
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+  #emailVerificationButton {
+    z-index: 0;
+    width: 100px;
+    height: 35px;
+    position: absolute;
+    top: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+    /**/
+    background-color: rgba(255, 223, 0, 1);
+    border: 2px solid black;
+    border-radius: 20px;
+    /**/
+    color: black;
+    font-family: "Rubik400", sans-serif;
+    font-size: 14px;
+    /**/
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+  /*____________________PRIMARY____________________*/
+  #displayContainer {
+    z-index: 0;
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    transform: none;
+    /**/
+    background: none;
+    border-radius: 0px;
+    box-shadow: none;
+    /**/
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    overflow: hidden;
+  }
+
+  #navigationBar {
+    z-index: 3;
+    width: 100%;
+    height: 50px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    /**/
+    background-color: rgba(255, 223, 0, 0.9);
+    border-radius: 0px;
+    box-shadow: 0px 2px 5px -1px grey;
+    /**/
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    overflow: hidden;
+  }
+
+  #navigationBarMenuToggleContainer {
+    z-index: 0;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    /**/
+    display: block;
+    background: none;
+    /**/
+    padding: 0px;
+    /**/
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+  #navigationBarMenuToggle {
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    /**/
+    background: none;
+    border: 0px;
+    /**/
+    padding: 0px;
+    /**/
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+  #menuButtonIcon {
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /**/
+    pointer-events: none;
+    touch-action: none;
+  }
+
+  #companyLogoContainer {
+    z-index: 0;
+    width: 20%;
+    height: 50px;
+    position: absolute;
+    top: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+    /**/
+    background: none;
+    /**/
+    padding: 0px;
+    /**/
+    object-position: center;
+    object-fit: contain;
+    /**/
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    pointer-events: none;
+    touch-action: none;
+  }
+
+  #companyLogo {
+    z-index: 0;
+    height: 80%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /**/
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    border: none;
+    /**/
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    outline: none;
+    pointer-events: none;
+    touch-action: none;
+    user-select: none; /* supported by Chrome and Opera */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+  }
+
+  #informationBar {
+    z-index: 4;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    /**/
+    background-color: transparent;
+    border-radius: 0px;
+    box-shadow: none;
+    /**/
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    overflow: hidden;
+  }
+
+  #logoutButtonContainer {
+    z-index: 0;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    /**/
+    background: none;
+    /**/
+    padding: 0px;
+    /**/
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+  #logoutButton {
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    /**/
+    background: none;
+    border: 0px;
+    /**/
+    padding: 0px;
+    /**/
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+  #logoutButtonIcon {
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /**/
+    pointer-events: none;
+    touch-action: none;
+    user-select: none; /* supported by Chrome and Opera */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+  }
+
+  #navigationMenu {
+    z-index: 2;
+    width: 250px;
+    max-width: 75%;
+    height: calc(100vh - 50px);
+    position: absolute;
+    top: 50px;
+    left: -300px;
+    /**/
+    background-color: rgba(255, 223, 0, 0.95);
+    box-shadow: 2px 0px 5px -1px grey;
+    opacity: 0.75;
+    /**/
+    padding: 0px;
+    /**/
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    overflow: hidden;
+  }
+
+  #menuFilterLayer {
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    /**/
+    mask-image: linear-gradient(
+      to bottom,
+      transparent 0%,
+      black 15px,
+      black calc(100% - 15px),
+      transparent 100%
+    );
+    /**/
+    padding: 10px 0px 20px 0px;
+    /**/
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+
+  .navigationBarSectionHeading {
+    z-index: 0;
+    width: 100%;
+    position: relative;
+    left: 0px;
+    /**/
+    color: black;
+    font-family: "Poppins500", sans-serif;
+    font-size: 16px;
+    /**/
+    padding: 0px 0px 0px 20px;
+    margin: 10px 0px 10px 0px;
+    /**/
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    user-select: none; /* supported by Chrome and Opera */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+  }
+
+  .navigationBarTabSelector {
+    z-index: 1;
+    width: calc(100% - 40px);
+    position: relative;
+    left: 40px;
+    /**/
+    background-color: transparent;
+    border: 0px solid black;
+    border-radius: 50px 0px 0px 50px;
+    outline: none;
+    /**/
+    color: #5a5a5a;
+    font-family: "FuturaLightCondensed", sans-serif;
+    font-size: 20px;
+    text-align: left;
+    /**/
+    padding: 6px 10px 6px 40px;
+    margin: 2px 0px 2px 0px;
+    /**/
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+  #contentDisplayContainer {
+    z-index: 1;
+    width: 100%;
+    height: calc(100vh - 50px);
+    position: absolute;
+    top: 50px;
+    left: 0px;
+    /**/
+    background-color: rgba(255, 255, 255, 0.8);
+    /**/
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    overflow: hidden;
+  }
+
+  #filterLayer {
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    /**/
+    mask-image: linear-gradient(
+      to bottom,
+      transparent 0%,
+      black 15px,
+      black calc(100% - 15px),
+      transparent 100%
+    );
+    opacity: 1;
+    /**/
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    overflow: hidden;
+  }
+
+  .contentDisplay {
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    /**/
+    display: none;
+    /**/
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+
+  .contentDisplayHeading {
+    z-index: 0;
+    width: 100%;
+    position: relative;
+    left: 0px;
+    /**/
+    color: black;
+    font-family: "Poppins300", sans-serif;
+    font-size: 16px;
+    /**/
+    margin: 15px 10px 30px 10px;
+    /**/
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+  .contentDisplayFlexBox {
+    z-index: 0;
+    width: 700px;
+    max-width: 100%;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    /**/
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    /**/
+    padding: 10px 10px 10px 10px;
+    /**/
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+  .contentDisplayNonFlexBox {
+    z-index: 0;
+    width: 700px;
+    max-width: 100%;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    /**/
+    padding: 60px 20px 40px 20px;
+    /**/
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+  .container {
+    z-index: 0;
+    max-width: 100%;
+    position: relative;
+    /**/
+    background-color: white;
+    border-radius: 20px 20px 20px 20px;
+    box-shadow: 0 0 10px 0 grey;
+    /**/
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    overflow-y: hidden;
+    overflow-x: auto;
+  }
+
+  .internalContainer {
+    z-index: 0;
+    min-width: 250px;
+    width: 100%;
+    position: relative;
+    top: 0px;
+    left: 0px;
+    /**/
+    padding: 20px 40px 20px 40px;
+    /**/
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+  /*____________________WALLET PAGE____________________*/
+  #totalInvestmentBalanceContainer {
+    width: 340px;
+    height: 150px;
+    /**/
+    background-image: linear-gradient(to right, white, gainsboro);
+    /**/
+    margin: 10px;
+  }
+
+  #creditCardIcon {
+    z-index: 0;
+    height: 120px;
+    position: absolute;
+    top: 25px;
+    right: 0px;
+    /**/
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    border: none;
+    /**/
+    pointer-events: none;
+    touch-action: none;
+    outline: none;
+    overflow: hidden;
+    user-select: none; /* supported by Chrome and Opera */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+  }
+
+  .balanceHeading {
+    z-index: 0;
+    position: relative;
+    left: 0px;
+    /**/
+    color: #505050;
+    font-family: "Poppins400", sans-serif;
+    font-size: 12px;
+    white-space: nowrap;
+    /**/
+    margin: 0px 0px 12px 0px;
+  }
+
+  .balanceValue {
+    z-index: 0;
+    position: relative;
+    left: 0px;
+    /**/
+    color: #c882ff;
+    font-family: "Rubik400", sans-serif;
+    font-size: 26px;
+    white-space: nowrap;
+  }
+
+  #balanceCurrency {
+    z-index: 0;
+    position: relative;
+    left: 0px;
+    /**/
+    color: lightgrey;
+    font-family: "Poppins500", sans-serif;
+    font-size: 26px;
+    white-space: nowrap;
+    /**/
+    padding: 0px 20px 0px 10px;
+  }
+
+  #creditsBalanceHeading {
+    margin: 20px 0px 12px 0px;
+  }
+
+  #tokenBalanceContainer {
+    width: 280px;
+    height: 150px;
+    /**/
+    background-image: linear-gradient(to right, #dcb0ff, #8f00ff);
+    /**/
+    margin: 10px;
+  }
+
+  #tokenIcon {
+    z-index: 0;
+    height: 180px;
+    position: absolute;
+    top: -50px;
+    right: 0px;
+    /**/
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    border: none;
+    /**/
+    pointer-events: none;
+    touch-action: none;
+    outline: none;
+    overflow: hidden;
+    user-select: none; /* supported by Chrome and Opera */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+  }
+
+  #tokenBalanceHeading {
+    z-index: 0;
+    position: relative;
+    left: 0px;
+    /**/
+    color: white;
+    font-family: "Poppins400", sans-serif;
+    font-size: 14px;
+    white-space: nowrap;
+    /**/
+    margin-bottom: 25px;
+  }
+
+  #tokenBalanceValue {
+    z-index: 0;
+    position: relative;
+    left: 0px;
+    /**/
+    color: black;
+    font-family: "Rubik400", sans-serif;
+    font-size: 32px;
+    white-space: nowrap;
+  }
+
+  #tokenBalanceDescription {
+    z-index: 0;
+    position: relative;
+    left: 0px;
+    /**/
+    color: lightgrey;
+    font-family: "Poppins300", sans-serif;
+    font-size: 12px;
+    /**/
+    margin-top: 30px;
+  }
+
+  #cypherTokenBalanceContainer {
+    width: 700px;
+    /**/
+    background-color: gainsboro;
+    /**/
+    margin: 40px 10px 25px 10px;
+  }
+
+  #cypherTokenBalanceInternalContainer {
+    padding: 20px;
+  }
+
+  #cypherTokenDisplayFlexBox {
+    z-index: 0;
+    width: 530px;
+    max-width: 100%;
+    height: 100%;
+    position: relative;
+    left: 0px;
+    /**/
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    /**/
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+  #nonagonContainer {
+    z-index: 0;
+    width: 200px;
+    height: 200px;
+    position: relative;
+    /**/
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+  .nonagonAnchor {
+    z-index: 0;
+    width: 64px;
+    height: 0px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+  }
+
+  .nonagonSegment {
+    z-index: 0;
+    width: 64px;
+    height: 94px;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    /**/
+    clip-path: polygon(50% 4%, 0% 100%, 100% 100%);
+    /**/
+    cursor: pointer;
+  }
+
+  #nonagonAnchor9 {
+    transform: translate(-50%, -50%) rotate(180deg) scale(1);
+  }
+
+  #token9 {
+    background-image: linear-gradient(#800d02 10%, #de9f3d 70%);
+  }
+
+  #nonagonAnchor8 {
+    transform: translate(-50%, -50%) rotate(220deg) scale(1);
+  }
+
+  #token8 {
+    background-image: linear-gradient(#de9f3d 10%, #800d02 70%);
+  }
+
+  #nonagonAnchor7 {
+    transform: translate(-50%, -50%) rotate(260deg) scale(1);
+  }
+
+  #token7 {
+    background-image: linear-gradient(#61d836 10%, #ffffff 70%);
+  }
+
+  #nonagonAnchor6 {
+    transform: translate(-50%, -50%) rotate(300deg) scale(1);
+  }
+
+  #token6 {
+    background-image: linear-gradient(#800d02 10%, #de9f3d 70%);
+  }
+
+  #nonagonAnchor5 {
+    transform: translate(-50%, -50%) rotate(340deg) scale(1);
+  }
+
+  #token5 {
+    background-image: linear-gradient(#de9f3d 10%, #003165 70%);
+  }
+
+  #nonagonAnchor4 {
+    transform: translate(-50%, -50%) rotate(20deg) scale(1);
+  }
+
+  #token4 {
+    background-image: linear-gradient(#ffffff 10%, #61d836 70%);
+  }
+
+  #nonagonAnchor3 {
+    transform: translate(-50%, -50%) rotate(60deg) scale(1);
+  }
+
+  #token3 {
+    background-image: linear-gradient(#800d02 10%, #de9f3d 70%);
+  }
+
+  #nonagonAnchor2 {
+    transform: translate(-50%, -50%) rotate(100deg) scale(1);
+  }
+
+  #token2 {
+    background-image: linear-gradient(#de9f3d 10%, #800d02 70%);
+  }
+
+  #nonagonAnchor1 {
+    transform: translate(-50%, -50%) rotate(140deg) scale(1);
+  }
+
+  #token1 {
+    background-image: linear-gradient(#de9f3d 10%, #003165 70%);
+  }
+
+  #nonagonLabelContainer {
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    /**/
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    /**/
+    pointer-events: none;
+    touch-action: none;
+    user-select: none; /* supported by Chrome and Opera */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+  }
+
+  .nonagonLabelAnchor {
+    z-index: 0;
+    width: 0px;
+    height: 0px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+  }
+
+  .nonagonSegmentLabel {
+    z-index: 0;
+    position: absolute;
+    top: 70px;
+    left: 50%;
+    /**/
+    color: white;
+    font-family: "Rubik400", sans-serif;
+    font-size: 20px;
+    text-align: center;
+  }
+
+  #nonagonLabelAnchor9 {
+    transform: rotate(180deg) scale(1);
+  }
+
+  #nonagonSegmentLabel9 {
+    color: #800d02;
+    transform: translate(-50%, -50%) rotate(-180deg);
+  }
+
+  #nonagonLabelAnchor8 {
+    transform: rotate(220deg) scale(1);
+  }
+
+  #nonagonSegmentLabel8 {
+    color: #de9f3d;
+    transform: translate(-50%, -50%) rotate(-220deg);
+  }
+
+  #nonagonLabelAnchor7 {
+    transform: rotate(260deg) scale(1);
+  }
+
+  #nonagonSegmentLabel7 {
+    color: #61d836;
+    transform: translate(-50%, -50%) rotate(-260deg);
+  }
+
+  #nonagonLabelAnchor6 {
+    transform: rotate(300deg) scale(1);
+  }
+
+  #nonagonSegmentLabel6 {
+    color: #800d02;
+    transform: translate(-50%, -50%) rotate(-300deg);
+  }
+
+  #nonagonLabelAnchor5 {
+    transform: rotate(340deg) scale(1);
+  }
+
+  #nonagonSegmentLabel5 {
+    color: #de9f3d;
+    transform: translate(-50%, -50%) rotate(-340deg);
+  }
+
+  #nonagonLabelAnchor4 {
+    transform: rotate(20deg) scale(1);
+  }
+
+  #nonagonSegmentLabel4 {
+    color: #ffffff;
+    transform: translate(-50%, -50%) rotate(-20deg);
+  }
+
+  #nonagonLabelAnchor3 {
+    transform: rotate(60deg) scale(1);
+  }
+
+  #nonagonSegmentLabel3 {
+    color: #800d02;
+    transform: translate(-50%, -50%) rotate(-60deg);
+  }
+
+  #nonagonLabelAnchor2 {
+    transform: rotate(100deg) scale(1);
+  }
+
+  #nonagonSegmentLabel2 {
+    color: #de9f3d;
+    transform: translate(-50%, -50%) rotate(-100deg);
+  }
+
+  #nonagonLabelAnchor1 {
+    transform: rotate(140deg) scale(1);
+  }
+
+  #nonagonSegmentLabel1 {
+    color: #de9f3d;
+    transform: translate(-50%, -50%) rotate(-140deg);
+  }
+
+  #cypherTokenBalanceValueContainer {
+    z-index: 0;
+    width: 250px;
+    max-width: 100%;
+    position: relative;
+    /**/
+    border-left: 2px solid white;
+    /**/
+    padding: 20px 0px 20px 30px;
+    margin: 0px 10px 0px 10px;
+    /**/
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+  #cypherTokenBalanceHeading {
+    z-index: 0;
+    position: relative;
+    left: 0px;
+    /**/
+    color: #505050;
+    font-family: "Poppins400", sans-serif;
+    font-size: 14px;
+    white-space: nowrap;
+    /**/
+    margin-bottom: 15px;
+  }
+
+  #cypherTokenBalance {
+    z-index: 0;
+    position: relative;
+    left: 0px;
+    /**/
+    color: white;
+    font-family: "Rubik400", sans-serif;
+    font-size: 24px;
+    white-space: nowrap;
+  }
+
+  #cypherTokenBalanceDescription {
+    z-index: 0;
+    position: relative;
+    left: 0px;
+    /**/
+    color: grey;
+    font-family: "Poppins300", sans-serif;
+    font-size: 12px;
+    /**/
+    margin-top: 25px;
+  }
+
+  #personalInformationContainer {
+    width: 700px;
+    /**/
+    background-color: whitesmoke;
+    /**/
+    margin: 25px 10px 25px 10px;
+  }
+
+  #personalInformationInternalContainer {
+    padding: 20px;
+  }
+
+  #editButtonContainer {
+    z-index: 1;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    /**/
+    background: none;
+    /**/
+    padding: 0px;
+    /**/
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+  #editButton {
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    /**/
+    background: none;
+    border: 0px;
+    /**/
+    padding: 0px;
+    /**/
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+  #editButtonIcon {
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    /**/
+    pointer-events: none;
+    touch-action: none;
+    user-select: none; /* supported by Chrome and Opera */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+  }
+
+  #cancelEditInfoButtonContainer {
+    z-index: 1;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    /**/
+    background: none;
+    /**/
+    padding: 0px;
+    /**/
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+  #cancelEditInfoButton {
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    /**/
+    background: none;
+    border: 0px;
+    /**/
+    padding: 0px;
+    /**/
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+  #cancelEditInfoButtonIcon {
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    /**/
+    pointer-events: none;
+    touch-action: none;
+    user-select: none; /* supported by Chrome and Opera */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+  }
+
+  #personalInformationForm {
+    z-index: 0;
+    width: 100%;
+    position: relative;
+    top: 0px;
+    left: 0px;
+    /**/
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    /**/
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+  .personalInformationFormFlexContainer {
+    z-index: 0;
+    width: 100%;
+    position: relative;
+    /**/
+    flex-grow: 1;
+    flex-basis: 250px;
+    /**/
+    padding: 0px 20px 0px 20px;
+    /**/
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+  #personalInformationFormFlexContainer2 {
+    background-color: white;
+    box-shadow: 0 0 5px 0 grey;
+    border: none;
+  }
+
+  #saveButtonContainer {
+    z-index: 1;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 0px;
+    left: 30px;
+    /**/
+    background: none;
+    /**/
+    padding: 0px;
+    /**/
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+  #saveButton {
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    /**/
+    background: none;
+    border: 0px;
+    /**/
+    padding: 0px;
+    /**/
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+  #saveButtonIcon {
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    /**/
+    pointer-events: none;
+    touch-action: none;
+    user-select: none; /* supported by Chrome and Opera */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+  }
+
+  #profilePictureContainer {
+    z-index: 1;
+    width: 200px;
+    height: 200px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    /**/
+    border: 0px;
+    border-radius: 50%;
+    box-shadow: 0 0 10px 0px black;
+    /**/
+    margin: 30px 0px 50px 0px;
+    /**/
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    overflow: hidden;
+  }
+
+  #profilePictureUpload {
+    display: none;
+  }
+
+  #profilePicture {
+    z-index: 0;
+    width: 250px;
+    height: 250px;
+    position: absolute;
+    top: -25px;
+    left: -25px;
+    /**/
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    pointer-events: none;
+    touch-action: none;
+    user-select: none; /* supported by Chrome and Opera */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+  }
+
+  #profilePictureEdit {
+    z-index: 0;
+    width: 100%;
+    height: 60px;
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+    /**/
+    background-color: rgba(0, 0, 0, 0.7);
+    border: 0px;
+    box-shadow: 0 0 5px 0 black;
+    /**/
+    color: white;
+    font-family: "Poppins400", sans-serif;
+    font-size: 12px;
+    /**/
+    padding: 0px 20px 5px 20px;
+    /**/
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+  .textInputAltContainer {
+    z-index: 0;
+    width: 100%;
+    height: 35px;
+    position: relative;
+    /**/
+    padding-top: 10px;
+    margin: 10px 0px 10px 0px;
+    /**/
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+  .textInputAlt:enabled {
+    z-index: 0;
+    width: 100%;
+    height: 25px;
+    position: relative;
+    left: 0px;
+    /**/
+    background: none;
+    border: none;
+    border-bottom: 1px solid darkgrey;
+    /**/
+    color: black;
+    font-family: "Poppins300", sans-serif;
+    font-size: 14px;
+    text-overflow: ellipsis;
+    /**/
+    padding: 5px 4px 0px 4px;
+    /**/
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    outline: none;
+    overflow: hidden;
+  }
+
+  .textInputAlt:disabled {
+    z-index: 0;
+    width: 100%;
+    height: 25px;
+    position: relative;
+    left: 0px;
+    /**/
+    background: none;
+    border: none;
+    /**/
+    color: black;
+    font-family: "Poppins300", sans-serif;
+    font-size: 14px;
+    text-overflow: ellipsis;
+    /**/
+    padding: 5px 4px 0px 4px;
+    /**/
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    outline: none;
+    overflow: hidden;
+  }
+
+  .floatingLabelAlt {
+    z-index: 1;
+    position: absolute;
+    top: 10px;
+    left: 0px;
+    transform: translateY(-50%);
+    /**/
+    color: darkgrey;
+    font-family: "Rubik400", sans-serif;
+    font-size: 10px;
+    /**/
+    padding-left: 4px;
+    /**/
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    pointer-events: none;
+    touch-action: none;
+    user-select: none; /* supported by Chrome and Opera */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+  }
+
+  #personalUserID {
+    color: #505050;
+    font-family: "Poppins400", sans-serif;
+    font-size: 14px;
+  }
+
+  #personalNamesContainer {
+    height: unset;
+    /**/
+    padding: 0px 4px 0px 4px;
+    margin: 15px 0px 15px 0px;
+    user-select: none; /* supported by Chrome and Opera */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+  }
+
+  .personalNames {
+    z-index: 0;
+    position: relative;
+    left: 0px;
+    /**/
+    background: none;
+    /**/
+    color: #3498db;
+    font-family: "Poppins500", sans-serif;
+    font-size: 18px;
+    line-height: 120%;
+    word-wrap: normal;
+    /**/
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    outline: none;
+    overflow: hidden;
+    user-select: none; /* supported by Chrome and Opera */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+  }
+
+  .telInputAlt:enabled {
+    z-index: 0;
+    width: 150px;
+    max-width: 100%;
+    height: 25px;
+    position: relative;
+    left: 0px;
+    /**/
+    background: none;
+    -webkit-appearance: none;
+    -moz-appearance: textfield;
+    border: none;
+    border-bottom: 1px solid darkgrey;
+    /**/
+    color: black;
+    font-family: "Poppins300", sans-serif;
+    font-size: 14px;
+    text-overflow: ellipsis;
+    /**/
+    padding: 5px 4px 0px 15px;
+    /**/
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    outline: none;
+  }
+
+  .telInputAlt:disabled {
+    z-index: 0;
+    width: 100%;
+    max-width: 100%;
+    height: 25px;
+    position: relative;
+    left: 0px;
+    /**/
+    background: none;
+    -webkit-appearance: none;
+    -moz-appearance: textfield;
+    appearance: none;
+    border: none;
+    /**/
+    color: black;
+    font-family: "Poppins300", sans-serif;
+    font-size: 14px;
+    text-overflow: ellipsis;
+    /**/
+    padding: 5px 4px 0px 15px;
+    /**/
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    outline: none;
+  }
+
+  .extensionPlusAlt {
+    z-index: 1;
+    height: 25px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    /**/
+    color: grey;
+    font-family: "Poppins300", sans-serif;
+    font-size: 14px;
+    /**/
+    padding: 18px 0px 0px 4px;
+    /**/
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    pointer-events: none;
+    touch-action: none;
+    user-select: none; /* supported by Chrome and Opera */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+  }
+
+  .dropdownListAlt:enabled {
+    z-index: 0;
+    width: 100%;
+    height: 25px;
+    position: relative;
+    left: 0px;
+    /**/
+    background-color: transparent;
+    -webkit-appearance: none;
+    -moz-appearance: textfield;
+    appearance: none;
+    border: none;
+    border-bottom: 1px solid darkgrey;
+    /**/
+    color: black;
+    font-family: "Poppins300", sans-serif;
+    font-size: 14px;
+    text-overflow: ellipsis;
+    /**/
+    padding: 3px 30px 0px 0px;
+    margin: 0px;
+    /**/
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    outline: none;
+    cursor: pointer;
+  }
+
+  .dropdownListAlt:disabled {
+    z-index: 0;
+    width: 100%;
+    height: 25px;
+    position: relative;
+    left: 0px;
+    /**/
+    background-color: transparent;
+    -webkit-appearance: none;
+    -moz-appearance: textfield;
+    appearance: none;
+    border: none;
+    /**/
+    color: black;
+    font-family: "Poppins300", sans-serif;
+    font-size: 14px;
+    text-overflow: ellipsis;
+    /**/
+    padding: 3px 6px 0px 0px;
+    margin: 0px;
+    /**/
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    outline: none;
+  }
+
+  option {
+    color: black;
+    font-family: "Poppin300", sans-serif;
+    font-size: 14px;
+  }
+
+  .dropdownListArrowAlt {
+    z-index: 0;
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    top: 12px;
+    right: 0px;
+    /**/
+    pointer-events: none;
+    touch-action: none;
+    user-select: none; /* supported by Chrome and Opera */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+  }
+
+  .dropdownListAlt:enabled ~ .dropdownListArrowAlt {
+    display: initial;
+  }
+
+  .dropdownListAlt:disabled ~ .dropdownListArrowAlt {
+    display: none;
+  }
+
+  #personalZIPCode {
+    width: 100px;
+  }
+
+  #changePasswordContainer {
+    z-index: 0;
+    width: 100%;
+    position: relative;
+    left: 0px;
+    /**/
+    border: none;
+    border-top: 2px solid grey;
+    /**/
+    margin-top: 20px;
+    /**/
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+  #changePasswordButtonsContainer {
+    z-index: 0;
+    width: 80px;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    /**/
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+  #editPasswordButtonContainer {
+    z-index: 1;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    /**/
+    background: none;
+    /**/
+    padding: 0px;
+    /**/
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+  #editPasswordButton {
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    /**/
+    background: none;
+    border: 0px;
+    /**/
+    padding: 0px;
+    /**/
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+  #editPasswordButtonIcon {
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    /**/
+    pointer-events: none;
+    touch-action: none;
+    user-select: none; /* supported by Chrome and Opera */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+  }
+
+  #cancelEditPasswordButtonContainer {
+    z-index: 1;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    /**/
+    background: none;
+    /**/
+    padding: 0px;
+    /**/
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+  #cancelEditPasswordButton {
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    /**/
+    background: none;
+    border: 0px;
+    /**/
+    padding: 0px;
+    /**/
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+  #cancelEditPasswordButtonIcon {
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    /**/
+    pointer-events: none;
+    touch-action: none;
+    user-select: none; /* supported by Chrome and Opera */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+  }
+
+  #savePasswordButtonContainer {
+    z-index: 0;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    bottom: 0px;
+    right: -30px;
+    /**/
+    background: none;
+    /**/
+    padding: 0px;
+    /**/
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+  #savePasswordButton {
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    /**/
+    background: none;
+    border: 0px;
+    /**/
+    padding: 0px;
+    /**/
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+  #savePasswordButtonIcon {
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    /**/
+    pointer-events: none;
+    touch-action: none;
+    user-select: none; /* supported by Chrome and Opera */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+  }
+
+  #changePasswordForm {
+    z-index: 1;
+    width: calc(100% - 80px);
+    position: relative;
+  }
+
+  #changePasswordInputsContainer {
+    z-index: 0;
+    width: 100%;
+    position: relative;
+    top: 0px;
+    left: 0px;
+    /**/
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    /**/
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+  #personalPasswordTextInputContainer {
+    width: 200px;
+    /**/
+    flex-grow: 1;
+    flex-basis: 150px;
+    /**/
+    margin: 20px 20px 0px 20px;
+  }
+
+  #personalPassword {
+    width: 100%;
+  }
+
+  #personalConfirmPasswordTextInputContainer {
+    width: 200px;
+    /**/
+    flex-grow: 1;
+    flex-basis: 150px;
+    /**/
+    margin: 20px 20px 0px 20px;
+  }
+
+  #personalConfirmPassword {
+    width: 100%;
+  }
+  /*_Loading Overlay_*/
+  .loadingOverlay {
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    /**/
+    background-color: rgba(0, 0, 0, 0.8);
+    /**/
+    padding: 0px 20px 0px 20px;
+    /**/
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    overflow: hidden;
+  }
+
+  #passwordVerificationContainerContainer {
+    z-index: 0;
+    width: 400px;
+    max-width: 100%;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /**/
+    background: none;
+    /**/
+    padding-top: 35px;
+    /**/
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+  #closeButtonContainer {
+    z-index: 1;
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    /**/
+    background: none;
+    /**/
+    padding: 0px;
+    /**/
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+  #closeButton {
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    /**/
+    background: none;
+    border: 0px;
+    /**/
+    padding: 0px;
+    /**/
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+  #closeButtonIcon {
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    /**/
+    pointer-events: none;
+    touch-action: none;
+    user-select: none; /* supported by Chrome and Opera */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+  }
+
+  #passwordVerificationInternalContainer {
+    min-width: 300px;
+  }
+
+  #passwordVerificationForm {
+    z-index: 0;
+  }
+
+  #passwordVerificationFormHeading {
+    z-index: 0;
+    width: 100%;
+    position: relative;
+    left: 0px;
+    /**/
+    color: grey;
+    font-family: "Poppins400", sans-serif;
+    font-size: 16px;
+    text-align: center;
+    line-height: 120%;
+    /**/
+    margin: 10px 0px 40px 0px;
+    user-select: none; /* supported by Chrome and Opera */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+  }
+
+  #passwordVerificationErrorMessage {
+    word-wrap: normal;
+  }
+
+  #passwordVerificationButton {
+    z-index: 0;
+    width: 100px;
+    height: 35px;
+    position: absolute;
+    top: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+    /**/
+    background-color: rgba(255, 223, 0, 1);
+    border: 2px solid black;
+    border-radius: 20px;
+    /**/
+    color: black;
+    font-family: "Rubik400", sans-serif;
+    font-size: 14px;
+    /**/
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+  /*____________________TRANSACTION LOG PAGE____________________*/
+
+  #transactionLogContainer {
+    width: 700px;
+    left: 50%;
+    transform: translateX(-50%);
+    /**/
+    background-image: linear-gradient(to top, #d6eaf8, #3498db);
+  }
+
+  #transactionLogInternalContainer {
+    z-index: 0;
+    min-width: 250px;
+    width: 100%;
+    position: relative;
+    top: 0px;
+    left: 0px;
+    /**/
+    padding: 30px;
+    /**/
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+  #tLogIcon {
+    z-index: 0;
+    height: 150px;
+    position: absolute;
+    top: 15px;
+    right: 0px;
+    /**/
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    border: none;
+    /**/
+    pointer-events: none;
+    touch-action: none;
+    outline: none;
+    overflow: hidden;
+    user-select: none; /* supported by Chrome and Opera */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+  }
+
+  #transactionLogHeading {
+    z-index: 0;
+    width: 100%;
+    position: relative;
+    /**/
+    color: black;
+    font-family: "Poppins500", sans-serif;
+    font-size: 20px;
+    text-align: left;
+    /**/
+    padding: 40px 0px 40px 0px;
+    /**/
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    user-select: none; /* supported by Chrome and Opera */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+  }
+
+  #tLogSelectionContainer {
+    z-index: 0;
+    width: 100%;
+    height: 50px;
+    position: relative;
+    /**/
+    margin: 60px 0px 0px 0px;
+    /**/
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    user-select: none; /* supported by Chrome and Opera */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+  }
+
+  #tLogSelectTokenTransactions {
+    z-index: 0;
+    width: 50%;
+    height: 20px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    /**/
+    background-color: rgba(245, 245, 245, 0.3);
+    border-width: 4px;
+    border-style: solid;
+    border-color: white;
+    /**/
+    color: #505050;
+    font-family: "Rubik400", sans-serif;
+    font-size: 12px;
+    text-align: center;
+    line-height: 2px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    /**/
+    padding: 20px 10px 20px 10px;
+    /**/
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    user-select: none; /* supported by Chrome and Opera */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    cursor: pointer;
+  }
+
+  #tLogSelectInvoices {
+    z-index: 0;
+    width: 50%;
+    height: 20px;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    /**/
+    border-width: 4px;
+    border-style: solid;
+    border-color: white;
+    /**/
+    color: #505050;
+    font-family: "Rubik400", sans-serif;
+    font-size: 12px;
+    text-align: center;
+    line-height: 2px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    /**/
+    padding: 20px 10px 20px 10px;
+    /**/
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    user-select: none; /* supported by Chrome and Opera */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    cursor: pointer;
+  }
+
+  #tLogHeadersContainer {
+    z-index: 0;
+    width: 100%;
+    height: 30px;
+    position: relative;
+    /**/
+    margin: 10px 0px 10px 0px;
+    /**/
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    overflow: hidden;
+  }
+
+  #tLogInvoiceHeader {
+    z-index: 0;
+    width: 80px;
+    position: absolute;
+    top: 50%;
+    left: 0px;
+    transform: translateY(-50%);
+    /**/
+    color: #e8e8e8;
+    font-family: "Rubik400", sans-serif;
+    font-size: 12px;
+    white-space: nowrap;
+    /**/
+    padding: 10px;
+    /**/
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+  #tLogProductHeader {
+    z-index: 0;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 80px;
+    transform: translateY(-50%);
+    /**/
+    border: none;
+    border-left: 2px solid whitesmoke;
+    /**/
+    color: #e8e8e8;
+    font-family: "Rubik400", sans-serif;
+    font-size: 12px;
+    white-space: nowrap;
+    /**/
+    padding: 10px;
+    /**/
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+  .tLogSelectionDisplayContainers {
+    z-index: 0;
+    width: 100%;
+    position: relative;
+    top: 0px;
+    left: 0px;
+    /**/
+    margin: 0px;
+    /**/
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+  #emptyLogPlaceholderTokens {
+    z-index: 0;
+    width: 100%;
+    height: 140px;
+    position: relative;
+    /**/
+    background-color: rgba(245, 245, 245, 0.3);
+    /**/
+    color: #505050;
+    font-family: "Rubik400", sans-serif;
+    font-size: 16px;
+    text-align: center;
+    /**/
+    padding: 80px 0px 80px 0px;
+    /**/
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    user-select: none; /* supported by Chrome and Opera */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+  }
+
+  #emptyLogPlaceholderInvoices {
+    z-index: 0;
+    width: 100%;
+    height: 140px;
+    position: relative;
+    /**/
+    background-color: rgba(245, 245, 245, 0.3);
+    /**/
+    color: #505050;
+    font-family: "Rubik400", sans-serif;
+    font-size: 16px;
+    text-align: center;
+    /**/
+    padding: 80px 0px 80px 0px;
+    /**/
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    user-select: none; /* supported by Chrome and Opera */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+  }
+
+  #tLogLoadingAnimationContainerContainer {
+    z-index: 0;
+    height: 35px;
+    position: absolute;
+    left: 110px;
+    top: 100px;
+    /**/
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+  .tLogEntryContainer {
+    z-index: 0;
+    width: 100%;
+    position: relative;
+    left: 0px;
+    /**/
+    margin: 5px 0px 5px 0px;
+    /**/
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    overflow: hidden;
+  }
+
+  .tLogEntry {
+    z-index: 0;
+    width: 100%;
+    height: 50px;
+    position: relative;
+    left: 0px;
+    /**/
+    background-color: #ebf5fb;
+    /**/
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    overflow: hidden;
+  }
+
+  .tLogInvoiceNumber {
+    z-index: 0;
+    width: 80px;
+    position: absolute;
+    top: 50%;
+    left: 0px;
+    transform: translateY(-50%);
+    /**/
+    color: #505050;
+    font-family: "Poppins300", sans-serif;
+    font-size: 14px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    /**/
+    padding: 10px 10px 10px 12px;
+    /**/
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+  .tLogProductName {
+    z-index: 0;
+    width: calc(100% - 80px);
+    max-height: 50px;
+    position: absolute;
+    top: 50%;
+    left: 80px;
+    transform: translateY(-50%);
+    /**/
+    border: none;
+    border-left: 2px solid black;
+    /**/
+    color: #505050;
+    font-family: "Poppins300", sans-serif;
+    font-size: 14px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    /**/
+    padding: 10px 40px 10px 10px;
+    /**/
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+  .displayMoreArrow {
+    z-index: 0;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 50%;
+    right: 5px;
+    transform: translateY(-50%);
+    /**/
+    cursor: pointer;
+    /**/
+    user-select: none; /* supported by Chrome and Opera */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+  }
+
+  .tLogEntryDetailsContainer {
+    z-index: 0;
+    width: 100%;
+    position: relative;
+    left: 0px;
+    /**/
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    background-color: rgba(235, 245, 251, 0.5);
+    /**/
+    padding: 10px 0px 10px 0px;
+    /**/
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+  .tLogEntryDetailsContainerOne {
+    z-index: 0;
+    width: 100%;
+    position: relative;
+    /**/
+    flex-grow: 3;
+    flex-basis: 220px;
+    /**/
+    margin: 10px;
+    padding: 10px;
+    /**/
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+  .tLogEntryDetailsContainerTwo {
+    z-index: 0;
+    width: 100%;
+    position: relative;
+    /**/
+    border-radius: 15px;
+    background-color: rgba(235, 245, 251, 0.5);
+    /**/
+    flex-grow: 3;
+    flex-basis: 220px;
+    /**/
+    margin: 10px;
+    padding: 10px;
+    /**/
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+  .tLogEntryDetailsHeading {
+    z-index: 0;
+    width: 100%;
+    position: relative;
+    left: 0px;
+    /**/
+    color: white;
+    font-family: "Rubik400", sans-serif;
+    font-size: 12px;
+    white-space: nowrap;
+    /**/
+    padding: 5px 0px 15px 0px;
+  }
+
+  .tLogEntryDetailsInfoContainer {
+    z-index: 0;
+    width: 100%;
+    position: relative;
+    /**/
+    padding: 5px 0px 5px 0px;
+    /**/
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+  .tLogEntryDetailsInfoFlexContainer {
+    z-index: 0;
+    width: 100%;
+    position: relative;
+    /**/
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    /**/
+    padding: 5px 0px 5px 0px;
+    /**/
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+  .tLogEntryDetailsInfo {
+    z-index: 0;
+    position: relative;
+    left: 0px;
+    /**/
+    color: #505050;
+    font-family: "Poppins400", sans-serif;
+    font-size: 12px;
+  }
+
+  .tLogEntryDetailsSubHeading {
+    z-index: 0;
+    height: 100%;
+    position: relative;
+    left: 0px;
+    /**/
+    color: grey;
+    font-family: "Rubik400", sans-serif;
+    font-size: 12px;
+    /**/
+    margin: 1px 4px 0px 0px;
+  }
+
+  /*____________________TOKEN TRANSACTION PAGE____________________*/
+  #tokenTFormContainer {
+    width: 700px;
+    left: 50%;
+    transform: translateX(-50%);
+    /**/
+    background-color: white;
+  }
+
+  #tokenTFormInternalContainer {
+    z-index: 0;
+    min-width: 250px;
+    width: 100%;
+    position: relative;
+    top: 0px;
+    left: 0px;
+    /**/
+    padding: 20px;
+    /**/
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+  #tokenTFormHeadingContainer {
+    z-index: 0;
+    width: 100%;
+    height: 120px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    /**/
+    background-image: linear-gradient(to right, #dcb0ff, #8f00ff);
+    box-shadow: 0px 1px 5px 0px grey;
+  }
+
+  #tokenTIcon {
+    z-index: 0;
+    height: 180px;
+    position: absolute;
+    top: -55px;
+    right: 0px;
+    /**/
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    border: none;
+    /**/
+    pointer-events: none;
+    touch-action: none;
+    outline: none;
+    overflow: hidden;
+    user-select: none; /* supported by Chrome and Opera */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+  }
+
+  #tokenTDataEntryForm {
+    z-index: 0;
+    width: 100%;
+    position: relative;
+    left: 0%;
+    /**/
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    /**/
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+  #tokenTFormHeading {
+    z-index: 0;
+    width: 100%;
+    position: relative;
+    left: 10px;
+    /**/
+    color: white;
+    font-family: "Poppins500", sans-serif;
+    font-size: 20px;
+    text-align: left;
+    /**/
+    margin: 40px 0px 60px 0px;
+    user-select: none; /* supported by Chrome and Opera */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+  }
+
+  .tokenTSectionSpacerLine {
+    z-index: 0;
+    width: 100%;
+    max-width: 400px;
+    /**/
+    border: 1px solid #8f00ff;
+    /**/
+    margin: 0px;
+    user-select: none; /* supported by Chrome and Opera */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+  }
+
+  #tokenTCustomerSelectDropdownContainer {
+    width: 100%;
+  }
+
+  #tokenTCustomerSelect {
+    border-color: #8f00ff;
+  }
+
+  #tokenTProductNameContainer {
+    max-width: 100%;
+  }
+
+  .tokenTDropdownListContainer {
+    z-index: 0;
+    width: 290px;
+    max-width: 100%;
+    height: 35px;
+    position: relative;
+    /**/
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+  #tokenTPaymentAndShippingContainer {
+    width: 100%;
+    position: relative;
+    left: 0%;
+    /**/
+    display: none;
+    flex-wrap: wrap;
+    justify-content: left;
+    /**/
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+  .tokenAllocationContainer {
+    z-index: 0;
+    width: 100%;
+    position: relative;
+    left: 0%;
+    /**/
+    background-color: whitesmoke;
+    border-radius: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    /**/
+    margin: 10px 0px 10px 0px;
+    padding: 20px 20px 20px 20px;
+    /**/
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+  #tokenTShippingCostsContainer {
+    display: none;
+  }
+
+  #tokenTShippingInformationContainer {
+    width: 100%;
+    position: relative;
+    left: 0%;
+    /**/
+    display: none;
+    flex-wrap: wrap;
+    justify-content: left;
+    /**/
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+  .tokenAllocationHeading {
+    z-index: 0;
+    width: 100%;
+    position: relative;
+    /**/
+    color: #8f00ff;
+    font-family: "Rubik400", sans-serif;
+    font-size: 12px;
+    text-align: left;
+    line-height: 20px;
+    /**/
+    margin: 0px 10px 10px 10px;
+    /**/
+    user-select: none; /* supported by Chrome and Opera */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+  }
+
+  .textInputContainerFlex20 {
+    z-index: 0;
+    width: 100%;
+    position: relative;
+    /**/
+    flex-grow: 1;
+    flex-basis: 80px;
+    /**/
+    margin: 10px 0px 10px 0px;
+    padding: 0px 12px 0px 12px;
+    /**/
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+  .tokenTInputContainer {
+    z-index: 0;
+    width: 80px;
+    max-width: 100%;
+    height: 35px;
+    position: relative;
+    /**/
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+  .tokenTInput {
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    left: 0px;
+    /**/
+    -webkit-appearance: none;
+    -moz-appearance: textfield;
+    background: none;
+    border: 2px solid #505050;
+    /**/
+    color: black;
+    font-family: "Poppins300", sans-serif;
+    font-size: 14px;
+    text-overflow: ellipsis;
+    /**/
+    padding: 0px 16px 0px 24px;
+    /**/
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    outline: none;
+  }
+
+  .tokenTInput:disabled {
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    left: 0px;
+    /**/
+    -webkit-appearance: none;
+    -moz-appearance: textfield;
+    background: none;
+    border: 2px solid grey;
+    /**/
+    color: grey;
+    font-family: "Poppins300", sans-serif;
+    font-size: 14px;
+    text-overflow: ellipsis;
+    /**/
+    padding: 0px 16px 0px 24px;
+    /**/
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    outline: none;
+  }
+
+  .tokenTInputLabel {
+    z-index: 1;
+    position: absolute;
+    top: 0%;
+    left: 10px;
+    transform: translateY(-50%);
+    /**/
+    background-color: whitesmoke;
+    /**/
+    color: dimgrey;
+    font-family: "Rubik400", sans-serif;
+    font-size: 12px;
+    /**/
+    padding: 0px 5px 0px 5px;
+    /**/
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    pointer-events: none;
+    touch-action: none;
+    user-select: none; /* supported by Chrome and Opera */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+  }
+
+  .tokenTPositiveNegative {
+    z-index: 1;
+    position: absolute;
+    top: 50%;
+    left: 12px;
+    transform: translateY(-50%);
+    /**/
+    color: grey;
+    font-family: "Poppins300", sans-serif;
+    font-size: 14px;
+    /**/
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    pointer-events: none;
+    touch-action: none;
+    user-select: none; /* supported by Chrome and Opera */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+  }
+
+  #tokenTShippingAddressContainer {
+    max-width: 100%;
+  }
+
+  #tokenTShippingZIPContainer {
+    max-width: 160px;
+  }
+
+  #tokenTShippingCountryContainer {
+    width: 100%;
+    max-width: 290px;
+  }
+
+  #tokenTSubmissionButton {
+    z-index: 0;
+    width: 100px;
+    height: 35px;
+    position: absolute;
+    top: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+    /**/
+    background-color: rgba(255, 223, 0, 1);
+    border: 2px solid black;
+    border-radius: 20px;
+    /**/
+    color: black;
+    font-family: "Rubik400", sans-serif;
+    font-size: 14px;
+    /**/
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+  /*____________________INVOICE SUBMISSION PAGE____________________*/
+  #invoiceFormContainer {
+    width: 700px;
+    left: 50%;
+    transform: translateX(-50%);
+    /**/
+    background-color: white;
+  }
+
+  #invoiceFormInternalContainer {
+    z-index: 0;
+    min-width: 250px;
+    width: 100%;
+    position: relative;
+    top: 0px;
+    left: 0px;
+    /**/
+    padding: 20px;
+    /**/
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+  #invoiceFormHeadingContainer {
+    z-index: 0;
+    width: 100%;
+    height: 120px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    /**/
+    background-image: linear-gradient(to right, #d6eaf8, #3498db);
+    box-shadow: 0px 1px 5px 0px grey;
+  }
+
+  #invoiceIcon {
+    z-index: 0;
+    height: 150px;
+    position: absolute;
+    top: -35px;
+    right: 30px;
+    /**/
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    border: none;
+    /**/
+    pointer-events: none;
+    touch-action: none;
+    outline: none;
+    overflow: hidden;
+    user-select: none; /* supported by Chrome and Opera */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+  }
+
+  #invoiceDataEntryForm {
+    z-index: 0;
+    width: 100%;
+    position: relative;
+    left: 0%;
+    /**/
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    /**/
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+  .form-validation-error {
+    border: 1px solid red !important;
+    -moz-box-shadow: 0 0 2px red !important;
+    -webkit-box-shadow: 0 0 2px red !important;
+    box-shadow: 0 0 2px red !important;
+  } /*Find out how to make this work again*/
+
+  #invoiceFormHeading {
+    z-index: 0;
+    width: 100%;
+    position: relative;
+    left: 10px;
+    /**/
+    color: #505050;
+    font-family: "Poppins500", sans-serif;
+    font-size: 20px;
+    text-align: left;
+    /**/
+    margin: 40px 0px 60px 0px;
+    user-select: none; /* supported by Chrome and Opera */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+  }
+
+  .requiredFieldsKey {
+    z-index: 0;
+    width: 100%;
+    position: relative;
+    left: 0px;
+    /**/
+    color: black;
+    font-family: "Rubik400", sans-serif;
+    font-size: 12px;
+    text-align: center;
+    /**/
+    margin: 0px 0px 20px 0px;
+    user-select: none; /* supported by Chrome and Opera */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+  }
+
+  .textInputContainerFlex100 {
+    z-index: 0;
+    width: 100%;
+    position: relative;
+    /**/
+    flex-grow: 6;
+    /**/
+    margin: 10px 0px 10px 0px;
+    padding: 0px 10px 0px 10px;
+    /**/
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+  .textInputContainerFlex50 {
+    z-index: 0;
+    width: 100%;
+    position: relative;
+    /**/
+    flex-grow: 3;
+    flex-basis: 220px;
+    /**/
+    margin: 10px 0px 10px 0px;
+    padding: 0px 10px 0px 10px;
+    /**/
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+  .textInputContainerFlex33 {
+    z-index: 0;
+    width: 100%;
+    position: relative;
+    /**/
+    flex-grow: 2;
+    flex-basis: 180px;
+    /**/
+    margin: 10px 0px 10px 0px;
+    padding: 0px 10px 0px 10px;
+    /**/
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+  .txtInputContainer {
+    z-index: 0;
+    width: 100%;
+    max-width: 290px;
+    height: 35px;
+    position: relative;
+    /**/
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+  .dropdownListContainer {
+    z-index: 0;
+    width: 200px;
+    max-width: 100%;
+    height: 35px;
+    position: relative;
+    /**/
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+  #invoiceCustomerSelectDropdownContainer {
+    width: 100%;
+  }
+
+  .dropdownList {
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    left: 0px;
+    /**/
+    -webkit-appearance: none;
+    -moz-appearance: textfield;
+    appearance: none;
+    background-color: transparent;
+    border: 2px solid #505050;
+    border-radius: 17px;
+    /**/
+    color: black;
+    font-family: "Poppins300", sans-serif;
+    font-size: 14px;
+    text-overflow: ellipsis;
+    /**/
+    margin: 0px;
+    padding: 0px 35px 0px 15px;
+    /**/
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    outline: none;
+    cursor: pointer;
+  }
+
+  .dropdownList:disabled {
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    left: 0px;
+    /**/
+    -webkit-appearance: none;
+    -moz-appearance: textfield;
+    appearance: none;
+    background-color: transparent;
+    border: 2px solid grey;
+    border-radius: 17px;
+    /**/
+    color: grey;
+    font-family: "Poppins300", sans-serif;
+    font-size: 14px;
+    text-overflow: ellipsis;
+    /**/
+    margin: 0px;
+    padding: 0px 35px 0px 15px;
+    /**/
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    outline: none;
+    cursor: auto;
+  }
+
+  .dropdownListLabel {
+    z-index: 1;
+    position: absolute;
+    top: 0%;
+    left: 17px;
+    transform: translateY(-50%);
+    /**/
+    background-color: white;
+    /**/
+    color: grey;
+    font-family: "Rubik400", sans-serif;
+    font-size: 10px;
+    /**/
+    padding: 0px 3px 0px 3px;
+    /**/
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    pointer-events: none;
+    touch-action: none;
+    user-select: none; /* supported by Chrome and Opera */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+  }
+
+  .dropdownListArrow {
+    z-index: 0;
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    top: 0px;
+    right: 7px;
+    /**/
+    pointer-events: none;
+    touch-action: none;
+    user-select: none; /* supported by Chrome and Opera */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+  }
+
+  .dropdownList:enabled ~ .dropdownListArrow {
+    display: initial;
+  }
+
+  .dropdownList:disabled ~ .dropdownListArrow {
+    display: none;
+  }
+
+  #invoiceCustomerSelect {
+    border-color: #3498db;
+  }
+
+  .sectionSpacerContainer {
+    z-index: 0;
+    width: 100%;
+    position: relative;
+    left: 0px;
+    /**/
+    margin: 40px 0px 20px 0px;
+    /**/
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    pointer-events: none;
+    touch-action: none;
+  }
+
+  .sectionSpacerLine {
+    z-index: 0;
+    width: 100%;
+    max-width: 400px;
+    /**/
+    border: 1px solid #3498db;
+    /**/
+    margin: 0px;
+    user-select: none; /* supported by Chrome and Opera */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+  }
+
+  .sectionSpacerLabel {
+    z-index: 1;
+    position: absolute;
+    top: 50%;
+    left: 23px;
+    transform: translateY(-50%);
+    /**/
+    background-color: white;
+    /**/
+    color: grey;
+    font-family: "Rubik400", sans-serif;
+    font-size: 12px;
+    white-space: nowrap;
+    /**/
+    padding: 0px 6px 0px 6px;
+    /**/
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    user-select: none; /* supported by Chrome and Opera */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+  }
+
+  .textAreaInputContainer {
+    z-index: 0;
+    width: 100%;
+    position: relative;
+    /**/
+    margin: 10px 0px 10px 0px;
+    padding: 0px 10px 0px 10px;
+    /**/
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+  .textAreaInput {
+    z-index: 0;
+    width: 100%;
+    height: 105px;
+    position: relative;
+    left: 0px;
+    /**/
+    background: none;
+    border: 2px solid #505050;
+    border-radius: 17px;
+    /**/
+    color: black;
+    font-family: "Poppins300", sans-serif;
+    font-size: 14px;
+    text-overflow: ellipsis;
+    /**/
+    padding: 5px 18px 0px 18px;
+    /**/
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    outline: none;
+    resize: none;
+  }
+
+  .textAreaInput:disabled {
+    z-index: 0;
+    width: 100%;
+    height: 105px;
+    position: relative;
+    left: 0px;
+    /**/
+    background: none;
+    border: 2px solid grey;
+    border-radius: 17px;
+    /**/
+    color: grey;
+    font-family: "Poppins300", sans-serif;
+    font-size: 14px;
+    text-overflow: ellipsis;
+    /**/
+    padding: 5px 18px 0px 18px;
+    /**/
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    outline: none;
+    resize: none;
+  }
+
+  .textAreaFloatingLabel {
+    z-index: 1;
+    position: absolute;
+    top: 18px;
+    left: 27px;
+    transform: translateY(-50%);
+    /**/
+    background-color: white;
+    /**/
+    color: grey;
+    font-family: "Rubik400", sans-serif;
+    font-size: 14px;
+    /**/
+    padding: 0px 3px 0px 3px;
+    /**/
+    transition: 0.2s ease-in-out;
+    /**/
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    pointer-events: none;
+    touch-action: none;
+    user-select: none; /* supported by Chrome and Opera */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+  }
+
+  .textAreaInput:focus ~ .textAreaFloatingLabel,
+  .textAreaInput:not(:focus) ~ .textAreaFloatingLabel {
+    top: 0%;
+    /**/
+    font-size: 10px;
+  }
+
+  .textAreaInput:not(:focus):placeholder-shown ~ .textAreaFloatingLabel {
+    top: 18px;
+    /**/
+    font-size: 14px;
+  }
+
+  .dateInputContainer {
+    z-index: 0;
+    width: 160px;
+    max-width: 100%;
+    position: relative;
+    height: 35px;
+    /**/
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+  .dateInput {
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    left: 0px;
+    /**/
+    -webkit-appearance: none;
+    -moz-appearance: textfield;
+    appearance: none;
+    background: none;
+    border: 2px solid #505050;
+    border-radius: 17px;
+    /**/
+    color: black;
+    font-family: "Poppins300", sans-serif;
+    font-size: 14px;
+    text-overflow: ellipsis;
+    /**/
+    padding: 0px 7px 0px 17px;
+    /**/
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    outline: none;
+    cursor: pointer;
+  }
+
+  .dateInput:disabled {
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    left: 0px;
+    /**/
+    -webkit-appearance: none;
+    -moz-appearance: textfield;
+    appearance: none;
+    background: none;
+    border: 2px solid grey;
+    border-radius: 17px;
+    /**/
+    color: grey;
+    font-family: "Poppins300", sans-serif;
+    font-size: 14px;
+    text-overflow: ellipsis;
+    /**/
+    padding: 0px 7px 0px 17px;
+    /**/
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    outline: none;
+    cursor: pointer;
+  }
+
+  ::-webkit-calendar-picker-indicator {
+    margin: 0px;
+  }
+
+  .dateInputLabel {
+    z-index: 1;
+    position: absolute;
+    top: 0%;
+    left: 17px;
+    transform: translateY(-50%);
+    /**/
+    background-color: white;
+    /**/
+    color: grey;
+    font-family: "Rubik400", sans-serif;
+    font-size: 10px;
+    /**/
+    padding: 0px 3px 0px 3px;
+    /**/
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    pointer-events: none;
+    touch-action: none;
+    user-select: none; /* supported by Chrome and Opera */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+  }
+
+  #invoiceGiftRecipientDropdownContainer {
+    width: 100%;
+  }
+
+  .numberInputContainer {
+    z-index: 0;
+    width: 160px;
+    max-width: 100%;
+    height: 35px;
+    position: relative;
+    /**/
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+  .numberInput {
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    left: 0px;
+    /**/
+    -webkit-appearance: none;
+    -moz-appearance: textfield;
+    background: none;
+    border: 2px solid #505050;
+    border-radius: 17px;
+    /**/
+    color: black;
+    font-family: "Poppins300", sans-serif;
+    font-size: 14px;
+    text-overflow: ellipsis;
+    /**/
+    padding: 0px 18px 0px 18px;
+    /**/
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    outline: none;
+  }
+
+  .numberInput:disabled {
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    left: 0px;
+    /**/
+    -webkit-appearance: none;
+    -moz-appearance: textfield;
+    background: none;
+    border: 2px solid grey;
+    border-radius: 17px;
+    /**/
+    color: grey;
+    font-family: "Poppins300", sans-serif;
+    font-size: 14px;
+    text-overflow: ellipsis;
+    /**/
+    padding: 0px 18px 0px 18px;
+    /**/
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    outline: none;
+  }
+
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    /**/
+    margin: 0;
+  }
+
+  .numberInputLabel {
+    z-index: 1;
+    position: absolute;
+    top: 0%;
+    left: 17px;
+    transform: translateY(-50%);
+    /**/
+    background-color: white;
+    /**/
+    color: grey;
+    font-family: "Rubik400", sans-serif;
+    font-size: 10px;
+    /**/
+    padding: 0px 3px 0px 3px;
+    /**/
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    pointer-events: none;
+    touch-action: none;
+    user-select: none; /* supported by Chrome and Opera */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+  }
+
+  #invoiceBundleRecipientDropdownContainer {
+    width: 100%;
+  }
+
+  #invoiceNumberContainer {
+    width: 200px;
+  }
+
+  .textNumberInput {
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    left: 0px;
+    /**/
+    background: none;
+    border: 2px solid #505050;
+    border-radius: 17px;
+    /**/
+    color: black;
+    font-family: "Poppins300", sans-serif;
+    font-size: 14px;
+    text-overflow: ellipsis;
+    /**/
+    padding: 0px 35px 0px 18px;
+    /**/
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    outline: none;
+  }
+
+  .textNumberInput:disabled {
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    left: 0px;
+    /**/
+    background: none;
+    border: 2px solid grey;
+    border-radius: 17px;
+    /**/
+    color: grey;
+    font-family: "Poppins300", sans-serif;
+    font-size: 14px;
+    text-overflow: ellipsis;
+    /**/
+    padding: 0px 35px 0px 18px;
+    /**/
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    outline: none;
+  }
+
+  .currency {
+    z-index: 1;
+    position: absolute;
+    top: 50%;
+    right: 17px;
+    transform: translateY(-50%);
+    /**/
+    color: grey;
+    font-family: "Poppins300", sans-serif;
+    font-size: 14px;
+    /**/
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    pointer-events: none;
+    touch-action: none;
+    user-select: none; /* supported by Chrome and Opera */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+  }
+
+  #invoiceProductTypeContainer {
+    width: 100%;
+    max-width: 290px;
+  }
+
+  #invoiceBillingZIPContainer {
+    max-width: 160px;
+  }
+
+  #invoiceBillingAddressContainer {
+    max-width: 100%;
+  }
+
+  #invoiceBillingCountryContainer {
+    width: 100%;
+    max-width: 290px;
+  }
+
+  .telInputContainer {
+    z-index: 0;
+    width: 200px;
+    max-width: 100%;
+    height: 35px;
+    position: relative;
+    /**/
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+  .telInput {
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    left: 0px;
+    /**/
+    -webkit-appearance: none;
+    -moz-appearance: textfield;
+    background: none;
+    border: 2px solid #505050;
+    border-radius: 17px;
+    /**/
+    color: black;
+    font-family: "Poppins300", sans-serif;
+    font-size: 14px;
+    text-overflow: ellipsis;
+    /**/
+    padding: 0px 18px 0px 30px;
+    /**/
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    outline: none;
+  }
+
+  .telInput:disabled {
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    left: 0px;
+    /**/
+    -webkit-appearance: none;
+    -moz-appearance: textfield;
+    background: none;
+    border: 2px solid grey;
+    border-radius: 17px;
+    /**/
+    color: grey;
+    font-family: "Poppins300", sans-serif;
+    font-size: 14px;
+    text-overflow: ellipsis;
+    /**/
+    padding: 0px 18px 0px 30px;
+    /**/
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    outline: none;
+  }
+
+  .telInputLabel {
+    z-index: 1;
+    position: absolute;
+    top: 0%;
+    left: 17px;
+    transform: translateY(-50%);
+    /**/
+    background-color: white;
+    /**/
+    color: grey;
+    font-family: "Rubik400", sans-serif;
+    font-size: 10px;
+    /**/
+    padding: 0px 3px 0px 3px;
+    /**/
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    pointer-events: none;
+    touch-action: none;
+    user-select: none; /* supported by Chrome and Opera */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+  }
+
+  .extensionPlus {
+    z-index: 1;
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+    /**/
+    color: grey;
+    font-family: "Poppins300", sans-serif;
+    font-size: 14px;
+    /**/
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    pointer-events: none;
+    touch-action: none;
+    user-select: none; /* supported by Chrome and Opera */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+  }
+
+  .checkboxContainer {
+    z-index: 0;
+    position: relative;
+    left: 0px;
+    /**/
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    display: inline-block;
+    /**/
+    color: #505050;
+    font-family: "Rubik400", sans-serif;
+    font-size: 14px;
+    /**/
+    padding: 0px 5px 0px 27px;
+    margin: 0px 0px 5px 0px;
+    /**/
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    cursor: pointer;
+  }
+
+  .checkboxInput {
+    z-index: 2;
+    height: 0;
+    width: 0;
+    position: absolute;
+    /**/
+    opacity: 0;
+    /**/
+    cursor: pointer;
+  }
+
+  .checkboxCheckmarkBox {
+    z-index: 1;
+    width: 17px;
+    height: 17px;
+    position: absolute;
+    top: 50%;
+    left: 0px;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    /**/
+    background: none;
+    border: 2px solid #505050;
+    border-radius: 17px;
+  }
+
+  .checkboxCheckmark {
+    z-index: 0;
+    width: 17px;
+    height: 17px;
+    position: absolute;
+    top: 50%;
+    left: 2px;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    /**/
+    display: none;
+  }
+
+  #invoiceShippingAddressContainer {
+    max-width: 100%;
+  }
+
+  #invoiceShippingZIPContainer {
+    max-width: 160px;
+  }
+
+  #invoiceShippingCountryContainer {
+    width: 100%;
+    max-width: 290px;
+  }
+
+  #invoiceSubmissionButton {
+    z-index: 0;
+    width: 100px;
+    height: 35px;
+    position: absolute;
+    top: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+    /**/
+    background-color: rgba(255, 223, 0, 1);
+    border: 2px solid black;
+    border-radius: 20px;
+    /**/
+    color: black;
+    font-family: "Rubik400", sans-serif;
+    font-size: 14px;
+    /**/
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+  /*____________________USER REGISTRATION PAGE____________________*/
+  #userRegistrationContainer {
+    width: 700px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  #userRegistrationInternalContainer {
+    z-index: 0;
+    min-width: 250px;
+    width: 100%;
+    position: relative;
+    top: 0px;
+    left: 0px;
+    /**/
+    padding: 20px;
+    /**/
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+  #registrationFormHeadingContainer {
+    z-index: 0;
+    width: 100%;
+    height: 120px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    /**/
+    background-image: linear-gradient(to right, #dcb0ff, #8f00ff);
+    box-shadow: 0px 1px 5px 0px grey;
+  }
+
+  #registrationIcon {
+    z-index: 0;
+    height: 140px;
+    position: absolute;
+    bottom: 0px;
+    right: 10px;
+    /**/
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    border: none;
+    /**/
+    pointer-events: none;
+    touch-action: none;
+    outline: none;
+    overflow: hidden;
+    user-select: none; /* supported by Chrome and Opera */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+  }
+
+  #registrationFormHeading {
+    z-index: 0;
+    width: 100%;
+    position: relative;
+    left: 10px;
+    /**/
+    color: white;
+    font-family: "Poppins500", sans-serif;
+    font-size: 20px;
+    text-align: left;
+    /**/
+    margin: 40px 0px 60px 0px;
+    user-select: none; /* supported by Chrome and Opera */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+  }
+
+  #userRegistrationForm {
+    z-index: 0;
+    width: 100%;
+    position: relative;
+    left: 0%;
+    /**/
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    /**/
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+  #registrationAddressContainer {
+    max-width: 100%;
+  }
+
+  #registrationCountryContainer {
+    width: 100%;
+    max-width: 290px;
+  }
+
+  #registrationZIPContainer {
+    max-width: 160px;
+  }
+
+  #userRegistrationButton {
+    z-index: 0;
+    width: 100px;
+    height: 35px;
+    position: absolute;
+    top: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+    /**/
+    background-color: rgba(255, 223, 0, 1);
+    border: 2px solid black;
+    border-radius: 20px;
+    /**/
+    color: black;
+    font-family: "Rubik400", sans-serif;
+    font-size: 14px;
+    /**/
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+  /*____________________CONTACT PAGE____________________*/
+  #contactContainer {
+    width: 700px;
+    left: 50%;
+    transform: translateX(-50%);
+    /**/
+    background-image: linear-gradient(135deg, grey, gainsboro);
+  }
+
+  #contactInternalContainer {
+    z-index: 0;
+    min-width: 300px;
+    width: 100%;
+    position: relative;
+    top: 0px;
+    left: 0px;
+    /**/
+    padding: 30px;
+    /**/
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+  #contactHeading {
+    z-index: 0;
+    width: 100%;
+    position: relative;
+    /**/
+    color: rgba(255, 223, 0, 1);
+    font-family: "Poppins500", sans-serif;
+    font-size: 20px;
+    text-align: center;
+    /**/
+    margin: 20px 0px 40px 0px;
+    user-select: none; /* supported by Chrome and Opera */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+  }
+
+  .contactInfoFlexContainer {
+    z-index: 0;
+    width: 100%;
+    position: relative;
+    left: 0px;
+    /**/
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-content: flex-start;
+    /**/
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+  .contactInfoContainer {
+    z-index: 0;
+    width: 100%;
+    max-width: 240px;
+    height: 230px;
+    position: relative;
+    /**/
+    flex-basis: 250px;
+    flex-grow: 3;
+    /**/
+    margin: 15px 0px 15px 0px;
+    /**/
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+  #emailIcon {
+    z-index: 0;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    /**/
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    border: none;
+    /**/
+    pointer-events: none;
+    touch-action: none;
+    outline: none;
+    user-select: none; /* supported by Chrome and Opera */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+  }
+
+  #contactInfoEmailAddress {
+    z-index: 0;
+    height: 30px;
+    position: absolute;
+    top: 0px;
+    left: 40px;
+    /**/
+    color: #505050;
+    font-family: "Rubik400", sans-serif;
+    font-size: 14px;
+    line-height: 30px;
+    text-align: center;
+  }
+
+  #phoneIcon {
+    z-index: 0;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 60px;
+    left: 0px;
+    /**/
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    border: none;
+    /**/
+    pointer-events: none;
+    touch-action: none;
+    outline: none;
+    user-select: none; /* supported by Chrome and Opera */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+  }
+
+  #contactInfoPhoneNumber {
+    z-index: 0;
+    height: 30px;
+    position: absolute;
+    top: 60px;
+    left: 40px;
+    /**/
+    color: #505050;
+    font-family: "Rubik400", sans-serif;
+    font-size: 14px;
+    line-height: 30px;
+    text-align: center;
+  }
+
+  #whatsappIcon {
+    z-index: 0;
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    top: 100px;
+    left: 40px;
+    /**/
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    border: 2px solid black;
+    border-radius: 10px;
+    /**/
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    user-select: none; /* supported by Chrome and Opera */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    cursor: pointer;
+  }
+
+  #calendarIcon {
+    z-index: 0;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 185px;
+    left: 0px;
+    /**/
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    border: none;
+    /**/
+    pointer-events: none;
+    touch-action: none;
+    outline: none;
+    user-select: none; /* supported by Chrome and Opera */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+  }
+
+  #contactInfoCalendar1 {
+    z-index: 0;
+    height: 30px;
+    position: absolute;
+    top: 177px;
+    left: 40px;
+    /**/
+    color: #505050;
+    font-family: "Rubik400", sans-serif;
+    font-size: 14px;
+    line-height: 30px;
+    text-align: center;
+  }
+
+  #contactInfoCalendar2 {
+    z-index: 0;
+    height: 30px;
+    position: absolute;
+    top: 197px;
+    left: 40px;
+    /**/
+    color: gainsboro;
+    font-family: "Rubik400", sans-serif;
+    font-size: 12px;
+    line-height: 30px;
+    text-align: center;
+  }
+
+  #calendlyIcon {
+    z-index: 0;
+    height: 60px;
+    position: absolute;
+    top: 235px;
+    left: 40px;
+    /**/
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    border: 2px solid black;
+    border-radius: 14px;
+    /**/
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    user-select: none; /* supported by Chrome and Opera */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    cursor: pointer;
+  }
+
+  #addressContactInfoContainer {
+    height: 295px;
+  }
+
+  #addressIcon {
+    z-index: 0;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    /**/
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    border: none;
+    /**/
+    pointer-events: none;
+    touch-action: none;
+    outline: none;
+    user-select: none; /* supported by Chrome and Opera */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+  }
+
+  #contactInfoAddress1 {
+    z-index: 0;
+    height: 100px;
+    position: absolute;
+    top: 2px;
+    left: 40px;
+    /**/
+    color: gainsboro;
+    font-family: "Rubik400", sans-serif;
+    font-size: 12px;
+    line-height: 14px;
+    text-align: left;
+  }
+
+  #contactInfoAddress2 {
+    z-index: 0;
+    height: 100px;
+    position: absolute;
+    top: 35px;
+    left: 40px;
+    /**/
+    color: #505050;
+    font-family: "Rubik400", sans-serif;
+    font-size: 14px;
+    line-height: 18px;
+    text-align: left;
+  }
+
+  #contactInfoGMaps {
+    z-index: 0;
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    top: 95px;
+    left: 40px;
+    /**/
+    border-radius: 14px;
+    border: 2px solid black;
+    /**/
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    outline: none;
+    user-select: none; /* supported by Chrome and Opera */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+  }
+
+  /*____________________ABOUT PAGE____________________*/
+  #aboutContainer {
+    width: 700px;
+    left: 50%;
+    transform: translateX(-50%);
+    /**/
+    background-image: linear-gradient(135deg, grey, gainsboro);
+  }
+
+  #aboutInternalContainer {
+    z-index: 0;
+    min-width: 250px;
+    width: 100%;
+    position: relative;
+    top: 0px;
+    left: 0px;
+    /**/
+    padding: 30px;
+    /**/
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+  #aboutHeading {
+    z-index: 0;
+    width: 100%;
+    position: relative;
+    /**/
+    color: rgba(255, 223, 0, 1);
+    font-family: "Poppins500", sans-serif;
+    font-size: 20px;
+    text-align: center;
+    line-height: 20px;
+    /**/
+    margin: 20px 0px 40px 0px;
+    user-select: none; /* supported by Chrome and Opera */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+  }
+
+  .aboutInfoText {
+    z-index: 0;
+    width: 100%;
+    position: relative;
+    /**/
+    color: #505050;
+    font-family: "Rubik400", sans-serif;
+    font-size: 14px;
+    text-align: left;
+    line-height: 20px;
+    /**/
+    user-select: none; /* supported by Chrome and Opera */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+  }
+
+  .aboutInfoFlexContainer {
+    z-index: 0;
+    width: 100%;
+    position: relative;
+    left: 0px;
+    /**/
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-content: flex-start;
+    /**/
+    margin: 20px 0px 20px 0px;
+    /**/
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+  .aboutInfoContainer {
+    z-index: 0;
+    width: 100%;
+    max-width: 190px;
+    position: relative;
+    /**/
+    flex-basis: 250px;
+    flex-grow: 3;
+    /**/
+    margin: 10px 10px 10px 10px;
+    /**/
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+  .aboutInfoHeading {
+    z-index: 0;
+    width: 100%;
+    position: relative;
+    /**/
+    color: white;
+    font-family: "Rubik400", sans-serif;
+    font-size: 12px;
+    text-align: left;
+    line-height: 20px;
+    /**/
+    margin: 5px 0px 5px 0px;
+    /**/
+    user-select: none; /* supported by Chrome and Opera */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+  }
+
+  .aboutInfoNonFlexContainer {
+    z-index: 0;
+    width: 100%;
+    position: relative;
+    left: 0px;
+    /**/
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    /**/
+    padding: 20px;
+    margin: 20px 0px 20px 0px;
+    /**/
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+  #tosContainer {
+    z-index: 0;
+    width: 100%;
+    position: relative;
+    left: 0px;
+    /**/
+    margin: 5px 0px 5px 0px;
+    /**/
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    overflow: hidden;
+  }
+
+  #tosHeader {
+    z-index: 0;
+    width: 100%;
+    height: 50px;
+    position: relative;
+    left: 0px;
+    /**/
+    background-color: rgba(255, 223, 0, 1);
+    /**/
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    overflow: hidden;
+  }
+
+  #tosHeading {
+    z-index: 0;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 0px;
+    transform: translateY(-50%);
+    /**/
+    color: #505050;
+    font-family: "Poppins400", sans-serif;
+    font-size: 14px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    /**/
+    padding: 0px 50px 0px 20px;
+    /**/
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+  #tosDisplayMoreArrow {
+    z-index: 0;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 50%;
+    right: 5px;
+    transform: translateY(-50%);
+    /**/
+    cursor: pointer;
+    /**/
+    user-select: none; /* supported by Chrome and Opera */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+  }
+
+  #tosDetailsContainer {
+    z-index: 0;
+    width: 100%;
+    height: 0px;
+    position: relative;
+    left: 0px;
+    /**/
+    display: none;
+    background-color: rgba(255, 255, 255, 0.2);
+    /**/
+    padding: 20px;
+    /**/
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+  #tosEffectiveDate {
+    z-index: 0;
+    width: 100%;
+    position: relative;
+    /**/
+    color: black;
+    font-family: "Rubik400", sans-serif;
+    font-size: 14px;
+    text-align: left;
+    line-height: 20px;
+    /**/
+    margin: 0px 0px 30px 0px;
+    /**/
+    user-select: none; /* supported by Chrome and Opera */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+  }
+
+  .tosInfoHeading {
+    z-index: 0;
+    width: 100%;
+    position: relative;
+    /**/
+    color: white;
+    font-family: "Rubik400", sans-serif;
+    font-size: 12px;
+    text-align: left;
+    line-height: 20px;
+    /**/
+    margin: 5px 0px 5px 0px;
+    /**/
+    user-select: none; /* supported by Chrome and Opera */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+  }
+
+  .tosInfoText {
+    z-index: 0;
+    width: 100%;
+    position: relative;
+    /**/
+    color: #505050;
+    font-family: "Rubik400", sans-serif;
+    font-size: 14px;
+    text-align: left;
+    line-height: 20px;
+    /**/
+    margin: 5px 0px 5px 0px;
+    /**/
+    user-select: none; /* supported by Chrome and Opera */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+  }
+
+  /*____________________IMPROVE YOUR EXPERIENCE PAGE____________________*/
+  #improveYourExperienceContainer {
+    width: 700px;
+    left: 50%;
+    transform: translateX(-50%);
+    /**/
+    background-image: linear-gradient(135deg, grey, gainsboro);
+  }
+
+  #improveYourExperienceInternalContainer {
+    z-index: 0;
+    min-width: 250px;
+    width: 100%;
+    position: relative;
+    top: 0px;
+    left: 0px;
+    /**/
+    padding: 30px;
+    /**/
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+  #improveYourExperienceHeading {
+    z-index: 0;
+    width: 100%;
+    position: relative;
+    /**/
+    color: rgba(255, 223, 0, 1);
+    font-family: "Poppins500", sans-serif;
+    font-size: 20px;
+    text-align: center;
+    line-height: 20px;
+    /**/
+    margin: 20px 0px 40px 0px;
+    user-select: none; /* supported by Chrome and Opera */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+  }
+
+  #improveYourExperienceFlexContainer {
+    z-index: 0;
+    width: 100%;
+    position: relative;
+    left: 0px;
+    /**/
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-content: center;
+    /**/
+    margin: 20px 0px 20px 0px;
+    /**/
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+  .improveYourExperienceLinkContainer {
+    z-index: 0;
+    height: 120px;
+    position: relative;
+    /**/
+    flex-basis: 250px;
+    flex-grow: 3;
+    /**/
+    margin: 20px 0px 20px 0px;
+    /**/
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+  .improveYourExperienceLink {
+    z-index: 0;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+    /**/
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    /**/
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    user-select: none; /* supported by Chrome and Opera */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    cursor: pointer;
+  }
+}
+
+@media only all and (min-width: 1000px) {
+  #displayContainer {
+    z-index: 0;
+    width: 1000px;
+    max-width: 100%;
+    height: calc(100% - 50px);
+    position: fixed;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    /**/
+    background: none;
+    border-radius: 20px 20px 0px 0px;
+    box-shadow: 0 0 20px 0 black;
+    /**/
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    overflow: hidden;
+  }
+
+  #navigationBar {
+    z-index: 3;
+    width: 250px;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    /**/
+    background-color: rgba(255, 223, 0, 0.9);
+    border-radius: 20px 0px 0px 0px;
+    box-shadow: 2px 0px 5px -1px grey;
+    /**/
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    overflow: hidden;
+  }
+
+  #navigationBarMenuToggleContainer {
+    display: none;
+  }
+
+  #companyLogoContainer {
+    z-index: 0;
+    width: 100%;
+    height: 100px;
+    position: absolute;
+    top: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+    /**/
+    background: none;
+    /**/
+    padding: 0px;
+    /**/
+    object-position: center;
+    object-fit: contain;
+    /**/
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    pointer-events: none;
+    touch-action: none;
+  }
+
+  #companyLogo {
+    z-index: 0;
+    height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /**/
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    border: none;
+    /**/
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    outline: none;
+    pointer-events: none;
+    touch-action: none;
+  }
+
+  #navigationMenu {
+    z-index: 3;
+    width: 250px;
+    max-width: 250px;
+    height: calc(100% - 150px);
+    position: absolute;
+    top: 150px;
+    left: 0px;
+    /**/
+    background: none;
+    box-shadow: none;
+    opacity: 1;
+    /**/
+    padding: 0px;
+    /**/
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    overflow: hidden;
+  }
+
+  #informationBar {
+    z-index: 2;
+    width: 750px;
+    height: 50px;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    /**/
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 0px 20px 0px 0px;
+    box-shadow: 0px 2px 5px -1px grey;
+    /**/
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    overflow: hidden;
+  }
+
+  #contentDisplayContainer {
+    z-index: 1;
+    width: 750px;
+    height: calc(100% - 50px);
+    position: absolute;
+    top: 50px;
+    left: 250px;
+    /**/
+    background-color: rgba(255, 255, 255, 0.8);
+    /**/
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    overflow: hidden;
+  }
+
+  .contentDisplay {
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    /**/
+    display: none;
+    /**/
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+
+  .contentDisplayFlexBox {
+    z-index: 0;
+    width: 700px;
+    max-width: 100%;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    /**/
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    /**/
+    padding: 10px 0px 10px 0px;
+    /**/
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+  .container {
+    overflow: hidden;
+  }
+}

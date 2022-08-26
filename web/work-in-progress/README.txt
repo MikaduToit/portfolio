@@ -1,0 +1,2 @@
+If this folder is empty, please contact me at: 'dutoit.mika@gmail.com' and I will upload the latest version of my work in progress.
+I cannot keep my WIP project up to date here on a public repository do to the use of private API keys.

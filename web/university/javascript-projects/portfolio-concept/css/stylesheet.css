@@ -1,0 +1,1006 @@
+:root
+{
+	--currentRotation: 0deg;
+}
+
+html 
+{
+	max-width: 100%;
+	max-height: 100%;
+	overflow-x: hidden;
+	overflow-y: hidden;
+}
+
+.homePage
+{
+	width: 100%;
+	height: 100%;
+	max-width: 100%;
+	max-height: 100%;
+	overflow-x: hidden;
+	overflow-y: hidden;
+	background-image: url("../assets/images/BackgroundCollage.png");
+	background-size: 100%;
+
+}
+
+#footer
+{
+	position: absolute;
+	bottom: 0%;
+	left: 0%;
+	width: 100%;
+	height: 2vmax;
+	background-color: #4bafe1;
+}
+
+
+
+/*Animations*/
+
+
+
+@keyframes FadeToBW
+{
+	0%
+	{
+		-webkit-filter: grayscale(0%);
+	}
+	100%
+	{
+		-webkit-filter: grayscale(100%);
+	}
+}
+
+@keyframes FadeToColour
+{
+	0%
+	{
+		-webkit-filter: grayscale(100%);
+	}
+	100%
+	{
+		-webkit-filter: grayscale(0%);
+	}
+}
+
+@keyframes FadeIn
+{
+	0%
+	{
+		opacity: 0;
+	}
+	100%
+	{
+		opacity: 1;
+	}
+}
+
+@keyframes FadeOut
+{
+	0%
+	{
+		opacity: 1;
+	}
+	100%
+	{
+		opacity: 0;
+	}
+}
+
+@keyframes AboutMeSquareAnimation
+{
+	0%
+	{
+		background-image: linear-gradient(to right, white, transparent), linear-gradient(to bottom, white, transparent), linear-gradient(to left, white, transparent), linear-gradient(to top, white, transparent);
+  		background-size: 0% 0.3vmax, 0.3vmax 0%, 0% 0.3vmax, 0.3vmax 0%;
+  		background-position: top left, top right, bottom right, bottom left;
+  		background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
+	}
+	10%
+	{
+		background-image: linear-gradient(to right, white, transparent), linear-gradient(to bottom, white, transparent), linear-gradient(to left, white, transparent), linear-gradient(to top, white, transparent);
+  		background-size: 100% 0.3vmax, 0.3vmax 0%, 0% 0.3vmax, 0.3vmax 0%;
+  		background-position: top left, top right, bottom right, bottom left;
+  		background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
+	}
+	20%
+	{
+		background-image: linear-gradient(to right, white, transparent), linear-gradient(to bottom, white, transparent), linear-gradient(to left, white, transparent), linear-gradient(to top, white, transparent);
+  		background-size: 100% 0.3vmax, 0.3vmax 100%, 0% 0.3vmax, 0.3vmax 0%;
+  		background-position: top left, top right, bottom right, bottom left;
+  		background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
+	}
+	30%
+	{
+		background-image: linear-gradient(to right, white, transparent), linear-gradient(to bottom, white, transparent), linear-gradient(to left, white, transparent), linear-gradient(to top, white, transparent);
+  		background-size: 100% 0.3vmax, 0.3vmax 100%, 100% 0.3vmax, 0.3vmax 0%;
+  		background-position: top left, top right, bottom right, bottom left;
+  		background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
+	}
+	40%
+	{
+		background-image: linear-gradient(to right, white, transparent), linear-gradient(to bottom, white, transparent), linear-gradient(to left, white, transparent), linear-gradient(to top, white, transparent);
+  		background-size: 100% 0.3vmax, 0.3vmax 100%, 100% 0.3vmax, 0.3vmax 100%;
+  		background-position: top left, top right, bottom right, bottom left;
+  		background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
+	}
+	50%
+	{
+		background-image: linear-gradient(to left, transparent, white), linear-gradient(to top, transparent, white), linear-gradient(to right, transparent, white), linear-gradient(to bottom, transparent, white);
+  		background-size: 100% 0.3vmax, 0.3vmax 100%, 100% 0.3vmax, 0.3vmax 100%;
+  		background-position: top right, bottom right, bottom left, top left;
+  		background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
+	}
+	60%
+	{
+		background-image: linear-gradient(to left, transparent, white), linear-gradient(to top, transparent, white), linear-gradient(to right, transparent, white), linear-gradient(to bottom, transparent, white);
+  		background-size: 0% 0.3vmax, 0.3vmax 100%, 100% 0.3vmax, 0.3vmax 100%;
+  		background-position: top right, bottom right, bottom left, top left;
+  		background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
+	}
+	70%
+	{
+		background-image: linear-gradient(to left, transparent, white), linear-gradient(to top, transparent, white), linear-gradient(to right, transparent, white), linear-gradient(to bottom, transparent, white);
+  		background-size: 0% 0.3vmax, 0.3vmax 0%, 100% 0.3vmax, 0.3vmax 100%;
+  		background-position: top right, bottom right, bottom left, top left;
+  		background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
+	}
+	80%
+	{
+		background-image: linear-gradient(to left, transparent, white), linear-gradient(to top, transparent, white), linear-gradient(to right, transparent, white), linear-gradient(to bottom, transparent, white);
+  		background-size: 0% 0.3vmax, 0.3vmax 0%, 0% 0.3vmax, 0.3vmax 100%;
+  		background-position: top right, bottom right, bottom left, top left;
+  		background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
+	}
+	90%
+	{
+		background-image: linear-gradient(to left, transparent, white), linear-gradient(to top, transparent, white), linear-gradient(to right, transparent, white), linear-gradient(to bottom, transparent, white);
+  		background-size: 0% 0.3vmax, 0.3vmax 0%, 0% 0.3vmax, 0.3vmax 0%;
+  		background-position: top right, bottom right, bottom left, top left;
+  		background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
+	}
+	100%
+	{
+		background-image: linear-gradient(to left, transparent, white), linear-gradient(to top, transparent, white), linear-gradient(to right, transparent, white), linear-gradient(to bottom, transparent, white);
+  		background-size: 0% 0.3vmax, 0.3vmax 0%, 0% 0.3vmax, 0.3vmax 0%;
+  		background-position: top right, bottom right, bottom left, top left;
+  		background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
+	}
+}
+
+@keyframes StarCreation 
+{
+  0% 
+  {
+      	background-image: linear-gradient(to top, white, white), linear-gradient(to right, white, transparent), linear-gradient(to right, white, transparent);
+  		background-size: 0.3vmax 0%, 0% 0.3vmax, 0% 0.3vmax;
+  		background-position: bottom left, top left, bottom left;
+  		background-repeat: no-repeat, no-repeat, no-repeat;
+  }
+  30% 
+  {
+  		background-image: linear-gradient(to top, white, white), linear-gradient(to right, white, transparent), linear-gradient(to right, white, transparent);
+  		background-size: 0.3vmax 100%, 0% 0.3vmax, 0% 0.3vmax;
+  		background-position: bottom left, top left, bottom left;
+  		background-repeat: no-repeat, no-repeat, no-repeat;
+  }
+  100% 
+  {
+      	background-image: linear-gradient(to top, white, white), linear-gradient(to right, white, transparent), linear-gradient(to right, white, transparent);
+  		background-size: 0.3vmax 100%, 100% 0.3vmax, 75% 0.3vmax;
+  		background-position: bottom left, top left, bottom left;
+  		background-repeat: no-repeat, no-repeat, no-repeat;
+  }
+}
+
+@keyframes StarRotation 
+{
+  0% 
+  {
+    transform: rotate(0deg);
+  }
+  100% 
+  {
+    transform: rotate(-360deg);
+  }
+}
+ 
+@keyframes RotateToParallelogram1 
+{
+  0% 
+  {
+    transform: rotate(var(--currentRotation));
+  }
+  100% 
+  {
+    transform: rotate(-360deg);
+  }
+}
+@keyframes RotateToParallelogram2 
+{
+  0% 
+  {
+    transform: rotate(var(--currentRotation));
+  }
+  100% 
+  {
+    transform: rotate(-72deg);
+  }
+}
+@keyframes RotateToParallelogram3 
+{
+  0% 
+  {
+    transform: rotate(var(--currentRotation));
+  }
+  100% 
+  {
+    transform: rotate(-144deg);
+  }
+}
+@keyframes RotateToParallelogram4 
+{
+  0% 
+  {
+    transform: rotate(var(--currentRotation));
+  }
+  100% 
+  {
+    transform: rotate(-216deg);
+  }
+}
+@keyframes RotateToParallelogram5 
+{
+  0% 
+  {
+    transform: rotate(var(--currentRotation));
+  }
+  100% 
+  {
+    transform: rotate(-288deg);
+  }
+}
+
+@keyframes EnlargeProjectDesktop
+{
+	0%
+	{
+		background-image: linear-gradient(to top, white, white), linear-gradient(to right, white, transparent), linear-gradient(to right, white, transparent);
+  		background-size: 0.3vmax 100%, 100% 0.3vmax, 75% 0.3vmax;
+  		background-position: bottom left, top left, bottom left;
+  		background-repeat: no-repeat, no-repeat, no-repeat;
+
+  		width: 16vmax;
+		height: 8vmax;
+		top: -12vmax;
+		left: 0vmax;
+	}
+
+	100%
+	{
+		background-image: linear-gradient(to top, white, white), linear-gradient(to right, white, transparent), linear-gradient(to right, white, transparent);
+  		background-size: 0.3vmax 100%, 100% 0.3vmax, 75% 0.3vmax;
+  		background-position: bottom left, top left, bottom left;
+  		background-repeat: no-repeat, no-repeat, no-repeat;
+
+		width: 60vmax;
+		height: 40vmax;
+		top: -21vmax;
+		left: -8vmax;
+	}
+}
+
+@keyframes ShrinkProjectDesktop
+{
+	0%
+	{
+		background-image: linear-gradient(to top, white, white), linear-gradient(to right, white, transparent), linear-gradient(to right, white, transparent);
+  		background-size: 0.3vmax 100%, 100% 0.3vmax, 75% 0.3vmax;
+  		background-position: bottom left, top left, bottom left;
+  		background-repeat: no-repeat, no-repeat, no-repeat;
+
+  		width: 60vmax;
+		height: 40vmax;
+		top: -21vmax;
+		left: -8vmax;
+	}
+	
+	100%
+	{
+		background-image: linear-gradient(to top, white, white), linear-gradient(to right, white, transparent), linear-gradient(to right, white, transparent);
+  		background-size: 0.3vmax 100%, 100% 0.3vmax, 75% 0.3vmax;
+  		background-position: bottom left, top left, bottom left;
+  		background-repeat: no-repeat, no-repeat, no-repeat;
+
+		width: 16vmax;
+		height: 8vmax;
+		top: -12vmax;
+		left: 0vmax;
+	}
+}
+
+@keyframes EnlargeProjectMobile
+{
+	0%
+	{
+		background-image: linear-gradient(to top, white, white), linear-gradient(to right, white, transparent), linear-gradient(to right, white, transparent);
+  		background-size: 0.3vmax 100%, 100% 0.3vmax, 75% 0.3vmax;
+  		background-position: bottom left, top left, bottom left;
+  		background-repeat: no-repeat, no-repeat, no-repeat;
+
+  		width: 16vmax;
+		height: 8vmax;
+		top: -12vmax;
+		left: 0vmax;
+	}
+
+	100%
+	{
+		background-image: linear-gradient(to top, white, white), linear-gradient(to right, white, transparent), linear-gradient(to right, white, transparent);
+  		background-size: 0.3vmax 100%, 100% 0.3vmax, 75% 0.3vmax;
+  		background-position: bottom left, top left, bottom left;
+  		background-repeat: no-repeat, no-repeat, no-repeat;
+
+		width: 48vmax;
+		height: 70vmax;
+		top: -8vmax;
+		left: -24vmax;
+	}
+}
+
+@keyframes ShrinkProjectMobile
+{
+	0%
+	{
+		background-image: linear-gradient(to top, white, white), linear-gradient(to right, white, transparent), linear-gradient(to right, white, transparent);
+  		background-size: 0.3vmax 100%, 100% 0.3vmax, 75% 0.3vmax;
+  		background-position: bottom left, top left, bottom left;
+  		background-repeat: no-repeat, no-repeat, no-repeat;
+
+  		width: 48vmax;
+		height: 70vmax;
+		top: -8vmax;
+		left: -24vmax;
+	}
+	
+	100%
+	{
+		background-image: linear-gradient(to top, white, white), linear-gradient(to right, white, transparent), linear-gradient(to right, white, transparent);
+  		background-size: 0.3vmax 100%, 100% 0.3vmax, 75% 0.3vmax;
+  		background-position: bottom left, top left, bottom left;
+  		background-repeat: no-repeat, no-repeat, no-repeat;
+
+		width: 16vmax;
+		height: 8vmax;
+		top: -12vmax;
+		left: 0vmax;
+	}
+}
+
+@keyframes EnlargeAboutMeDesktop
+{
+	0%
+	{
+  		width: 5vmax;
+		height: 5vmax;
+		top: 50%;
+		left: 50%;
+	}
+
+	100%
+	{
+		width: 40vmax;
+		height: 40vmax;
+		top: 50%;
+		left: 50%;
+	}
+}
+
+@keyframes ShrinkAboutMeDesktop
+{
+	0%
+	{
+  		width: 40vmax;
+		height: 40vmax;
+		top: 50%;
+		left: 50%;
+	}
+	
+	100%
+	{
+		width: 5vmax;
+		height: 5vmax;
+		top: 50%;
+		left: 50%;
+	}
+}
+
+@keyframes EnlargeAboutMeMobile
+{
+	0%
+	{
+  		width: 5vmax;
+		height: 5vmax;
+		top: 50%;
+		left: 50%;
+	}
+
+	100%
+	{
+		width: 40vmax;
+		height: 40vmax;
+		top: 50%;
+		left: 50%;
+	}
+}
+
+@keyframes ShrinkAboutMeMobile
+{
+	0%
+	{
+  		width: 40vmax;
+		height: 40vmax;
+		top: 50%;
+		left: 50%;
+	}
+	
+	100%
+	{
+		width: 5vmax;
+		height: 5vmax;
+		top: 50%;
+		left: 50%;
+	}
+}
+
+@keyframes MoveStarOffCenterDesktop
+{
+	0%
+	{
+		left: 50%;
+		top: 50%;
+	}
+	100%
+	{
+		left: 25%;
+		top: 50%;
+	}
+}
+
+@keyframes MoveStarToCenterDesktop
+{
+	0%
+	{
+		left: 25%;
+		top: 50%;
+	}
+	100%
+	{
+		left: 50%;
+		top: 50%;
+	}
+}
+
+@keyframes MoveStarOffCenterMobile
+{
+	0%
+	{
+		left: 50%;
+		top: 50%;
+	}
+	100%
+	{
+		left: 50%;
+		top: 25%;
+	}
+}
+
+@keyframes MoveStarToCenterMobile
+{
+	0%
+	{
+		left: 50%;
+		top: 25%;
+	}
+	100%
+	{
+		left: 50%;
+		top: 50%;
+	}
+}
+
+
+
+/*Objects*/
+
+
+
+
+#moveAnchor
+{
+	position: absolute;
+	width: 10px;
+	height: 10px;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%,-50%);
+}
+
+#aboutMe
+{
+	position: absolute;
+	justify-content: center;
+	width: 5vmax;
+	height: 5vmax;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%,-50%);
+	border-radius: 0%;
+	text-align: center;
+	vertical-align: middle;
+	z-index: 0;
+	overflow: hidden;
+}
+
+#aboutMeSquare
+{
+	position: absolute;
+	justify-content: center;
+	width: 100%;
+	height: 100%;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%,-50%);
+	border-radius: 0%;
+	text-align: center;
+	vertical-align: middle;
+	z-index: 0;
+}
+
+#pivots
+{
+	position: absolute;
+	width: 0px;
+	height: 0px;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%,-50%);
+	border-radius: 50%;
+	z-index: 1;
+}
+
+#pivot1
+{
+	position: absolute;
+	display: flex;
+	justify-content: center;
+	width: 0px;
+	height: 0px;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%,-50%);
+	transform: rotate(0deg);
+}
+
+#pivot2
+{
+	position: absolute;
+	display: flex;
+	justify-content: center;
+	width: 0px;
+	height: 0px;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%,-50%);
+	transform: rotate(72deg);
+}
+
+#pivot3
+{
+	position: absolute;
+	display: flex;
+	justify-content: center;
+	width: 0px;
+	height: 0px;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%,-50%);
+	transform: rotate(144deg);
+}
+
+#pivot4
+{
+	position: absolute;
+	display: flex;
+	justify-content: center;
+	width: 0px;
+	height: 0px;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%,-50%);
+	transform: rotate(216deg);
+}
+
+#pivot5
+{
+	position: absolute;
+	display: flex;
+	justify-content: center;
+	width: 0px;
+	height: 0px;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%,-50%);
+	transform: rotate(288deg);
+}
+
+#parallelogram1 
+{
+	position: absolute;
+	width: 16vmax;
+	height: 8vmax;
+	-webkit-transform: skew(-30deg);
+	  	-moz-transform: skew(-30deg);
+	     	-o-transform: skew(-30deg);
+	top: -12vmax;
+	left: 0vmax;
+}
+
+#project1
+{
+	position: absolute;
+	width: calc(100% - 0.6vmax);
+	height: calc(100% - 0.6vmax);
+	background-color: black;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%,-50%);
+	background:linear-gradient(110deg, black 20%, transparent 80%);
+	background-position: top left;
+	background-repeat: no-repeat;
+}
+
+#mondrianProjectContainer
+{
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%,-50%);
+	overflow: hidden;
+	-webkit-filter: grayscale(100%);
+}
+
+#mondrianProject
+{
+	top: 10%;
+	left: 25%;
+	width: 20vmax;
+	height: 20vmax;
+	min-width: 5vmax;
+	min-height: 5vmax;
+	position: absolute;
+	-webkit-transform: skew(30deg);
+	  	-moz-transform: skew(30deg);
+	     	-o-transform: skew(30deg);
+}
+
+#parallelogram2 
+{
+	position: absolute;
+	width: 16vmax;
+	height: 8vmax;
+	-webkit-transform: skew(-30deg);
+	  	-moz-transform: skew(-30deg);
+	     	-o-transform: skew(-30deg);
+	top: -12vmax;
+	left: 0vmax;
+}
+
+#project2
+{
+	position: absolute;
+	width: calc(100% - 0.6vmax);
+	height: calc(100% - 0.6vmax);
+	background-color: black;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%,-50%);
+	-webkit-mask-image:linear-gradient(110deg, black 20%, transparent 80%);
+}
+
+#jqueryProjectContainer
+{
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%,-50%);
+	overflow: hidden;
+	-webkit-filter: grayscale(100%);
+}
+
+#jqueryProject
+{
+	top: 10%;
+	left: 10%;
+	width: 32vmax;
+	height: 18vmax;
+	min-width: 1.6vmax;
+	min-height: 0.9vmax;
+	position: absolute;
+	-webkit-transform: skew(30deg);
+	  	-moz-transform: skew(30deg);
+	     	-o-transform: skew(30deg);
+}
+
+#parallelogram3 
+{
+	position: absolute;
+	width: 16vmax;
+	height: 8vmax;
+	-webkit-transform: skew(-30deg);
+	  	-moz-transform: skew(-30deg);
+	     	-o-transform: skew(-30deg);
+	top: -12vmax;
+	left: 0vmax;
+}
+
+#project3
+{
+	position: absolute;
+	width: calc(100% - 0.6vmax);
+	height: calc(100% - 0.6vmax);
+	background-color: black;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%,-50%);
+	-webkit-mask-image:linear-gradient(110deg, black 20%, transparent 80%);
+}
+
+#parallelogram4 
+{
+	position: absolute;
+	width: 16vmax;
+	height: 8vmax;
+	-webkit-transform: skew(-30deg);
+	  	-moz-transform: skew(-30deg);
+	     	-o-transform: skew(-30deg);
+	top: -12vmax;
+	left: 0vmax;
+}
+
+#project4
+{
+	position: absolute;
+	width: calc(100% - 0.6vmax);
+	height: calc(100% - 0.6vmax);
+	background-color: black;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%,-50%);
+	-webkit-mask-image:linear-gradient(110deg, black 20%, transparent 80%);
+}
+
+#parallelogram5 
+{
+	position: absolute;
+	width: 16vmax;
+	height: 8vmax;
+	-webkit-transform: skew(-30deg);
+	  	-moz-transform: skew(-30deg);
+	     	-o-transform: skew(-30deg);
+	top: -12vmax;
+	left: 0vmax;
+}
+
+#project5
+{
+	position: absolute;
+	width: calc(100% - 0.6vmax);
+	height: calc(100% - 0.6vmax);
+	background-color: black;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%,-50%);
+	-webkit-mask-image:linear-gradient(110deg, black 20%, transparent 80%);
+}
+
+@font-face
+{
+	font-family: EngraversGothic;
+	src: url("../assets/fonts/EngraversGothicBT.ttf");
+}
+
+@font-face
+{
+	font-family: OratorStd;
+	src: url("../assets/fonts/OratorStd.otf");
+}
+
+@font-face
+{
+	font-family: TCM;
+	src: url("../assets/fonts/TCM.ttf");
+}
+
+#hi-aboutMe-text
+{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	font-family: TCM;
+	font-size: 4vmax;
+	color: #4bafe1;
+	text-shadow: 0.2vmax 0.2vmax 0.1vmax black;
+	z-index: -1;
+}
+
+#header1
+{
+	position: absolute;
+	font-family: EngraversGothic;
+	font-size: 1.5vmax;
+	color: #4bafe1;
+	text-shadow: 0.1vmax 0.1vmax 0.1vmax black;
+	top: -1.5vmax;
+	left: 0vmax;
+	-webkit-transform: skew(30deg);
+	  	-moz-transform: skew(30deg);
+	     	-o-transform: skew(30deg);
+	z-index: -1;
+}
+
+#header2
+{
+	position: absolute;
+	font-family: EngraversGothic;
+	font-size: 1.5vmax;
+	color: #4bafe1;
+	text-shadow: 0.1vmax 0.1vmax 0.1vmax black;
+	top: -1.5vmax;
+	left: 0vmax;
+	-webkit-transform: skew(30deg);
+	  	-moz-transform: skew(30deg);
+	     	-o-transform: skew(30deg);
+	z-index: -1;
+}
+
+#header3
+{
+	position: absolute;
+	font-family: EngraversGothic;
+	font-size: 1.5vmax;
+	color: #4bafe1;
+	text-shadow: 0.1vmax 0.1vmax 0.1vmax black;
+	top: -1.5vmax;
+	left: 0vmax;
+	-webkit-transform: skew(30deg);
+	  	-moz-transform: skew(30deg);
+	     	-o-transform: skew(30deg);
+	z-index: -1;
+}
+
+#header4
+{
+	position: absolute;
+	font-family: EngraversGothic;
+	font-size: 1.5vmax;
+	color: #4bafe1;
+	text-shadow: 0.1vmax 0.1vmax 0.1vmax black;
+	top: -1.5vmax;
+	left: 0vmax;
+	-webkit-transform: skew(30deg);
+	  	-moz-transform: skew(30deg);
+	     	-o-transform: skew(30deg);
+	z-index: -1;
+}
+
+#header5
+{
+	position: absolute;
+	font-family: EngraversGothic;
+	font-size: 1.5vmax;
+	color: #4bafe1;
+	text-shadow: 0.1vmax 0.1vmax 0.1vmax black;
+	top: -1.5vmax;
+	left: 0vmax;
+	-webkit-transform: skew(30deg);
+	  	-moz-transform: skew(30deg);
+	     	-o-transform: skew(30deg);
+	z-index: -1;
+}
+
+#mondrianproject-text
+{
+	position: absolute;
+	font-family: TCM;
+	font-size: 1.5vmax;
+	color: white;
+	text-shadow: 0.1vmax 0.1vmax 0.1vmax black;
+	top: 40%;
+	left: 10%;
+	padding-right: 50%;
+	padding-top: 10vmax;
+	-webkit-transform: skew(30deg);
+	  	-moz-transform: skew(30deg);
+	     	-o-transform: skew(30deg);
+	z-index: -1;
+}
+
+#jqueryproject-text
+{
+	position: absolute;
+	font-family: TCM;
+	font-size: 1.5vmax;
+	color: white;
+	text-shadow: 0.1vmax 0.1vmax 0.1vmax black;
+	top: 40%;
+	left: 10%;
+	padding-right: 50%;
+	padding-top: 10vmax;
+	-webkit-transform: skew(30deg);
+	  	-moz-transform: skew(30deg);
+	     	-o-transform: skew(30deg);
+	z-index: -1;
+}
+
+#aboutMe-textcontainer
+{
+	height: calc(100% - 0.6vmax);
+	width: calc(100% - 0.6vmax);
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	z-index: -1;
+	transform: translate(-50%,-50%);
+	opacity: 0;
+	text-align: center;
+	vertical-align: middle;
+	background-image: radial-gradient(circle, black, transparent);
+}
+
+#aboutMe-text
+{
+	position: absolute;
+	font-family: TCM;
+	font-size: 1.5vmax;
+	color: white;
+	text-shadow: 0.1vmax 0.1vmax 0.1vmax black;
+	z-index: -1;
+	padding-top: 60%;
+	padding-left: 10%;
+	padding-right: 10%;
+}
+
+#imageofme
+{
+	position: absolute;
+	z-index: -1;
+	height: 12vmax;
+	width: 12vmax;
+	border: white 0.1vmax solid;
+	border-radius: 50%;
+	background-image: url("../assets/images/Me.jpg");
+	top: 30%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	background-size: 100%
+}
+
+#heading
+{
+	position: absolute;
+	z-index: 0;
+	height: 20vmax;
+	width: 20vmax;
+	font-family: EngraversGothic;
+	font-size: 4vmax;
+	color: #4bafe1;
+	text-shadow: 0.3vmax 0.3vmax 0.2vmax black;
+	top: 5%;
+	left: 5%;
+}

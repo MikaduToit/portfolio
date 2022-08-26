@@ -1,0 +1,87 @@
+body
+{
+
+}
+
+.sunrise
+{
+    background-image: url("../assets/Sunrise.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.day
+{
+    background-image: url("../assets/Daytime.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.sunset
+{
+    background-image: url("../assets/Sunset.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.night
+{
+    background-image: url("../assets/Nightime.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+#time
+{
+	top: 50%;
+	left: 50%;
+	position: absolute;
+	font-size: 10vmax;
+	font-weight: bold;
+	font-family: Sans-serif;
+	margin: auto;
+    width: 100%;
+	text-align: center;
+	transform: translate(-50%, 0%);
+}
+
+#button
+{
+	position: absolute;
+	transform: translate(-50%, 200%);
+	background-color: red;
+	top: 50%;
+	left: 50%;
+	width: 10vmax;
+	height: 10vmax;
+	border-width: 1vmax;
+	border-style: solid;
+	border-color: black;
+	border-radius: 50%;
+}
+
+#buttonText
+{
+	font-size: 2vmax;
+	font-weight: bold;
+	font-family: Sans-serif;
+	position: absolute;
+	text-align: center; 
+	color: black;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+#text
+{
+	margin: auto;
+	position: absolute;
+	transform: translate(-25%, 500%);
+	top: 50%;
+	left: 50%;
+	font-size: 2vmax;
+	font-weight: bold;
+	font-family: Sans-serif;
+	color: yellow;
+}

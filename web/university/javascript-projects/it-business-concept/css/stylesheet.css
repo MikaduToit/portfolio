@@ -1,0 +1,768 @@
+:root
+{
+	--globalvariablename: 0;
+}
+
+
+
+/*Objects*/
+
+
+
+html 
+{
+	overflow-x: hidden;
+	background-color: #DADADA;
+	z-index: 0;
+}
+
+.homePage
+{
+	position: absolute;
+	padding: 0;
+	margin: 0;
+	width: 100%;
+	max-width: 1600px;
+	min-height: 100%;
+	overflow-x: hidden;
+	left: 50%;
+	top: 0%;
+	transform: translateX(-50%);
+	z-index: 1;
+}
+
+#headerBox
+{
+	position: absolute;
+	top: 0%;
+	left: 0%;
+	width: 100%;
+	height: 10%;
+	background-color: #E5E5E5;
+	z-index: 2;
+}
+
+#companyLogo
+{
+	position: absolute;
+	top: 0%;
+	left: 3%;
+	width: 20%;
+	height: 100%;
+	min-width: 500px;
+	min-height: 100%;
+	background-image: url("../assets/images/PrimalwareOfficialText.png");
+	background-size: 100%;
+	background-position: center;
+	background-repeat: no-repeat;
+	z-index: 3;
+}
+
+#facebookIcon
+{
+	position: absolute;
+	top: 50%;
+	right: 4%;
+	width: 2%;
+	height: 40%;
+	min-width: 50px;
+	min-height: 50px;
+	transform: translateY(-50%);
+	background-image: url("../assets/images/facebook.png");
+	background-size: 100%;
+	background-position: center;
+	background-repeat: no-repeat;
+	z-index: 3;
+}
+
+#sectionsBox
+{
+	position: absolute;
+	top: 10%;
+	left: 0%;
+	width: 100%;
+	height: 7%;
+	background-color: black;
+	z-index: 2;
+}
+
+#sectionsSubBox
+{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 100%;
+	height: 100%;
+	max-width: 900px;
+	z-index: 2;
+}
+
+#sectionDivider1
+{
+	position: absolute;
+	top: 50%;
+	left: 20%;
+	transform: translate(-50%, -50%);
+	width: 0.2vmin;
+	height: 50%;
+	background-color: white;
+	z-index: 4;
+}
+
+#sectionDivider2
+{
+	position: absolute;
+	top: 50%;
+	left: 40%;
+	transform: translate(-50%, -50%);
+	width: 0.2vmin;
+	height: 50%;
+	background-color: white;
+	z-index: 4;
+}
+
+#sectionDivider3
+{
+	position: absolute;
+	top: 50%;
+	left: 60%;
+	transform: translate(-50%, -50%);
+	width: 0.2vmin;
+	height: 50%;
+	background-color: white;
+	z-index: 4;
+}
+
+#sectionDivider4
+{
+	position: absolute;
+	top: 50%;
+	left: 80%;
+	transform: translate(-50%, -50%);
+	width: 0.2vmin;
+	height: 50%;
+	background-color: white;
+	z-index: 4;
+}
+
+input[type=button] 
+{
+    background-color: transparent;
+    padding: 0;
+    margin: 0;
+    border: none;
+    cursor: pointer;
+    justify-content: center;
+    vertical-align: middle;
+    position: absolute;
+    min-height: 100%;
+    min-width: 100%;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	font-family: FuturaLightCondensed;
+	font-size: 1.5vh;
+	letter-spacing: 0.2vmin;
+	color: white;
+	text-align: center;
+	vertical-align: middle;
+	z-index: 3;
+}
+
+input[type=button]:focus
+{
+	outline:0;
+}
+
+input[type=button]:hover 
+{
+    color: #800000;
+}
+
+#businessBox
+{
+	position: absolute;
+	top: 0%;
+	left: 10%;
+	transform: translate(-50%, 0%);
+	width: 20%;
+	height: 100%;
+	z-index: 2;
+}
+
+#productsBox
+{
+	position: absolute;
+	top: 0%;
+	left: 30%;
+	transform: translate(-50%, 0%);
+	width: 20%;
+	height: 100%;
+	z-index: 2;
+}
+
+#affiliationsBox
+{
+	position: absolute;
+	top: 0%;
+	left: 50%;
+	transform: translate(-50%, 0%);
+	width: 20%;
+	height: 100%;
+	z-index: 2;
+}
+
+#newsBox
+{
+	position: absolute;
+	top: 0%;
+	left: 70%;
+	transform: translate(-50%, 0%);
+	width: 20%;
+	height: 100%;
+	z-index: 2;
+}
+
+#aboutUsBox
+{
+	position: absolute;
+	top: 0%;
+	left: 90%;
+	transform: translate(-50%, 0%);
+	width: 20%;
+	height: 100%;
+	z-index: 2;
+}
+
+#bodyBox
+{
+	position: absolute;
+	top: 17%;
+	left: 0%;
+	width: 100%;
+	min-height: 90%;
+	background-color: #800000;
+	z-index: 2;
+}
+
+#logoBackground
+{
+	position: absolute;
+	top: 0%;
+	left: 0%;
+	width: 100%;
+	min-height: 100%;
+	background-image: url("../assets/images/PrimalwareBackground_1080p.png");
+	background-size: 100%;
+	background-repeat: no-repeat;
+	z-index: 3;
+}
+
+#businessTab
+{
+	position: absolute;
+	top: 0%;
+	left: 0%;
+	width: 100%;
+	height: 100%;
+	z-index: 4;
+	overflow: hidden;
+}
+
+#businessTabContents
+{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	padding-top: 40%;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 4;
+	overflow: hidden;
+	opacity: 0;
+}
+
+#businessDescription
+{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	font-family: FuturaMediumCondensed;
+	letter-spacing: 0.2vmin;
+	font-size: 3vh;
+	color: white;
+	text-align: center;
+	vertical-align: middle;
+	z-index: 6;
+}
+
+#productsTab
+{
+	position: relative;
+	top: 0%;
+	left: 0%;
+	width: 100%;
+	z-index: 4;
+	overflow: hidden;
+}
+
+#productsTabContents
+{
+	position: relative;
+	top: 0%;
+	left: 0%;
+	width: 100%;
+	z-index: 4;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	overflow: hidden;
+	opacity: 0;
+}
+
+#contentBox
+{
+	position: relative;
+	left: 0%;
+	top: 0%;
+	width: 300px;
+    height: 300px;
+    z-index: 6;
+    justify-content: center;
+}
+
+#productNames
+{
+	position: relative;
+	font-family: FuturaMediumCondensed;
+	font-size: 1.7vh;
+	letter-spacing: 0.2vmin;
+	padding-top: 10%;
+	color: black;
+	text-align: center;
+	vertical-align: middle;
+	z-index: 5;
+}
+
+#icon
+{
+	position: relative;
+	width: 50%;
+	left: 50%;
+	padding-top: 10%;
+	transform: translateX(-50%);
+	z-index: 5;
+}
+
+#affiliationsTab
+{
+	position: relative;
+	top: 0%;
+	left: 0%;
+	width: 100%;
+	z-index: 4;
+	overflow: hidden;
+}
+
+#affiliationsTabContents
+{
+	position: relative;
+	top: 0%;
+	left: 0%;
+	width: 100%;
+	z-index: 4;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	overflow: hidden;
+	opacity: 0;
+}
+
+.brandLinks
+{
+	position: relative;
+	left: 0%;
+	top: 0%;
+	width: 200px;
+    height: 200px;
+    z-index: 6;
+}
+
+#logo
+{
+	position: absolute;
+	width: 90%;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 5;
+}
+
+#newsTab
+{
+	position: absolute;
+	top: 0%;
+	left: 0%;
+	width: 100%;
+	height: 100%;
+	z-index: 4;
+	overflow: hidden;
+}
+
+#newsTabContents
+{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	padding-top: 40%;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 4;
+	overflow: hidden;
+	opacity: 0;
+}
+
+#newsDescription
+{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	font-family: FuturaMediumCondensed;
+	letter-spacing: 0.2vmin;
+	font-size: 3vh;
+	color: white;
+	text-align: center;
+	vertical-align: middle;
+	z-index: 6;
+}
+
+#aboutUsTab
+{
+	position: absolute;
+	top: 0%;
+	left: 0%;
+	width: 100%;
+	height: 100%;
+	z-index: 4;
+	overflow: hidden;
+}
+
+#aboutUsTabContents
+{
+	position: absolute;
+	width: 100%;
+	max-width: 800px;
+	height: 50%;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 4;
+	overflow: hidden;
+	opacity: 0;
+}
+
+#aboutUsDescription
+{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	font-family: FuturaMediumCondensed;
+	letter-spacing: 0.2vmin;
+	font-size: 2.4vh;
+	color: white;
+	text-align: center;
+	vertical-align: middle;
+	z-index: 6;
+}
+
+#phoneIcon
+{
+	position: absolute;
+	width: 10%;
+	left: 5%;
+	top: 30%;
+	z-index: 6;
+}
+
+#phoneNumberText
+{
+	position: absolute;
+	left: 20%;
+	top: 35%;
+	width: 80%;
+	font-family: FuturaMediumCondensed;
+	letter-spacing: 0.2vmin;
+	font-size: 2vh;
+	color: white;
+	vertical-align: middle;
+	z-index: 6;
+}
+
+#emailIcon
+{
+	position: absolute;
+	width: 10%;
+	left: 5%;
+	top: 50%;
+	z-index: 6;
+}
+
+#emailText
+{
+	position: absolute;
+	left: 20%;
+	top: 55%;
+	width: 80%;
+	font-family: FuturaMediumCondensed;
+	letter-spacing: 0.2vmin;
+	font-size: 2vh;
+	color: white;
+	vertical-align: middle;
+	z-index: 6;
+}
+
+#locationIcon
+{
+	position: absolute;
+	width: 10%;
+	left: 5%;
+	top: 70%;
+	z-index: 6;
+}
+
+#addressText
+{
+	position: absolute;
+	left: 20%;
+	top: 75%;
+	width: 80%;
+	font-family: FuturaMediumCondensed;
+	letter-spacing: 0.2vmin;
+	font-size: 2vh;
+	color: white;
+	vertical-align: middle;
+	z-index: 6;
+}
+
+#footerBox
+{
+	position: absolute;
+	bottom: 0%;
+	left: 0%;
+	width: 100%;
+	min-height: 7%;
+	transform: translateY(100%);
+	background-color: #444444;
+	z-index: 2;
+}
+
+#copyrightTextbox
+{
+	position: absolute;
+	bottom: 0%;
+	left: 0%;
+	width: 100%;
+	height: 100%;
+	z-index: 3;
+}
+
+#copyrightStatement
+{
+	position: absolute;
+	padding-top: 1.5%;
+	width: 100%;
+	height: 100%;
+	font-family: FuturaLight;
+	font-size: 1.7vh;
+	color: black;
+	text-align: center;
+	vertical-align: middle;
+	z-index: 4;
+}
+
+
+
+/*Animations*/
+
+
+
+@keyframes HighlightSection
+{
+	0%
+	{
+		background-image: linear-gradient(to bottom, #800000, black);
+		background-size: 98% 0%;
+		background-position: top center;
+		background-repeat: no-repeat;
+	}
+	100%
+	{
+		background-image: linear-gradient(to bottom, #800000, black);
+		background-size: 98% 100%;
+		background-position: top center;
+		background-repeat: no-repeat;
+	}
+}
+
+@keyframes OpenTabBlack
+{
+	0%
+	{
+		background-image: linear-gradient(to bottom, black, rgba(0,0,0,0.3));
+		background-size: 100% 0%;
+		background-position: top center;
+		background-repeat: no-repeat;
+
+		height: 0%;
+	}
+	100%
+	{
+		background-image: linear-gradient(to bottom, black, rgba(0,0,0,0.3));
+		background-size: 100% 100%;
+		background-position: top center;
+		background-repeat: no-repeat;
+
+		height: 100%;
+	}
+}
+
+@keyframes DeselectSection
+{
+	0%
+	{
+		background-image: linear-gradient(to bottom, #800000, black);
+		background-size: 98% 100%;
+		background-position: top center;
+		background-repeat: no-repeat;
+	}
+	100%
+	{
+		background-image: linear-gradient(to bottom, #800000, black);
+		background-size: 98% 0%;
+		background-position: top center;
+		background-repeat: no-repeat;
+	}
+}
+
+@keyframes CloseTabBlack
+{
+	0%
+	{
+		background-image: linear-gradient(to bottom, black, rgba(0,0,0,0.3));
+		background-size: 100% 100%;
+		background-position: top center;
+		background-repeat: no-repeat;
+
+		height: 100%;
+	}
+	100%
+	{
+		background-image: linear-gradient(to bottom, black, rgba(0,0,0,0.3));
+		background-size: 100% 0%;
+		background-position: top center;
+		background-repeat: no-repeat;
+
+		height: 0%;
+	}
+}
+
+@keyframes OpenTabWhite
+{
+	0%
+	{
+		background-image: linear-gradient(to bottom, #E5E5E5, rgba(255,255,255,0.3));
+		background-size: 100% 0%;
+		background-position: top center;
+		background-repeat: no-repeat;
+
+		height: 0;
+	}
+	100%
+	{
+		background-image: linear-gradient(to bottom, #E5E5E5, rgba(255,255,255,0.3));
+		background-size: 100% 100%;
+		background-position: top center;
+		background-repeat: no-repeat;
+
+		height: 0%;
+	}
+}
+
+@keyframes CloseTabWhite
+{
+	0%
+	{
+		background-image: linear-gradient(to bottom, #E5E5E5, rgba(255,255,255,0.3));
+		background-size: 100% 100%;
+		background-position: top center;
+		background-repeat: no-repeat;
+
+		height: 0%;
+	}
+	100%
+	{
+		background-image: linear-gradient(to bottom, #E5E5E5, rgba(255,255,255,0.3));
+		background-size: 100% 0%;
+		background-position: top center;
+		background-repeat: no-repeat;
+
+		height: 0;
+	}
+}
+
+@keyframes FadeIn
+{
+	0%
+	{
+		opacity: 0;
+	}
+	100%
+	{
+		opacity: 1;
+	}
+}
+
+@keyframes FadeOut
+{
+	0%
+	{
+		opacity: 1;
+	}
+	100%
+	{
+		opacity: 0;
+	}
+}
+
+
+
+/*Fonts*/
+
+
+
+@font-face
+{
+	font-family: FuturaLight;
+	src: url("../assets/fonts/futuralight.ttf");
+}
+
+@font-face
+{
+	font-family: FuturaLightCondensed;
+	src: url("../assets/fonts/futuralightcondensed.ttf");
+}
+
+@font-face
+{
+	font-family: FuturaMedium;
+	src: url("../assets/fonts/futuramedium.ttf");
+}
+
+@font-face
+{
+	font-family: FuturaMediumCondensed;
+	src: url("../assets/fonts/futuramediumcondensed.ttf");
+}
