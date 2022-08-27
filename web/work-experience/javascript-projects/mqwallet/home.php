@@ -18,7 +18,7 @@
     }
     
     //Connects to the desired database.
-    $dbConnection = new mysqli("matrix-q.nl.mysql", "matrix_q_nl_wallet", "MQWALLET900", "matrix_q_nl_wallet");
+    $dbConnection = new mysqli("localhost", "matrix_q_nl_wallet", "admin", "admin");
 
     $fetchUserInfo = $dbConnection->prepare("SELECT Email, FirstName, LastName, PhoneNumber, Company, Address, City, ZIPCode, Province, Country, ProfilePicture FROM tbl_user_information WHERE UserID = ?");
     $userID = $_SESSION['loggedInUserInfoArray']['UserID'];
@@ -241,7 +241,7 @@
                                             <div class="textInputAltContainer">
                                                 <select class="dropdownListAlt" name="personalCountry" required disabled>
                                                     <option value="Afghanistan">Afghanistan</option>
-                                                    <option value="Aland Islands">Aland Islands</option><!--May need to add support for the special character Å, and do the same for ShippingCountry-->
+                                                    <option value="Aland Islands">Aland Islands</option><!--May need to add support for the special character ï¿½, and do the same for ShippingCountry-->
                                                     <option value="Albania">Albania</option>
                                                     <option value="Algeria">Algeria</option>
                                                     <option value="American Samoa">American Samoa</option>

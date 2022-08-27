@@ -14,7 +14,7 @@
     $loggedUserID = $_SESSION['loggedInUserInfoArray']['UserID'];
 
     //Connects to the desired database.
-    $dbConnection = new mysqli("matrix-q.nl.mysql", "matrix_q_nl_wallet", "MQWALLET900", "matrix_q_nl_wallet");
+    $dbConnection = new mysqli("localhost", "matrix_q_nl_wallet", "admin", "admin");
 
     //If connected, do the following.
     $tokenTransactionLogArray = array();
