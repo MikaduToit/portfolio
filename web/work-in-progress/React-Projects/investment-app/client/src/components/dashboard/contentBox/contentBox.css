@@ -1,0 +1,87 @@
+/*All elements that have different property values for each media query
+need to have all those properties defined in both queries. If the value
+refains the same, a duplication of that property is not required.*/
+@media only all and (min-width: 0px) {
+  .contentBox {
+    z-index: -3;
+    width: 100%;
+    height: calc(100% - 50px);
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    overflow: hidden;
+  }
+
+  .contentBoxFlexLayout {
+    width: 100%;
+    position: relative;
+    left: 0;
+    top: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px;
+  }
+
+  .contentDisplayBox {
+    width: 660px;
+    max-width: 100%;
+    position: relative;
+    background: none;
+    backdrop-filter: blur(5px); /*Firefox requires config changes*/
+    -webkit-backdrop-filter: blur(5px);
+    border-radius: 20px;
+    box-shadow: 0 0 10px 0 black;
+    margin-top: 40px;
+    overflow-y: hidden;
+    overflow-x: auto;
+  }
+
+  .headingIcon {
+    width: 140px;
+    height: 140px;
+    position: absolute;
+    bottom: -30px;
+    right: 20px;
+    color: rgba(255, 215, 0, 0.8);
+    pointer-events: none;
+    touch-action: none;
+    user-select: none;
+  }
+
+  .heading {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    color: black;
+    font-family: "Rubik500", sans-serif;
+    font-size: 18px;
+    padding: 0px 40px 0px 40px;
+    pointer-events: none;
+    touch-action: none;
+    user-select: none;
+  }
+
+  .formKey {
+    width: 100%;
+    position: relative;
+    left: 0;
+    color: rgba(255, 215, 0, 1);
+    font-family: "Rubik400", sans-serif;
+    font-size: 12px;
+    text-align: center;
+    pointer-events: none;
+    touch-action: none;
+    user-select: none;
+  }
+}
+
+@media only all and (min-width: 1000px) {
+  .contentBox {
+    z-index: -1;
+    width: 750px;
+  }
+}

@@ -1,0 +1,89 @@
+/*All elements that have different property values for each media query
+need to have all those properties defined in both queries. If the value
+refains the same, a duplication of that property is not required.*/
+@media only all and (min-width: 0px) {
+  .navMenu {
+    width: 100%;
+    height: 50px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(255, 215, 0, 0.8);
+    border-radius: 0;
+    box-shadow: 0px 2px 5px -1px black;
+  }
+
+  .backdropFadeFilter {
+    z-index: -2;
+    width: 100%;
+    height: calc(100vh - 50px);
+    position: absolute;
+    top: 50px;
+    background-color: black;
+    transition: 0.2s linear;
+    overflow: hidden;
+    cursor: pointer;
+  }
+
+  .navButtonsBox {
+    z-index: -1;
+    width: 250px;
+    max-width: 75%;
+    height: calc(100vh - 50px);
+    position: absolute;
+    top: 50px;
+    background-color: rgba(255, 215, 0, 0.8);
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px); /*Firefox requires config changes*/
+    box-shadow: 2px 0px 5px -1px black;
+    overflow: hidden;
+  }
+
+  .navSpacer {
+    width: 100%;
+    position: relative;
+    left: 0;
+    color: black;
+    font-family: "Poppins500", sans-serif;
+    font-size: 16px;
+    padding: 0px 0px 0px 20px;
+    margin: 10px 0px 10px 0px;
+    user-select: none;
+  }
+
+  .navButton {
+    width: calc(100% - 40px);
+    position: relative;
+    left: 40px;
+    border: 0 solid;
+    border-radius: 50px 0px 0px 50px;
+    outline: none;
+    font-family: "FuturaLightCondensed", sans-serif;
+    font-size: 20px;
+    text-align: left;
+    padding: 6px 10px 6px 40px;
+    margin: 2px 0px 2px 0px;
+    cursor: pointer;
+  }
+}
+
+@media only all and (min-width: 1000px) {
+  .navMenu {
+    width: 250px;
+    height: 100%;
+    border-radius: 20px 0px 0px 0px;
+    box-shadow: 2px 0px 5px -1px black;
+  }
+
+  .navButtonsBox {
+    z-index: 1;
+    max-width: 100%;
+    height: calc(100% - 150px);
+    top: 150px;
+    transform: none;
+    background-color: transparent;
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none; /*Firefox requires config changes*/
+    box-shadow: none;
+  }
+}

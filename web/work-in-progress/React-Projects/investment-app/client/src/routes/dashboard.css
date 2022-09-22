@@ -1,0 +1,48 @@
+/*All elements that have different property values for each media query
+need to have all those properties defined in both queries. If the value
+refains the same, a duplication of that property is not required.*/
+@media only all and (min-width: 0px) {
+  .dashboard {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transform: none;
+    background: none;
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px); /*Firefox requires config changes*/
+    border-radius: 0;
+    box-shadow: none;
+    overflow: hidden;
+  }
+
+  .topAndBottomFadeFilter {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    mask-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0) 5px,
+      rgba(0, 0, 0, 1) 10px,
+      rgba(0, 0, 0, 1) calc(100% - 10px),
+      rgba(0, 0, 0, 0) calc(100%)
+    );
+    padding: 20px 0px 20px 0px;
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+}
+
+@media only all and (min-width: 1000px) {
+  .dashboard {
+    width: 1000px;
+    height: calc(100% - 50px);
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 20px 20px 0px 0px;
+    box-shadow: 0 0 10px 0 black;
+  }
+}

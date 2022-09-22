@@ -1,0 +1,50 @@
+@media only all and (min-width: 0px) {
+  .alert {
+    width: 500px;
+    max-width: 90%;
+    position: absolute;
+    left: 50vw;
+    top: 0px;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(5px); /*Firefox requires config changes*/
+    -webkit-backdrop-filter: blur(5px);
+    border: 2px solid orangered;
+    border-radius: 20px;
+    box-shadow: 0 0 10px 0 black;
+    padding: 10px 45px 10px 20px;
+    color: orangered;
+    font-family: "Poppins500", sans-serif;
+    font-size: 14px;
+    line-height: 15px;
+  }
+
+  .alertIconButton {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+
+  .alertIcon {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: orangered;
+    pointer-events: none;
+    touch-action: none;
+  }
+}
+
+@media only all and (min-width: 1000px) {
+  .alert {
+    top: 20px;
+  }
+}

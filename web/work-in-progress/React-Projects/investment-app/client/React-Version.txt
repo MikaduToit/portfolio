@@ -1,0 +1,2 @@
+Terminal Command = npm view react version
+React : v18.1.0

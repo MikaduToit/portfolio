@@ -1,0 +1,4 @@
+401 = UNAUTHORIZED, try token refresh.
+403 = FORBIDDEN, block access.
+500 = INTERNAL SERVER ERROR, general server error handling.
+503 = SERVICE UNAVAILABLE, server side connection problem.

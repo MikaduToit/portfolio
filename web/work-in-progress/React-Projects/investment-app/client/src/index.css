@@ -1,0 +1,100 @@
+/*Fonts*/
+@font-face {
+  font-family: "Poppins100";
+  src: url("./assets/fonts/poppins/Poppins-Thin.ttf") format("truetype");
+  font-style: normal;
+}
+@font-face {
+  font-family: "Poppins200";
+  src: url("./assets/fonts/poppins/Poppins-ExtraLight.ttf") format("truetype");
+  font-style: normal;
+}
+@font-face {
+  font-family: "Poppins300";
+  src: url("./assets/fonts/poppins/Poppins-Light.ttf") format("truetype");
+  font-style: normal;
+}
+@font-face {
+  font-family: "Poppins400";
+  src: url("./assets/fonts/poppins/Poppins-Regular.ttf") format("truetype");
+  font-style: normal;
+}
+@font-face {
+  font-family: "Poppins500";
+  src: url("./assets/fonts/poppins/Poppins-Medium.ttf") format("truetype");
+  font-style: normal;
+}
+@font-face {
+  font-family: "Poppins600";
+  src: url("./assets/fonts/poppins/Poppins-SemiBold.ttf") format("truetype");
+  font-style: normal;
+}
+@font-face {
+  font-family: "Poppins700";
+  src: url("./assets/fonts/poppins/Poppins-Bold.ttf") format("truetype");
+  font-style: normal;
+}
+@font-face {
+  font-family: "Rubik300";
+  src: url("./assets/fonts/rubik/Rubik-Light.ttf") format("truetype");
+  font-style: normal;
+}
+@font-face {
+  font-family: "Rubik400";
+  src: url("./assets/fonts/rubik/Rubik-Regular.ttf") format("truetype");
+  font-style: normal;
+}
+@font-face {
+  font-family: "Rubik500";
+  src: url("./assets/fonts/rubik/Rubik-Medium.ttf") format("truetype");
+  font-style: normal;
+}
+@font-face {
+  font-family: "FuturaLightCondensed";
+  src: url("./assets/fonts/futura/futuralightcondensed.ttf") format("truetype");
+  font-style: normal;
+}
+
+/*Elements*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  line-height: 100%;
+}
+
+html {
+  width: 100vw;
+  height: 100vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  scrollbar-color: black transparent;
+  scrollbar-width: thin;
+  scrollbar-gutter: both-edges;
+}
+
+body {
+  background-image: url("./assets/backgrounds/MQBackground.png");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  font-family: "Poppins500", sans-serif;
+  font-size: 14px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/*FIXES CHROME HIGHLIGHTING AUTOFILLED INPUTS*/
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: darkgrey !important;
+}
