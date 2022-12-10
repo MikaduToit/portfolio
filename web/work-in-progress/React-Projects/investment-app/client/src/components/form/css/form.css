@@ -1,0 +1,125 @@
+/*CSS classes used across multiple form sub-components*/
+.form {
+  z-index: 0;
+  width: 100%;
+  position: relative;
+  left: 0;
+  padding: 20px 40px 20px 40px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: left;
+  gap: 0 40px;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.formKey {
+  width: 100%;
+  position: relative;
+  left: 0;
+  color: darkgrey;
+  font-family: "Font1", sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  text-align: center;
+  pointer-events: none;
+  touch-action: none;
+  user-select: none;
+}
+
+.formDescription {
+  width: 100%;
+  position: relative;
+  left: 0;
+  margin-top: 20px;
+  padding: 0 0 2px 8px;
+  border-left: 2px solid rgb(143, 0, 255);
+  color: gainsboro;
+  font-family: "Font1", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 120%;
+  text-align: left;
+  white-space: pre-wrap;
+  pointer-events: none;
+  touch-action: none;
+  user-select: none;
+}
+
+.serverRes {
+  width: 100%;
+  position: relative;
+  padding: 0 10px 0 10px;
+  font-family: "Font1", sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 120%;
+  text-align: center;
+  white-space: pre-wrap;
+}
+
+.inputBox100 {
+  width: 100%;
+  position: relative;
+  margin-top: 30px;
+  flex: 3 1 auto;
+}
+
+.inputBox50 {
+  width: 100%;
+  max-width: 265px;
+  position: relative;
+  margin-top: 30px;
+  flex: 1.5 1 170px;
+}
+
+.inputBox33 {
+  width: 100%;
+  position: relative;
+  margin-top: 30px;
+  flex: 1 1 150px;
+}
+
+.inputBox {
+  width: 100%;
+  position: relative;
+  margin-top: 10px;
+}
+
+.inputFocusBorder {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background: none;
+  border-width: 0 0 2px 0;
+  border-style: none none solid none;
+  border-color: rgba(255, 215, 0, 1);
+  transition: 0.1s linear;
+  pointer-events: none;
+  touch-action: none;
+  user-select: none;
+}
+
+.inputValidation {
+  width: 100%;
+  position: relative;
+  padding: 2px 10px 0 10px;
+  color: tomato;
+  font-family: "Font1", sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 120%;
+  text-align: left;
+  white-space: pre-wrap;
+}
+
+.inputFloatingLabel {
+  position: absolute;
+  left: 10px;
+  font-family: "Font1", sans-serif;
+  font-weight: 500;
+  white-space: nowrap;
+  transition: 0.1s linear;
+  pointer-events: none;
+  touch-action: none;
+  user-select: none;
+}

@@ -1,0 +1,27 @@
+/*All elements that have different property values for each media query
+need to have all those properties defined in both queries. If the value
+refains the same, a duplication of that property is not required.*/
+@media only all and (min-width: 0px) {
+  .navBarBox {
+    z-index: 1;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: transparent;
+    border-radius: 0;
+    box-shadow: none;
+    overflow: hidden;
+  }
+}
+
+@media only all and (min-width: 1000px) {
+  .navBarBox {
+    z-index: -1;
+    width: 750px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 0 20px 0 0;
+    box-shadow: 0 5px 10px 0 black;
+  }
+}

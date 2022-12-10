@@ -22,7 +22,7 @@ const databaseSetup = () => {
   }
 
   let handleDatabaseSetup = new Promise((resolve, reject) => {
-    let db = mysql.createConnection(dbConfig);
+    let db = mysql.createConnection(dbConfig.connection);
 
     db.connect((err) => {
       if (err) {
@@ -36,14 +36,34 @@ const databaseSetup = () => {
   })
     .then((db) => {
       return new Promise((resolve, reject) => {
+        db.query(`CREATE DATABASE ${dbConfig.config.database}`, (err, result) => {
+          if (err) {
+            errors = err.message;
+            reject(db);
+          } else if (result) {
+            results = "Database created! ";
+            db.changeUser({ database: dbConfig.config.database }, (err) => {
+              if (err) {
+                errors = err.message;
+                reject(db);
+              } else {
+                resolve(db);
+              }
+            });
+          }
+        });
+      });
+    })
+    .then((db) => {
+      return new Promise((resolve, reject) => {
         db.query(
-          'CREATE TABLE `tbl_users` (`ID` int NOT NULL AUTO_INCREMENT, `FirstName` varchar(255) NOT NULL, `LastName` varchar(255) NOT NULL, `Address` varchar(255) NOT NULL, `City` varchar(255) NOT NULL, `ProvinceOrState` varchar(255) NOT NULL, `Country` varchar(255) NOT NULL, `PostalCode` varchar(255) NOT NULL, `PhoneNumber` varchar(255) DEFAULT NULL, `Email` varchar(255) NOT NULL, `Password` varchar(255) NOT NULL, `Roles` varchar(255) NOT NULL, `RegistrationDate` datetime NOT NULL, `RegisteredByID` int NOT NULL, `LastLogin` datetime DEFAULT NULL, `LoginRefreshToken` varchar(255) DEFAULT NULL, `LoginIP` varchar(255) DEFAULT NULL, `ProfilePicture` varchar(255) NOT NULL DEFAULT "DefaultPP.png", PRIMARY KEY (`ID`), UNIQUE KEY `Email_UNIQUE` (`Email`)) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci',
+          'CREATE TABLE `tbl_users` (`ID` int NOT NULL AUTO_INCREMENT, `FirstName` varchar(255) NOT NULL, `LastName` varchar(255) NOT NULL, `Address` varchar(255) NOT NULL, `City` varchar(255) NOT NULL, `ProvinceOrState` varchar(255) NOT NULL, `Country` varchar(255) NOT NULL, `PostalCode` varchar(255) NOT NULL, `PhoneNumber` varchar(255) DEFAULT NULL, `Email` varchar(255) NOT NULL, `Password` varchar(255) NOT NULL, `Roles` varchar(255) NOT NULL, `RegistrationDate` datetime NOT NULL, `RegisteredByID` int NOT NULL, `LastLogin` datetime DEFAULT NULL, `LoginIPs` varchar(255) DEFAULT NULL, `LoginRefreshToken` varchar(255) DEFAULT NULL, `VerificationToken` varchar(255) DEFAULT NULL, `ProfilePicture` varchar(255) NOT NULL DEFAULT "DefaultPP.png", PRIMARY KEY (`ID`), UNIQUE KEY `Email_UNIQUE` (`Email`)) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci',
           (err, result) => {
             if (err) {
               errors = err.message;
               reject(db);
             } else if (result) {
-              results = "Users table created! ";
+              results = results + "Users table created! ";
               resolve(db);
             }
           }
@@ -61,13 +81,14 @@ const databaseSetup = () => {
           "admin",
           "admin",
           "admin",
-          "0000",
-          "+0000000000",
+          "admin",
+          "admin",
           "admin@admin",
           hashedPassword,
-          "1010",
+          "1010,1005,1000",
           new Date(),
           1,
+          null,
           null,
           null,
           null,
@@ -75,7 +96,7 @@ const databaseSetup = () => {
         ];
 
         db.query(
-          "INSERT INTO tbl_users (FirstName, LastName, Address, City, ProvinceOrState, Country, PostalCode, PhoneNumber, Email, Password, Roles, RegistrationDate, RegisteredByID, LastLogin, LoginRefreshToken, LoginIP, ProfilePicture) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)",
+          "INSERT INTO tbl_users (FirstName, LastName, Address, City, ProvinceOrState, Country, PostalCode, PhoneNumber, Email, Password, Roles, RegistrationDate, RegisteredByID, LastLogin, LoginIPs, LoginRefreshToken, VerificationToken, ProfilePicture) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)",
           adminUserData,
           (err, result) => {
             if (err) {

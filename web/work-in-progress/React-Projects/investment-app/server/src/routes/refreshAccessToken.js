@@ -33,7 +33,7 @@ router.get("/", (req, res) => {
       }
 
       let handleRefreshAccessToken = new Promise((resolve, reject) => {
-        let db = mysql.createConnection(dbConfig);
+        let db = mysql.createConnection(dbConfig.config);
 
         db.connect((err) => {
           if (err) {
@@ -49,28 +49,24 @@ router.get("/", (req, res) => {
       })
         .then((db) => {
           return new Promise((resolve, reject) => {
-            db.query(
-              "SELECT Roles, LoginRefreshToken FROM tbl_users WHERE ID = ?",
-              [decoded.id],
-              (err, result) => {
-                if (err) {
+            db.query("SELECT Roles, LoginRefreshToken FROM tbl_users WHERE ID = ?", [decoded.id], (err, result) => {
+              if (err) {
+                db.end();
+                errors = err.message;
+                statusCode = 503; //SERVICE UNAVAILABLE
+                reject();
+              } else if (result) {
+                if (!result.length) {
                   db.end();
-                  errors = err.message;
-                  statusCode = 503; //SERVICE UNAVAILABLE
+                  errors = "Refresh Token recieved containing an invalid ID!";
+                  statusCode = 403; //FORBIDDEN, because ID in Refresh Token does not exist in the DB.
                   reject();
-                } else if (result) {
-                  if (!result.length) {
-                    db.end();
-                    errors = "Refresh Token recieved containing an invalid ID!";
-                    statusCode = 403; //FORBIDDEN, because ID in Refresh Token does not exist in the DB.
-                    reject();
-                  } else {
-                    db.end();
-                    resolve(result);
-                  }
+                } else {
+                  db.end();
+                  resolve(result);
                 }
               }
-            );
+            });
           });
         })
         .then((result) => {

@@ -1,3 +1,5 @@
+import "./css/navSpacer.css";
+
 //Export
 const NavSpacer = (props) => {
   //Render...

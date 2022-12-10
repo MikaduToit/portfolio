@@ -1,4 +1,5 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
+import jwtDecode from "jwt-decode";
 
 //Reducers
 import { setCredentials, logout, session } from "../authorization/authSlice";
@@ -25,13 +26,12 @@ const baseQueryWithReauth = async (args, api, extraOptions) => {
 
     if (refreshAuthResult?.data) {
       //A new Access Token was recieved.
-      const currentID = api.getState().auth.id;
-      const currentRoles = api.getState().auth.roles;
+      const userInfo = jwtDecode(refreshAuthResult.data.accessToken).UserInfo;
       //Store the new Access Token.
       api.dispatch(
         setCredentials({
-          id: currentID,
-          roles: currentRoles,
+          id: userInfo.id,
+          roles: userInfo.roles,
           token: refreshAuthResult.data.accessToken,
         })
       );

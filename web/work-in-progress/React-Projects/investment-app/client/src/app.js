@@ -12,9 +12,11 @@ import { usePreLoadCheckMutation } from "./app/authorization/authApiMutation";
 import { selectCurrentToken } from "./app/authorization/authSlice";
 
 //Routes
+import LoadingOverlay from "./components/general/loadingOverlay";
 import Login from "./routes/login";
 import Dashboard from "./routes/dashboard";
-import LoadingOverlay from "./components/misc/loadingOverlay";
+import ForgotPassword from "./routes/forgotPassword";
+import ChangePassword from "./routes/changePassword";
 
 //Export
 const App = () => {
@@ -27,7 +29,9 @@ const App = () => {
   //Hooks...
   //Executes once when component first mounts, because of empty [].
   useEffect(() => {
-    preLoad();
+    if (!window.location.pathname.includes("forgot-password") && !window.location.pathname.includes("change-password")) {
+      preLoad();
+    }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
@@ -36,7 +40,7 @@ const App = () => {
     try {
       await preLoadCheck().unwrap();
     } catch {
-      //Do nothing.
+      //Nothing needs to happen in the case of an error.
     }
 
     setPreLoadComplete(true);
@@ -49,18 +53,21 @@ const App = () => {
         {preLoadComplete ? (
           token ? (
             <>
-              <Route path="*" element={<Navigate to="/dashboard" replace />} />
-              <Route path="/dashboard" element={<Dashboard />} />
+              <Route path="*" element={<Navigate to="dashboard" replace />} />
+              <Route path="dashboard/*" element={<Dashboard />} />
             </>
           ) : (
             <>
-              <Route path="*" element={<Navigate to="/login" replace />} />
-              <Route path="/login" element={<Login />} />
+              <Route path="*" element={<Navigate to="login" replace />} />
+              <Route path="login" element={<Login />} />
             </>
           )
         ) : (
           <Route path="*" element={<LoadingOverlay />} />
         )}
+        <Route path="forgot-password" element={<ForgotPassword />} />
+        <Route path="forgot-password/change-password" element={<ChangePassword />} />
+        <Route path="user-registration/change-password" element={<ChangePassword />} />
       </Routes>
     </BrowserRouter>
   );

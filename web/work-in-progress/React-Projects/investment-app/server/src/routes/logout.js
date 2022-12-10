@@ -34,7 +34,7 @@ router.get("/", (req, res) => {
   }
 
   let handleLogout = new Promise((resolve, reject) => {
-    let db = mysql.createConnection(dbConfig);
+    let db = mysql.createConnection(dbConfig.config);
 
     db.connect((err) => {
       if (err) {
@@ -52,21 +52,17 @@ router.get("/", (req, res) => {
       return new Promise((resolve, reject) => {
         const decoded = jwt.decode(refreshToken);
 
-        db.query(
-          "UPDATE tbl_users SET LoginRefreshToken = ? WHERE ID = ?",
-          ["", decoded.id],
-          (err, result) => {
-            if (err) {
-              db.end();
-              errors = err.message;
-              statusCode = 503; //SERVICE UNAVAILABLE
-              reject();
-            } else if (result) {
-              db.end();
-              resolve();
-            }
+        db.query("UPDATE tbl_users SET LoginRefreshToken = ? WHERE ID = ?", ["", decoded.id], (err, result) => {
+          if (err) {
+            db.end();
+            errors = err.message;
+            statusCode = 503; //SERVICE UNAVAILABLE
+            reject();
+          } else if (result) {
+            db.end();
+            resolve();
           }
-        );
+        });
       });
     })
     .then(() => {

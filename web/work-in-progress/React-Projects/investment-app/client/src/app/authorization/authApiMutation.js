@@ -17,14 +17,32 @@ export const authApiMutation = authApi.injectEndpoints({
         keepUnusedDataFor: 60,
       }),
     }),
-    test: builder.mutation({
-      query: () => ({
-        url: "/protectedRequestTest",
-        method: "GET",
+    forgotPassword: builder.mutation({
+      query: (credentials) => ({
+        url: "/forgotPassword",
+        method: "POST",
+        body: { ...credentials },
+        keepUnusedDataFor: 60,
+      }),
+    }),
+    changePassword: builder.mutation({
+      query: (credentials) => ({
+        url: "/changePassword",
+        method: "POST",
+        body: { ...credentials },
+        keepUnusedDataFor: 60,
+      }),
+    }),
+    userRegistration: builder.mutation({
+      query: (credentials) => ({
+        url: "/userRegistration",
+        method: "POST",
+        body: { ...credentials },
         keepUnusedDataFor: 60,
       }),
     }),
   }),
 });
 
-export const { usePreLoadCheckMutation, useLoginMutation, useTestMutation } = authApiMutation;
+export const { usePreLoadCheckMutation, useLoginMutation, useForgotPasswordMutation, useChangePasswordMutation, useUserRegistrationMutation } =
+  authApiMutation;

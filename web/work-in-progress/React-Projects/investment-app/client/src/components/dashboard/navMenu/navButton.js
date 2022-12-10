@@ -1,4 +1,8 @@
-import { useState, useEffect, useContext } from "react";
+import { useState, useContext, useEffect } from "react";
+import "./css/navButton.css";
+
+//Libraries
+import { Link } from "react-router-dom";
 
 //Context
 import { DashboardContext } from "../../../routes/dashboard";
@@ -6,12 +10,16 @@ import { DashboardContext } from "../../../routes/dashboard";
 //Export
 const NavButton = (props) => {
   //State
-  const [selected, setSelected] = useState();
-  const [backgroundColour, setBackgroundColour] = useState();
-  const [textColour, setTextColour] = useState();
+  const [selected, setSelected] = useState(false);
+  const [style, setStyle] = useState({
+    backgroundColour: "transparent",
+    textColour: "#505050",
+    cursor: "pointer",
+  });
   //Context
   const selectedTab = useContext(DashboardContext).selectedTab;
   const onTabSelection = useContext(DashboardContext).handleTabSelection;
+  const awaitingProcess = useContext(DashboardContext).awaitingProcess;
 
   //Hooks...
   //Check if this button has been selected.
@@ -19,49 +27,84 @@ const NavButton = (props) => {
     if (selectedTab === props.id) {
       setSelected(true);
     } else {
-      if (selected) {
-        setSelected(false);
-      }
+      setSelected(false);
     }
   }, [selectedTab]);
 
   //Highlight this button if it is selected.
   useEffect(() => {
     if (selected) {
-      setBackgroundColour("rgb(143,0,255)");
-      setTextColour("white");
+      setStyle((prevState) => {
+        return { ...prevState, ...{ backgroundColour: "rgb(143,0,255)", textColour: "whitesmoke" } };
+      });
     } else {
-      setBackgroundColour("transparent");
-      setTextColour("#5a5a5a");
+      setStyle((prevState) => {
+        return { ...prevState, ...{ backgroundColour: "transparent", textColour: "#505050" } };
+      });
     }
   }, [selected]);
 
-  //Functions...
-  const handleMouseEnter = (e) => {
+  useEffect(() => {
+    if (awaitingProcess) {
+      setStyle((prevState) => {
+        return { ...prevState, ...{ cursor: "wait" } };
+      });
+    } else {
+      setStyle((prevState) => {
+        return { ...prevState, ...{ cursor: "pointer" } };
+      });
+    }
+  }, [awaitingProcess]);
+
+  //Events...
+  const handleFocus = () => {
     if (!selected) {
-      setBackgroundColour("black");
-      setTextColour("white");
+      setStyle((prevState) => {
+        return { ...prevState, ...{ backgroundColour: "black", textColour: "whitesmoke" } };
+      });
     }
   };
 
-  const handleMouseLeave = (e) => {
+  const handleBlur = () => {
     if (!selected) {
-      setBackgroundColour("transparent");
-      setTextColour("#5a5a5a");
+      setStyle((prevState) => {
+        return { ...prevState, ...{ backgroundColour: "transparent", textColour: "#505050" } };
+      });
+    }
+  };
+
+  const handleMouseEnter = () => {
+    if (!selected) {
+      setStyle((prevState) => {
+        return { ...prevState, ...{ backgroundColour: "black", textColour: "whitesmoke" } };
+      });
+    }
+  };
+
+  const handleMouseLeave = () => {
+    if (!selected) {
+      setStyle((prevState) => {
+        return { ...prevState, ...{ backgroundColour: "transparent", textColour: "#505050" } };
+      });
     }
   };
 
   //Render...
   return (
-    <button
-      className="navButton"
-      style={{ backgroundColor: backgroundColour, color: textColour }}
-      onMouseEnter={handleMouseEnter}
-      onMouseLeave={handleMouseLeave}
-      onClick={() => onTabSelection(props.id)}
-    >
-      {props.label}
-    </button>
+    <Link to={props.href} className="navButtonLink" tabIndex="-1">
+      <button
+        className="navButton"
+        style={{ background: style.backgroundColour, color: style.textColour, cursor: style.cursor }}
+        onFocus={handleFocus}
+        onBlur={handleBlur}
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
+        onClick={() => onTabSelection(props.id)}
+        disabled={awaitingProcess ? awaitingProcess : props.disabled}
+      >
+        {props.label}
+      </button>
+    </Link>
   );
 };
 

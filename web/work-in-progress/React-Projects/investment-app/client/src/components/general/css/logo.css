@@ -1,0 +1,68 @@
+/*All elements that have different property values for each media query
+need to have all those properties defined in both queries. If the value
+refains the same, a duplication of that property is not required.*/
+@media only all and (min-width: 0px) {
+  .logoResponsiveBox {
+    width: 100%;
+    height: 50px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: none;
+    pointer-events: none;
+    touch-action: none;
+    user-select: none;
+  }
+
+  .logoResponsiveHTMLPicture {
+    height: 80%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: none;
+  }
+
+  .logoBox {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: none;
+    pointer-events: none;
+    touch-action: none;
+    user-select: none;
+  }
+
+  .logoHTMLPicture {
+    height: 80%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: none;
+  }
+
+  .logo {
+    height: 100%;
+    position: relative;
+    image-rendering: -webkit-optimize-contrast;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    border: none;
+    outline: none;
+  }
+}
+
+@media only all and (min-width: 1000px) {
+  .logoResponsiveBox {
+    height: 100px;
+    top: 20px;
+  }
+
+  .logoResponsiveHTMLPicture {
+    height: 100%;
+  }
+}

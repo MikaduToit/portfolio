@@ -1,0 +1,34 @@
+.interfaceBox {
+  width: 500px;
+  max-width: 90%;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 120px;
+  background: none;
+  backdrop-filter: blur(5px); /*Firefox requires config changes*/
+  -webkit-backdrop-filter: blur(5px);
+  border-radius: 20px;
+  box-shadow: 0 0 10px 0 black;
+  overflow-y: hidden;
+  overflow-x: auto;
+}
+
+.interfaceBoxPreserveMinWidth {
+  width: 100%;
+  position: relative;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+}
+
+.interfaceHeaderBox {
+  z-index: 1;
+  width: 100%;
+  height: 120px;
+  position: relative;
+  left: 0;
+  background: rgba(255, 215, 0, 0.8);
+  box-shadow: 0 2px 5px -1px black;
+  overflow: hidden;
+}

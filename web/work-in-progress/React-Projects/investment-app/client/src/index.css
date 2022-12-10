@@ -1,65 +1,125 @@
 /*Fonts*/
 @font-face {
-  font-family: "Poppins100";
+  font-family: "Font1";
+  src: url("./assets/fonts/barlow/Barlow-Thin.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 100;
+}
+@font-face {
+  font-family: "Font1";
+  src: url("./assets/fonts/barlow/Barlow-ExtraLight.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 200;
+}
+@font-face {
+  font-family: "Font1";
+  src: url("./assets/fonts/barlow/Barlow-Light.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 300;
+}
+@font-face {
+  font-family: "Font1";
+  src: url("./assets/fonts/barlow/Barlow-Regular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Font1";
+  src: url("./assets/fonts/barlow/Barlow-Medium.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 500;
+}
+@font-face {
+  font-family: "Font1";
+  src: url("./assets/fonts/barlow/Barlow-SemiBold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 600;
+}
+@font-face {
+  font-family: "Font1";
+  src: url("./assets/fonts/barlow/Barlow-Bold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 700;
+}
+@font-face {
+  font-family: "Font1";
+  src: url("./assets/fonts/barlow/Barlow-ExtraBold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 800;
+}
+@font-face {
+  font-family: "Font1";
+  src: url("./assets/fonts/barlow/Barlow-Black.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 900;
+}
+
+@font-face {
+  font-family: "Font2";
   src: url("./assets/fonts/poppins/Poppins-Thin.ttf") format("truetype");
   font-style: normal;
+  font-weight: 100;
 }
 @font-face {
-  font-family: "Poppins200";
+  font-family: "Font2";
   src: url("./assets/fonts/poppins/Poppins-ExtraLight.ttf") format("truetype");
   font-style: normal;
+  font-weight: 200;
 }
 @font-face {
-  font-family: "Poppins300";
+  font-family: "Font2";
   src: url("./assets/fonts/poppins/Poppins-Light.ttf") format("truetype");
   font-style: normal;
+  font-weight: 300;
 }
 @font-face {
-  font-family: "Poppins400";
+  font-family: "Font2";
   src: url("./assets/fonts/poppins/Poppins-Regular.ttf") format("truetype");
   font-style: normal;
+  font-weight: 400;
 }
 @font-face {
-  font-family: "Poppins500";
+  font-family: "Font2";
   src: url("./assets/fonts/poppins/Poppins-Medium.ttf") format("truetype");
   font-style: normal;
+  font-weight: 500;
 }
 @font-face {
-  font-family: "Poppins600";
+  font-family: "Font2";
   src: url("./assets/fonts/poppins/Poppins-SemiBold.ttf") format("truetype");
   font-style: normal;
+  font-weight: 600;
 }
 @font-face {
-  font-family: "Poppins700";
+  font-family: "Font2";
   src: url("./assets/fonts/poppins/Poppins-Bold.ttf") format("truetype");
   font-style: normal;
+  font-weight: 700;
 }
 @font-face {
-  font-family: "Rubik300";
-  src: url("./assets/fonts/rubik/Rubik-Light.ttf") format("truetype");
+  font-family: "Font2";
+  src: url("./assets/fonts/poppins/Poppins-ExtraBold.ttf") format("truetype");
   font-style: normal;
+  font-weight: 800;
 }
 @font-face {
-  font-family: "Rubik400";
-  src: url("./assets/fonts/rubik/Rubik-Regular.ttf") format("truetype");
+  font-family: "Font2";
+  src: url("./assets/fonts/poppins/Poppins-Black.ttf") format("truetype");
   font-style: normal;
+  font-weight: 900;
 }
+
 @font-face {
-  font-family: "Rubik500";
-  src: url("./assets/fonts/rubik/Rubik-Medium.ttf") format("truetype");
-  font-style: normal;
-}
-@font-face {
-  font-family: "FuturaLightCondensed";
+  font-family: "Font3";
   src: url("./assets/fonts/futura/futuralightcondensed.ttf") format("truetype");
   font-style: normal;
 }
 
-/*Elements*/
+/*General Styling*/
 * {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
   line-height: 100%;
 }
 
@@ -79,13 +139,15 @@ body {
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
-  font-family: "Poppins500", sans-serif;
+  font-family: "Font2", sans-serif;
+  font-weight: 500;
   font-size: 14px;
+  text-overflow: ellipsis;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-/*FIXES CHROME HIGHLIGHTING AUTOFILLED INPUTS*/
+/*Browser Specific General Fixes*/
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,
@@ -95,6 +157,7 @@ textarea:-webkit-autofill:focus,
 select:-webkit-autofill,
 select:-webkit-autofill:hover,
 select:-webkit-autofill:focus {
+  /*FIXES CHROME HIGHLIGHTING AUTOFILLED INPUTS*/
   -webkit-background-clip: text !important;
   -webkit-text-fill-color: darkgrey !important;
 }

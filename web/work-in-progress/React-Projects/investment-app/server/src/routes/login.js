@@ -32,7 +32,7 @@ router.post("/", (req, res) => {
   }
 
   let handleLogin = new Promise((resolve, reject) => {
-    let db = mysql.createConnection(dbConfig);
+    let db = mysql.createConnection(dbConfig.config);
 
     db.connect((err) => {
       if (err) {
@@ -48,47 +48,45 @@ router.post("/", (req, res) => {
   })
     .then((db) => {
       return new Promise((resolve, reject) => {
-        db.query(
-          "SELECT ID, FirstName, Email, Password, Roles, LoginIP FROM tbl_users WHERE Email = ?",
-          [loginEmail],
-          (err, result) => {
-            if (err) {
+        db.query("SELECT ID, Password, Roles, LoginIPs, VerificationToken FROM tbl_users WHERE Email = ?", [loginEmail], (err, result) => {
+          if (err) {
+            db.end();
+            errors = err.message;
+            statusCode = 503; //SERVICE UNAVAILABLE
+            reject();
+          } else if (result) {
+            if (!result.length) {
               db.end();
-              errors = err.message;
-              statusCode = 503; //SERVICE UNAVAILABLE
+              statusCode = 403; //FORBIDDEN, because email submitted does not exist in the DB.
+              clientError = "Email not registered!";
               reject();
-            } else if (result) {
-              if (!result.length) {
-                db.end();
-                statusCode = 403; //UNAUTHORIZED, because email submitted does not exist in the DB.
-                clientError = "Email not registered!";
-                reject();
-              } else {
-                queryData = result[0];
-                resolve(db);
-              }
+            } else {
+              queryData = result[0];
+              resolve(db);
             }
           }
-        );
+        });
       });
     })
     .then((db) => {
       return new Promise((resolve, reject) => {
-        if (queryData.LoginIP === "Email not verified") {
+        //Check that the user's email has been verified.
+        if (!queryData.Password) {
           db.end();
 
           //Re-send email verification link.
-          async function emailVerificationLink() {
+          async function sendVerifyEmailLink() {
             //Generate test SMTP service account from ethereal.email
             let testAccount = await nodemailer.createTestAccount();
+            let link = "http://localhost:3000/user-registration/change-password?verification=" + queryData.VerificationToken;
 
             //Create reusable transporter object using the default SMTP transport.
             const transporter = nodemailer.createTransport({
               host: "smtp.ethereal.email",
               port: 587,
               auth: {
-                user: "kaci8@ethereal.email",
-                pass: "YbvRHZcqQ8SMm8kQY7",
+                user: "granville.cartwright19@ethereal.email",
+                pass: "5ad4V3vd6zr5YaYP3E",
               },
             });
 
@@ -97,21 +95,25 @@ router.post("/", (req, res) => {
               to: loginEmail,
               subject: "Invezat - Email Verification",
               text:
-                "Good day " +
-                queryData.FirstName +
-                ", and welcome to Invezat! " +
+                "Good day!" +
                 "\n\n" +
-                "To complete your registration, please copy the following link and open it in your browser to verify your email address and set up your new password: " +
+                "Welcome to Invezat!" +
+                "\n" +
+                "You have been registered on our app which makes keeping track of all your investments a piece of cake." +
                 "\n\n" +
-                "http://localhost:3000/emailVerification/",
+                "Please visit the link below to complete your registration process." +
+                "\n\n" +
+                link,
               html:
-                "Good day <b>" +
-                queryData.FirstName +
-                "</b>, and welcome to Invezat! " +
+                "Good day!" +
                 "<br><br>" +
-                "To complete your registration, please click on the following link to verify your email address and set up your new password: " +
+                "Welcome to Invezat!" +
+                "<br>" +
+                "You have been registered on our app which makes keeping track of all your investments a piece of cake." +
                 "<br><br>" +
-                "<a href='http://localhost:3000/emailVerification/' target='_blank'>Verify Email Adress</a>",
+                "Please visit the link below to complete your registration process." +
+                "<br><br>" +
+                `<a href=${link} target='_blank'>Change Password</a>`,
             };
 
             //Send email with defined transport object.
@@ -124,10 +126,10 @@ router.post("/", (req, res) => {
               }
             });
           }
-          emailVerificationLink();
+          sendVerifyEmailLink();
 
-          statusCode = 403; //UNAUTHORIZED, because email submitted has not been verified.
-          clientError = "Email not verified! Please check your email for a verification link!";
+          statusCode = 403; //FORBIDDEN, because email submitted has not been verified.
+          clientError = "Email not verified!\nPlease check your email for a verification link!";
           reject();
         } else {
           resolve(db);
@@ -152,31 +154,27 @@ router.post("/", (req, res) => {
             { expiresIn: "12h" }
           );
 
-          db.query(
-            "UPDATE tbl_users SET LoginRefreshToken = ? WHERE ID = ?",
-            [refreshToken, queryData.ID],
-            (err, result) => {
-              if (err) {
-                db.end();
-                errors = err.message;
-                statusCode = 503; //SERVICE UNAVAILABLE
-                reject();
-              } else if (result) {
-                db.end();
-                accessToken = jwt.sign(
-                  {
-                    UserInfo: { id: queryData.ID, roles: queryData.Roles },
-                  },
-                  process.env.access_Token_Secret,
-                  { expiresIn: "10m" }
-                );
-                resolve();
-              }
+          db.query("UPDATE tbl_users SET LoginRefreshToken = ? WHERE ID = ?", [refreshToken, queryData.ID], (err, result) => {
+            if (err) {
+              db.end();
+              errors = err.message;
+              statusCode = 503; //SERVICE UNAVAILABLE
+              reject();
+            } else if (result) {
+              db.end();
+              accessToken = jwt.sign(
+                {
+                  UserInfo: { id: queryData.ID, roles: queryData.Roles },
+                },
+                process.env.access_Token_Secret,
+                { expiresIn: "10m" }
+              );
+              resolve();
             }
-          );
+          });
         } else {
           db.end();
-          statusCode = 403; //UNAUTHORIZED, because email or password entered was incorrect.
+          statusCode = 403; //FORBIDDEN, because email or password entered was incorrect.
           clientError = "Incorrect email or password!";
           reject();
         }

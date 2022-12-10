@@ -1,0 +1,48 @@
+.sectionBox {
+  width: 650px;
+  max-width: 100%;
+  position: relative;
+  margin-top: 20px;
+  background: none;
+  backdrop-filter: blur(5px); /*Firefox requires config changes*/
+  -webkit-backdrop-filter: blur(5px);
+  border-radius: 20px;
+  box-shadow: 0 0 10px 0 black;
+  overflow-y: hidden;
+  overflow-x: auto;
+}
+
+.sectionBoxPreserveMinWidth {
+  width: 100%;
+  position: relative;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+}
+
+.sectionHeaderBox {
+  z-index: 1;
+  width: 100%;
+  height: 120px;
+  position: relative;
+  left: 0;
+  background: rgba(255, 215, 0, 0.8);
+  box-shadow: 0 2px 5px -1px black;
+  pointer-events: none;
+  touch-action: none;
+  user-select: none;
+  overflow: hidden;
+}
+
+.sectionHeading {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 0 40px 0 40px;
+  color: black;
+  font-family: "Font1", sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+}

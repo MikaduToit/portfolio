@@ -1,11 +1,11 @@
-const verifyRoles = (...allowedRoles) => {
+const verifyRoles = (allowedRoles) => {
   return (req, res, next) => {
-    if (!req?.roles) return res.sendStatus(401); //UNAUTHORIZED
-    const rolesArray = [...allowedRoles];
-    const result = req.roles
-      .map((role) => rolesArray.includes(role))
-      .find((val) => val === true);
-    if (!result) return res.sendStatus(401); //UNAUTHORIZED
+    if (!req?.roles) return res.status(403).json({ message: "You do not have the required authorization to make this request!" }); //FORBIDDEN
+
+    //Check that at least one of the the roles recieved through the request, matches the roles authorized for the request.
+    const matchingRoles = allowedRoles.filter((value) => req.roles.includes(value));
+    if (!matchingRoles.length) return res.status(403).json({ message: "You do not have the required authorization to make this request!" }); //FORBIDDEN
+
     next();
   };
 };

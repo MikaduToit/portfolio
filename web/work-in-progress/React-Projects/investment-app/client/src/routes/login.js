@@ -1,5 +1,4 @@
-import { useState, createRef, useEffect } from "react";
-import "./login.css";
+import { createRef, useState, useEffect, useCallback } from "react";
 import jwtDecode from "jwt-decode";
 
 //Library Hooks
@@ -11,29 +10,27 @@ import { useLoginMutation } from "../app/authorization/authApiMutation";
 import { setCredentials, session } from "../app/authorization/authSlice";
 
 //Components
-import Alert from "../components/misc/alert";
-import Logo from "../components/misc/logo";
-import TextInput from "../components/formElements/textInput";
-import SubmitButton from "../components/formElements/submitButton";
+import Alert from "../components/general/alert";
+import InterfaceBox from "../components/general/interfaceBox";
+import Form from "../components/form/form";
 
 //Export
 const Login = () => {
-  //State
-  const [alert, setAlert] = useState();
-  const [formData, setFormData] = useState({ email: "", password: "" });
-  const [error, setError] = useState("");
-  const [processing, setProcessing] = useState(false);
   //Reference forwarding
   const emailRef = createRef();
   const passwordRef = createRef();
   const submitRef = createRef();
-  //To Map
+  //State
+  const [alert, setAlert] = useState();
+  const [formData, setFormData] = useState({ email: "", password: "" });
+  const [serverRes, setServerRes] = useState({ error: false, message: "" });
+  const [processing, setProcessing] = useState(false);
   const [formElements] = useState([
     {
-      id: "0",
-      ref: emailRef,
       component: "TextInput",
-      size: "inputBox100",
+      box: "inputBox100",
+      id: "0",
+      forwardRef: emailRef,
       name: "email",
       type: "email",
       pattern: null,
@@ -42,15 +39,15 @@ const Login = () => {
       label: "Email",
     },
     {
-      id: "1",
-      ref: passwordRef,
       component: "TextInput",
-      size: "inputBox100",
+      box: "inputBox100",
+      id: "1",
+      forwardRef: passwordRef,
       name: "password",
       type: "password",
-      pattern: "^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[.!@#$%^&*_=+-]).{8,24}$",
+      pattern: "^(?=.{8,24}$)(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*[~!@#$%^&*_=+;:,<>.?-])([A-Za-z0-9~!@#$%^&*_=+;:,<>.?-]+)$",
       regex:
-        "Password must be 8 - 24 characters in length, including atleast one:\nLowercase Letter, Uppercase Letter, Number, and Symbol [.!@#$%^&*_=+-]",
+        "Password must be 8 - 24 characters in length, including atleast one:\nLowercase Letter, Uppercase Letter, Number, and Symbol [~!@#$%^&*_=+;:,<>.?-]",
       required: true,
       label: "Password",
     },
@@ -63,9 +60,28 @@ const Login = () => {
   //Hooks...
   //Executes once when component first mounts, because of empty [].
   useEffect(() => {
-    if (formElements[0].ref.current) {
-      formElements[0].ref.current.focus();
+    formElements[0].forwardRef.current.focus();
+
+    //Executes once when component first unmounts, because of empty [].
+    return () => {
+      window.removeEventListener("beforeunload", handleUnload);
+    };
+  }, []);
+
+  //When processing, warn the user about leaving the page.
+  useEffect(() => {
+    if (processing) {
+      window.addEventListener("beforeunload", handleUnload);
+    } else {
+      window.removeEventListener("beforeunload", handleUnload);
     }
+  }, [processing]);
+
+  //useCallback ensures the function is not redeclared every render (which would alter its reference).
+  const handleUnload = useCallback((e) => {
+    e.preventDefault();
+    e.returnValue = "";
+    return "";
   }, []);
 
   //Alert user of expired session.
@@ -74,16 +90,16 @@ const Login = () => {
     setAlert(sessionExpired);
   }, [sessionExpired]);
 
-  //Focus on appropriate input after error is returned.
+  //Focus on appropriate input after server response is received.
   useEffect(() => {
-    if (error) {
-      if (error === "Email not registered!") {
-        formElements[0].ref.current.focus();
+    if (serverRes.error) {
+      if (serverRes.message === "Email not registered!") {
+        formElements[0].forwardRef.current.focus();
       } else {
-        formElements[1].ref.current.focus();
+        formElements[1].forwardRef.current.focus();
       }
     }
-  }, [error]);
+  }, [serverRes.error]);
 
   //Functions...
   const handleAlertClose = () => {
@@ -91,10 +107,10 @@ const Login = () => {
   };
 
   //Form Events...
-  const handleChange = (e) => {
-    if (error) {
-      setError("");
-    }
+  const handleChange = (name, e, value) => {
+    setServerRes((prevState) => {
+      return { ...prevState, ...{ error: false, message: "" } };
+    });
 
     setFormData((prevState) => {
       return { ...prevState, ...{ [e.target.name]: e.target.value } };
@@ -113,7 +129,6 @@ const Login = () => {
 
       //Reset state to default...
       setFormData({ email: "", password: "" });
-      setError("");
 
       const userInfo = jwtDecode(response.accessToken).UserInfo;
 
@@ -131,11 +146,17 @@ const Login = () => {
       setProcessing(false);
     } catch (err) {
       if (err.status === 403) {
-        setError(err.data.message);
+        setServerRes((prevState) => {
+          return { ...prevState, ...{ error: true, message: err.data.message } };
+        });
       } else if (err.status === 503) {
-        setError("Server connection failed! Please try again later or contact support!");
+        setServerRes((prevState) => {
+          return { ...prevState, ...{ error: true, message: "Server connection failed!\nPlease try again later or contact support!" } };
+        });
       } else {
-        setError("Login failed! Please contact support!");
+        setServerRes((prevState) => {
+          return { ...prevState, ...{ error: true, message: "Login failed!\nPlease contact support!" } };
+        });
       }
 
       setFormData((prevState) => {
@@ -149,44 +170,25 @@ const Login = () => {
   //Render...
   return (
     <>
-      {alert ? <Alert onAlertClose={handleAlertClose} alertMessage={"Session Expired!"} /> : null}
-      <section className="loginBox">
-        <div className="internalContainer">
-          <div className="headerBox">
-            <Logo responsive={false} />
-          </div>
-          <form className="formBox" onSubmit={handleSubmit}>
-            {formElements.map((formElement) => {
-              return (
-                <TextInput
-                  key={formElement.id}
-                  size={formElement.size}
-                  ref={formElement.ref}
-                  name={formElement.name}
-                  type={formElement.type}
-                  pattern={formElement.pattern}
-                  regex={formElement.regex}
-                  value={formData[formElement.name]}
-                  onChange={handleChange}
-                  required={formElement.required}
-                  disabled={processing}
-                  label={formElement.label}
-                  error={
-                    error === "Email not registered!" && formElement.name === "email"
-                      ? true
-                      : error === "Incorrect email or password!" && formElement.name === "password"
-                      ? true
-                      : false
-                  }
-                />
-              );
-            })}
-            {error ? <div className="serverError">{error}</div> : null}
-            <SubmitButton label="Login" ref={submitRef} disabled={processing} />
-          </form>
-        </div>
-      </section>
-      <div className="forcePageBottomMargin" />
+      {alert ? <Alert onAlertClose={handleAlertClose} alertMessage={"Session expired."} /> : null}
+      <InterfaceBox minWidth="200px" logo={true} processing={processing}>
+        <Form
+          id="loginForm"
+          onSubmit={handleSubmit}
+          formRequired={false}
+          formDescription={null}
+          formElements={formElements}
+          formData={formData}
+          onChange={handleChange}
+          serverRes={serverRes}
+          buttonLabel="Login"
+          buttonForwardRef={submitRef}
+          processing={processing}
+          autoComplete="on"
+          onKeyDown={null}
+        />
+      </InterfaceBox>
+      <div className="forceBottomMargin" style={{ height: "60px" }} />
     </>
   );
 };

@@ -1,69 +1,75 @@
 import { useState, useEffect } from "react";
-import "./navMenu.css";
+import "./css/navMenu.css";
+
+//Library Hooks
+import { useSelector } from "react-redux";
+
+//Custom Hooks
+import { selectCurrentRoles } from "../../../app/authorization/authSlice";
 
 //Components
-import NavMenuToggle from "./navMenuToggle";
-import Logo from "../../misc/logo";
-import NavButtonsBox from "./navButtonsBox";
+import TopAndBottomFadeFilter from "../../general/topAndBottomFadeFilter";
+import NavSpacer from "./navSpacer";
+import NavButton from "./navButton";
 
 //Export
 const NavMenu = (props) => {
   //State
-  const [navMenuOpen, setNavMenuOpen] = useState(false);
-  const [navMenuTransitionStyle, setNavMenuTransitionStyle] = useState("none");
-  const [backdropOpacity, setBackdropOpacity] = useState("0");
-  const [backdropPointerEvents, setBackdropPointerEvents] = useState("none");
-  const [backdropTouchAction, setBackdropTouchAction] = useState("none");
+  const [navButtonsAll] = useState([
+    { id: "0", label: "PERSONAL", type: "spacer", roles: "1010,1005,1000" },
+    { id: "00", label: "Wallet", type: "button", roles: "1010,1005,1000", href: "wallet" },
+    { id: "01", label: "Investments", type: "button", roles: "1000", href: "investments" },
+    { id: "1", label: "ADMINISTRATOR", type: "spacer", roles: "1010,1005" },
+    { id: "10", label: "Investment Logging", type: "button", roles: "1005", href: "investment-logging" },
+    { id: "11", label: "Client Wallets", type: "button", roles: "1010,1005", href: "client-wallets" },
+    { id: "12", label: "Client Investments", type: "button", roles: "1005", href: "client-investments" },
+    { id: "13", label: "User Management", type: "button", roles: "1010", href: "user-management" },
+    { id: "14", label: "User Registration", type: "button", roles: "1010,1005", href: "user-registration" },
+    { id: "2", label: "SUPPORT", type: "spacer", roles: "1010,1005,1000" },
+    { id: "20", label: "Contact", type: "button", roles: "1010,1005,1000", href: "contact" },
+  ]);
+  const [navButtons, setNavButtons] = useState([]);
+  //Hooks
+  const roles = useSelector(selectCurrentRoles);
 
   //Hooks...
-  //Reset navMenu position when switching between desktop and mobile views.
+  //Display only the tabs which are accessible to the user.
   useEffect(() => {
-    setNavMenuOpen(false);
-    setNavMenuTransitionStyle("none");
-  }, [props.mobileView]);
+    let navButtonsRestricted = navButtonsAll.map((item) => {
+      return { ...item };
+    });
+    let restrictedIndexes = [];
 
-  //Adjust backdropFadeFilter when navMenu is toggled.
-  useEffect(() => {
-    if (navMenuOpen) {
-      setBackdropOpacity("0.6");
-      setBackdropPointerEvents("auto");
-      setBackdropTouchAction("auto");
-    } else {
-      setBackdropOpacity("0");
-      setBackdropPointerEvents("none");
-      setBackdropTouchAction("none");
-    }
-  }, [navMenuOpen]);
+    navButtonsAll.forEach((element, index) => {
+      const elementRoles = element.roles.split(",");
 
-  //Functions...
-  const handleNavMenuToggle = () => {
-    setNavMenuOpen(!navMenuOpen);
-    if (navMenuTransitionStyle !== "0.2s ease-in") {
-      setNavMenuTransitionStyle("0.2s ease-in");
-    }
-  };
+      const matchingRoles = elementRoles.filter((value) => roles.includes(value));
+      if (!matchingRoles.length) {
+        restrictedIndexes.push(index);
+      }
+    });
+
+    restrictedIndexes = restrictedIndexes.reverse();
+    restrictedIndexes.forEach(function (element) {
+      navButtonsRestricted.splice(element, 1);
+    });
+
+    setNavButtons(navButtonsRestricted);
+  }, [roles]);
 
   //Render...
   return (
-    <section className="navMenu">
-      <NavMenuToggle mobileView={props.mobileView} onNavMenuToggle={handleNavMenuToggle} />
-      <Logo responsive={true} />
-      {props.mobileView ? (
-        <div
-          className="backdropFadeFilter"
-          style={{
-            opacity: backdropOpacity,
-            pointerEvents: backdropPointerEvents,
-            touchAction: backdropTouchAction,
-          }}
-          onClick={handleNavMenuToggle}
-        />
-      ) : null}
-      <NavButtonsBox
-        mobileView={props.mobileView}
-        navMenuOpen={navMenuOpen}
-        navMenuTransitionStyle={navMenuTransitionStyle}
-      />
+    <section className="navMenu" style={props.style}>
+      <TopAndBottomFadeFilter style={null}>
+        {navButtons.map((navButton) => {
+          return navButton.type === "spacer" ? (
+            <NavSpacer key={navButton.id} label={navButton.label} />
+          ) : (
+            <NavButton key={navButton.id} id={navButton.id} label={navButton.label} href={navButton.href} disabled={props.disabled} />
+          );
+        })}
+        <div className="forceBottomMargin" style={{ height: "20px" }} />
+      </TopAndBottomFadeFilter>
     </section>
   );
 };

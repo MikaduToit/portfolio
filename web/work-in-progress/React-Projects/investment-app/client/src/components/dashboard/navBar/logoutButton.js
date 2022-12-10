@@ -1,14 +1,21 @@
+import { useContext } from "react";
+
+//Context
+import { DashboardContext } from "../../../routes/dashboard";
+
 //Library Hooks
 import { useDispatch } from "react-redux";
 
 //Custom Hooks
 import { logout } from "../../../app/authorization/authSlice";
 
-//Assets
-import { BiLogOut } from "react-icons/bi";
+//Components
+import IconButton from "../../general/iconButton";
 
 //Export
 const LogoutButton = () => {
+  //Context
+  const awaitingProcess = useContext(DashboardContext).awaitingProcess;
   //Hooks
   const dispatch = useDispatch();
 
@@ -20,14 +27,14 @@ const LogoutButton = () => {
 
   //Render...
   return (
-    <button
-      className="iconButton"
-      style={{ top: "50%", right: "15px" }}
-      onClick={handleLogout}
+    <IconButton
+      style={{ width: "20px", height: "20px", top: "50%", right: "5px" }}
       title="Logout"
-    >
-      <BiLogOut className="icon" />
-    </button>
+      handleClick={handleLogout}
+      icon="logout"
+      colour="black"
+      disabled={awaitingProcess}
+    />
   );
 };
 

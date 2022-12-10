@@ -35,6 +35,8 @@ app.get("/", (req, res) => {
 //Routes...
 app.use("/preLoadCheck", require("./src/routes/preLoadCheck"));
 app.use("/login", require("./src/routes/login"));
+app.use("/forgotPassword", require("./src/routes/forgotPassword"));
+app.use("/changePassword", require("./src/routes/changePassword"));
 app.use("/refreshAccessToken", require("./src/routes/refreshAccessToken"));
 app.use("/logout", require("./src/routes/logout"));
 
@@ -42,7 +44,7 @@ app.use("/logout", require("./src/routes/logout"));
 app.use(verifyJWT);
 
 //Protected Routes...
-app.use("/protectedRequestTest", require("./src/routes/protectedRequestTest"));
+app.use("/userRegistration", require("./src/routes/userRegistration"));
 
 //Custom Middleware...
 app.use(serverErrorHandler);

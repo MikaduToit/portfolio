@@ -1,0 +1,30 @@
+.alert {
+  width: 500px;
+  max-width: 90%;
+  height: 40px;
+  position: absolute;
+  left: 50vw;
+  top: 40px;
+  transform: translateX(-50%);
+  padding: 10px 35px 10px 35px;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(5px); /*Firefox requires config changes*/
+  -webkit-backdrop-filter: blur(5px);
+  border: 2px solid orangered;
+  border-radius: 20px;
+  box-shadow: 0 0 10px 0 black;
+}
+
+.alertMessage {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  color: white;
+  font-family: "Font1", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 12px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
