@@ -4,7 +4,7 @@
     date_default_timezone_set('Europe/Amsterdam');
 
     //Connects to the desired database.
-    $dbConnection = new mysqli("localhost", "matrix_q_nl_wallet", "admin", "admin");
+    $dbConnection = new mysqli("localhost", "root", "", "matrix_q_nl_wallet");
 
     //If connected, do the following.
     $customerListArray = array();

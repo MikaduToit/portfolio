@@ -9,13 +9,13 @@
     
     if ($_SESSION['loggedIn'] == false)
     {
-        exit('logout');
+        exit('logout.php');
     }
 
     //error_reporting(0);
 
     //Connects to the desired database.
-    $dbConnection = new mysqli("localhost", "matrix_q_nl_wallet", "admin", "admin");
+    $dbConnection = new mysqli("localhost", "root", "", "matrix_q_nl_wallet");
 
     //Database connection check.
     if (!$dbConnection)

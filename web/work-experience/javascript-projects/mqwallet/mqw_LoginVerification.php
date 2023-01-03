@@ -9,7 +9,7 @@
     $_SESSION['loggedInUserInfoArray'] = array();
 
     //Connects to the desired database.
-    $dbConnection = new mysqli("localhost", "matrix_q_nl_wallet", "admin", "admin");
+    $dbConnection = new mysqli("localhost", "root", "", "matrix_q_nl_wallet");
 
     //Database connection check.
     if (!$dbConnection)
@@ -74,11 +74,11 @@
                 {
                     $_SESSION['admin'] = true;
                     unset($_SESSION['loggedInUserInfoArray']['Admin']);
-                    exit("adminhome");
+                    exit("adminhome.php");
                 }
                 else
                 {
-                    exit("home");
+                    exit("home.php");
                 }
             }
             else 
